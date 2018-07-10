@@ -1,0 +1,6 @@
+.dev/
+.vscode/
+build/
+node_modules/
+*.log
+.notes
