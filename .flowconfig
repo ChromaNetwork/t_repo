@@ -1,5 +1,6 @@
 [ignore]
 ./build/.*
+.*/node_modules/styled-components/.*
 
 [options]
 module.name_mapper='^Base\(\/?.*\)$' -> '<PROJECT_ROOT>/src/\1'

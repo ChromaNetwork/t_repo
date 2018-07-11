@@ -11,6 +11,19 @@ export const Colors: { [key: string]: string } = {
     accentBlue: "#8FC4C9"
 };
 
+export const Measurements: { [key: string]: number } = {
+    basePadding: 24
+};
+
+export const FontSizes: { [key: string]: number } = {
+    largeHeading: 42,
+    normalHeading: 36,
+    smallHeading: 28,
+    largeText: 22,
+    normalText: 16,
+    smallText: 11
+};
+
 export const Paths: { [key: string]: string } = {
     home: "/",
     about: "/about",
