@@ -11,21 +11,28 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // Components
 import Home from "Templates/Home";
-import Away from "Templates/Away";
+import About from "Templates/About";
+import Downloads from "Templates/Downloads";
+import Opportunities from "Templates/Opportunities";
+
+// Constants and Utils
+import { Paths } from "Base/Constants";
 
 function App() {
-    const HomeComponent = () => <Home message="I'm home!" />;
-    const AwayComponent = () => <Away message="I'm away!" />;
+    const HomeComponent = () => <Home message="Home" />;
+    const AboutComponent = () => <About message="About" />;
+    const DownloadsComponent = () => <Downloads message="Downloads" />;
+    const OpportunitiesComponent = () => <Opportunities message="Opportunities" />;
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={HomeComponent} />
-                <Route path="/away" component={AwayComponent} />
+                <Route exact path={Paths.home} component={HomeComponent} />
+                <Route exact path={Paths.about} component={AboutComponent} />
+                <Route exact path={Paths.downloads} component={DownloadsComponent} />
+                <Route exact path={Paths.opportunities} component={OpportunitiesComponent} />
             </Switch>
         </BrowserRouter>
     );
 }
 
-// This is an example of type casting with flow: https://flow.org/en/docs/types/casting/
-// Prettier and flow typecasting do not work well together; prettier is too opinionated on parens.
 /* prettier-ignore */ ReactDOM.render(<App />, ((document): any).getElementById("app"));
