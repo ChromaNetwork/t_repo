@@ -11,7 +11,7 @@ type Props = {
     message: string
 };
 
-function Downloads(props: Props) {
+function Contact(props: Props) {
     const { message }: { message: string } = props;
     return (
         <div>
@@ -29,4 +29,4 @@ function Downloads(props: Props) {
     );
 }
 
-export default Downloads;
+export default Contact;

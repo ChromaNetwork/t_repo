@@ -23,6 +23,8 @@ function Opportunities(props: Props) {
             <NavLink to={Paths.downloads}>Downloads</NavLink>
             <br />
             <NavLink to={Paths.opportunities}>Opportunities</NavLink>
+            <br />
+            <NavLink to={Paths.contact}>Contact</NavLink>
         </div>
     );
 }

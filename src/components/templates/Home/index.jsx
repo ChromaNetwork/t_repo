@@ -22,6 +22,14 @@ function Home() {
             <NavLink to={Paths.downloads}>Downloads</NavLink>
             <br />
             <NavLink to={Paths.opportunities}>Opportunities</NavLink>
+            <br />
+            <NavLink to={Paths.contact}>Contact</NavLink>
+
+            <br />
+            <br />
+            <br />
+            <LargeHeading> Typography </LargeHeading>
+            <hr />
 
             <LargeHeading>Large Heading</LargeHeading>
             <NormalHeading>Normal Heading</NormalHeading>
@@ -30,6 +38,11 @@ function Home() {
             <NormalText>Normal Text</NormalText>
             <SmallText>Small Text</SmallText>
 
+            <br />
+            <br />
+            <br />
+            <LargeHeading> Colors </LargeHeading>
+            <hr />
             <ColorsDemo />
         </div>
     );

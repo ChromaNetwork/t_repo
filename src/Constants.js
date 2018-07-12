@@ -30,7 +30,8 @@ export const Paths: { [key: string]: string } = {
     home: "/",
     about: "/about",
     downloads: "/downloads",
-    opportunities: "/opportunities"
+    opportunities: "/opportunities",
+    contact: "/contact"
 };
 
 export const ExternalLinks: { [key: string]: string } = {
