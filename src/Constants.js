@@ -1,5 +1,7 @@
 // @flow
 
+export const FontFamily: string = "Mukta Malar";
+
 export const Colors: { [key: string]: string } = {
     darkPurple: "#7C3B67",
     lightPurple: "#A5508F",
@@ -11,17 +13,17 @@ export const Colors: { [key: string]: string } = {
     accentBlue: "#8FC4C9"
 };
 
-export const Measurements: { [key: string]: number } = {
-    basePadding: 24
+export const Measurements: { [key: string]: string } = {
+    basePadding: "24px"
 };
 
-export const FontSizes: { [key: string]: number } = {
-    largeHeading: 42,
-    normalHeading: 36,
-    smallHeading: 28,
-    largeText: 22,
-    normalText: 16,
-    smallText: 11
+export const FontSizes: { [key: string]: string } = {
+    largeHeading: "54px",
+    normalHeading: "36px",
+    smallHeading: "30px",
+    largeText: "24px",
+    normalText: "18px",
+    smallText: "14px"
 };
 
 export const Paths: { [key: string]: string } = {

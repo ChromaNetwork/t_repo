@@ -2,7 +2,7 @@
 
 // node_modules
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // Constants and Utils
 import { Paths } from "Base/Constants";
@@ -15,12 +15,14 @@ function Opportunities(props: Props) {
     const { message }: { message: string } = props;
     return (
         <div>
-            {message}
+            {message} <br />
+            <NavLink to={Paths.home}>Home</NavLink>
             <br />
-            <Link to={Paths.home}>Home</Link>
-            <Link to={Paths.about}>About</Link>
-            <Link to={Paths.downloads}>Downloads</Link>
-            <Link to={Paths.opportunities}>Opportunities</Link>
+            <NavLink to={Paths.about}>About</NavLink>
+            <br />
+            <NavLink to={Paths.downloads}>Downloads</NavLink>
+            <br />
+            <NavLink to={Paths.opportunities}>Opportunities</NavLink>
         </div>
     );
 }
