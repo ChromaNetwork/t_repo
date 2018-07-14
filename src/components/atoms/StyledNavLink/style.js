@@ -18,6 +18,7 @@ export default css`
     margin-left: ${Measurements.basePadding};
     margin-right: ${Measurements.basePadding};
     user-select: none;
+    padding-bottom: 5px;
 
     &:visited {
         color: ${props => props.theme.white};

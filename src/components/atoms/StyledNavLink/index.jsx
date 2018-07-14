@@ -32,11 +32,8 @@ export default function StyledNavLink(props: Props) {
             exact
             to={to}
             activeStyle={{
-                borderBottomStyle: "solid",
-                borderBottomWidth: "5px",
-                borderBottomColor: MainTheme.accentLightColor,
-                boxSizing: "border-box",
-                height: "50%"
+                paddingBottom: 0,
+                borderBottom: `solid 5px ${MainTheme.accentLightColor}`
             }}
         >
             {label}

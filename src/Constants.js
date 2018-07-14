@@ -7,7 +7,7 @@ export const Colors: { [key: string]: string } = {
     lightPurple: "#A5508F",
     darkBlue: "#223C4C",
     lightBlue: "#4B6F81",
-    black: "#36393E",
+    black: "#000000",
     white: "#FFFFFF",
     darkGray: "#454545",
     accentBlue: "#8FC4C9"
@@ -15,7 +15,25 @@ export const Colors: { [key: string]: string } = {
 
 export const Measurements: { [key: string]: string } = {
     basePadding: "24px",
-    headerHeight: "70px"
+    contentHorizontalPadding: "15%",
+    headerHeight: "70px",
+    nonHeroHeaderHeight: "118px"
+};
+
+export const Depths: { [key: string]: number } = {
+    lowest: -3,
+    lower: -2,
+    low: -1,
+    default: 0,
+    high: 1,
+    higher: 2,
+    highest: 3
+};
+
+export const MediaBreakpoints: { [key: string]: string } = {
+    tablet: "min-width: 768px",
+    desktop: "min-width: 992px",
+    wide: "min-width: 1200px"
 };
 
 export const FontSizes: { [key: string]: string } = {
@@ -73,6 +91,7 @@ export const HeaderLinks: Array<HeaderLink> = [
     { label: "About", url: Paths.about },
     { label: "Downloads", url: Paths.downloads },
     { label: "Opportunities", url: Paths.opportunities },
+    { label: "Contact", url: Paths.contact },
     { label: "Explorer", url: ExternalLinks.explorer, external: true },
     { label: "Store", url: ExternalLinks.store, external: true }
 ];
