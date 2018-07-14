@@ -5,10 +5,15 @@ import React from "react";
 import styled from "styled-components";
 
 // Constants
-import { Colors, FontSizes } from "Base/Constants";
+import { Colors } from "Base/Constants";
 
 // Types
 import type { Node } from "react";
+
+// Styles
+import LargeTextStyle from "./LargeText.style";
+import NormalTextStyle from "./NormalText.style";
+import SmallTextStyle from "./Smalltext.style";
 
 type Props = {
     className?: string,
@@ -17,15 +22,8 @@ type Props = {
     children: Node
 };
 
-const StyledText = styled.p`
-    margin: 0;
-    padding: 0;
-    color: ${props => props.color};
-    background-color: ${props => props.bgColor};
-`;
-
-const StyledLargeText = StyledText.extend`
-    font-size: ${FontSizes.largeText};
+const StyledLargeText = styled.p`
+    ${LargeTextStyle};
 `;
 
 export const LargeText = (props: Props) => {
@@ -43,8 +41,8 @@ LargeText.defaultProps = {
     className: ""
 };
 
-const StyledNormalText = StyledText.extend`
-    font-size: ${FontSizes.normalText};
+const StyledNormalText = styled.p`
+    ${NormalTextStyle};
 `;
 
 export const NormalText = (props: Props) => {
@@ -62,8 +60,8 @@ NormalText.defaultProps = {
     className: ""
 };
 
-const StyledSmallText = StyledText.extend`
-    font-size: ${FontSizes.smallText};
+const StyledSmallText = styled.p`
+    ${SmallTextStyle};
 `;
 
 export const SmallText = (props: Props) => {

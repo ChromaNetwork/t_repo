@@ -2,29 +2,31 @@
 
 // node_modules
 import React from "react";
-import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 // Constants and Utils
-import { Paths } from "Base/Constants";
+// import { Paths, Measurements } from "Base/Constants";
+
+// Assets
+import HeroImg from "Assets/herobg2.jpg";
 
 // Components
 import { LargeText, NormalText, SmallText } from "Atoms/StyledText";
 import { LargeHeading, NormalHeading, SmallHeading } from "Atoms/StyledHeading";
+import Header from "Organisms/Header";
 import ColorsDemo from "Molecules/dev/Colors";
+
+const Hero = styled.img`
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+`;
 
 function Home() {
     return (
         <div>
-            <NavLink to={Paths.home}>Home</NavLink>
-            <br />
-            <NavLink to={Paths.about}>About</NavLink>
-            <br />
-            <NavLink to={Paths.downloads}>Downloads</NavLink>
-            <br />
-            <NavLink to={Paths.opportunities}>Opportunities</NavLink>
-            <br />
-            <NavLink to={Paths.contact}>Contact</NavLink>
-
+            <Header heroFloat />
+            <Hero src={HeroImg} alt="" />
             <br />
             <br />
             <br />

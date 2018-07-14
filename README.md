@@ -4,11 +4,38 @@
 
 `yarn start-dev`
 
+Uses Material-UI for UI elements and layout.
+
+Supported browsers:
+https://material-ui.com/getting-started/supported-platforms/
+
+```
+IE	Edge	Firefox	Chrome	Safari
+11	>= 14	>= 45	>= 49	>= 10
+```
+
+Dependencies:
+
+```
+"@material-ui/core": "^1.3.1", -- Material-UI for flexible grid and UI components
+"babel-polyfill": "^6.26.0", -- For polyfill of ES7 features to ES5
+"react": "^16.4.1", -- React
+"react-dom": "^16.4.1", -- React
+"react-feather": "^1.1.1", -- Feather Icons in React Components
+"react-router-dom": "^4.3.1", -- Routing with react
+"styled-components": "^3.3.3"  -- Modular css themeing in-line
+```
+
 ## Tweaks that would improve the site long-term ("TODOs"):
 
--   Accessibility improvements (aria-attributes, etc.)
--   Localization (incl. rtl/ltr optimizations)
--   Basic CMS login / editing of content via portal -- storage of content on server or firebase integration
--   More responsive design (rem instead of pixels, flexible grid layouts, etc)
--   Automated github build/deployment
--   Testing on more browsers / devices.
+s - small effort
+m - medium effort
+l - large effort
+
+-   Accessibility improvements (aria-attributes, etc.) - s
+-   Localization (incl. rtl/ltr optimizations) - l
+-   Basic CMS login / editing of content via portal -- storage of content on server or firebase integration - l
+-   More responsive design (rem instead of pixels, flexible grid layouts, etc) - m
+-   Automated github build/deployment (CI) - s
+-   Testing on more browsers / devices. - m
+-   SEO - s

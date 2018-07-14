@@ -5,10 +5,15 @@ import React from "react";
 import styled from "styled-components";
 
 // Constants
-import { Colors, FontSizes } from "Base/Constants";
+import { Colors } from "Base/Constants";
 
 // Types
 import type { Node } from "react";
+
+// Styles
+import LargeHeadingStyle from "./LargeHeading.style";
+import NormalHeadingStyle from "./NormalHeading.style";
+import SmallHeadingStyle from "./SmallHeading.style";
 
 type Props = {
     className?: string,
@@ -18,11 +23,7 @@ type Props = {
 };
 
 const StyledLargeHeading = styled.h1`
-    margin: 0;
-    padding: 0;
-    color: ${props => props.color};
-    background-color: ${props => props.bgColor};
-    font-size: ${FontSizes.largeHeading};
+    ${LargeHeadingStyle};
 `;
 
 export const LargeHeading = (props: Props) => {
@@ -41,11 +42,7 @@ LargeHeading.defaultProps = {
 };
 
 const StyledNormalHeading = styled.h2`
-    margin: 0;
-    padding: 0;
-    color: ${props => props.color};
-    background-color: ${props => props.bgColor};
-    font-size: ${FontSizes.normalHeading};
+    ${NormalHeadingStyle};
 `;
 
 export const NormalHeading = (props: Props) => {
@@ -64,11 +61,7 @@ NormalHeading.defaultProps = {
 };
 
 const StyledSmallHeading = styled.h3`
-    margin: 0;
-    padding: 0;
-    color: ${props => props.color};
-    background-color: ${props => props.bgColor};
-    font-size: ${FontSizes.smallHeading};
+    ${SmallHeadingStyle};
 `;
 
 export const SmallHeading = (props: Props) => {

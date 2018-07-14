@@ -14,7 +14,8 @@ export const Colors: { [key: string]: string } = {
 };
 
 export const Measurements: { [key: string]: string } = {
-    basePadding: "24px"
+    basePadding: "24px",
+    headerHeight: "70px"
 };
 
 export const FontSizes: { [key: string]: string } = {
@@ -61,11 +62,17 @@ export const DownloadableFiles: { [key: string]: DownloadableFileLinks } = {
     }
 };
 
-export const HeaderLinks: Array<{ label: string, urls: Array<string> }> = [
-    { label: "Home", urls: [Paths.home] },
-    { label: "About", urls: [Paths.about] },
-    { label: "Downloads", urls: [Paths.downloads] },
-    { label: "Opportunities", urls: [Paths.opportunities] },
-    { label: "Explorer", urls: [ExternalLinks.explorer] },
-    { label: "Store", urls: [ExternalLinks.store] }
+export type HeaderLink = {
+    label: string,
+    url: string,
+    external?: boolean
+};
+
+export const HeaderLinks: Array<HeaderLink> = [
+    { label: "Home", url: Paths.home },
+    { label: "About", url: Paths.about },
+    { label: "Downloads", url: Paths.downloads },
+    { label: "Opportunities", url: Paths.opportunities },
+    { label: "Explorer", url: ExternalLinks.explorer, external: true },
+    { label: "Store", url: ExternalLinks.store, external: true }
 ];
