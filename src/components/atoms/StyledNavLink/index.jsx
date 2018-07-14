@@ -25,7 +25,7 @@ const StyledNavLinkComponent = styled(NavLink)`
 `;
 
 export default function StyledNavLink(props: Props) {
-    const { className, label, to } = props;
+    const { className, label, to, ...passthrough } = props;
     return (
         <StyledNavLinkComponent
             className={className}
@@ -35,6 +35,7 @@ export default function StyledNavLink(props: Props) {
                 paddingBottom: 0,
                 borderBottom: `solid 5px ${MainTheme.accentLightColor}`
             }}
+            {...passthrough}
         >
             {label}
         </StyledNavLinkComponent>

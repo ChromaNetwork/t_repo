@@ -25,15 +25,9 @@ const NavLinksContainer = styled.nav`
 const StyledAnchor = styled.a`
     ${NavLinkStyle};
 `;
-
-type Props = {
-    className?: string
-};
-
-export default function NavLinks(props: Props) {
-    const { className } = props;
+export default function NavLinks(props: any) {
     return (
-        <NavLinksContainer className={className}>
+        <NavLinksContainer {...props}>
             {HeaderLinks.map((link: HeaderLink) => {
                 if (link.external) {
                     return (
@@ -47,7 +41,3 @@ export default function NavLinks(props: Props) {
         </NavLinksContainer>
     );
 }
-
-NavLinks.defaultProps = {
-    className: ""
-};

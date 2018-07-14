@@ -24,8 +24,12 @@ type Props = {
 };
 
 export default function HeroImage(props: Props) {
-    const { srcDefault, children } = props;
-    return <HeroContainer srcDefault={srcDefault}>{children}</HeroContainer>;
+    const { srcDefault, children, ...passthrough } = props;
+    return (
+        <HeroContainer srcDefault={srcDefault} {...passthrough}>
+            {children}
+        </HeroContainer>
+    );
 }
 
 HeroImage.defaultProps = {

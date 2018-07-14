@@ -27,9 +27,9 @@ const StyledLargeText = styled.p`
 `;
 
 export const LargeText = (props: Props) => {
-    const { color, bgColor, className, children } = props;
+    const { color, bgColor, className, children, ...passThrough } = props;
     return (
-        <StyledLargeText color={color} bgColor={bgColor} className={className}>
+        <StyledLargeText color={color} bgColor={bgColor} className={className} {...passThrough}>
             {children}
         </StyledLargeText>
     );
@@ -46,9 +46,9 @@ const StyledNormalText = styled.p`
 `;
 
 export const NormalText = (props: Props) => {
-    const { color, bgColor, className, children } = props;
+    const { color, bgColor, className, children, ...passThrough } = props;
     return (
-        <StyledNormalText color={color} bgColor={bgColor} className={className}>
+        <StyledNormalText color={color} bgColor={bgColor} className={className} {...passThrough}>
             {children}
         </StyledNormalText>
     );
@@ -65,9 +65,9 @@ const StyledSmallText = styled.p`
 `;
 
 export const SmallText = (props: Props) => {
-    const { color, bgColor, className, children } = props;
+    const { color, bgColor, className, children, ...passthrough } = props;
     return (
-        <StyledSmallText color={color} bgColor={bgColor} className={className}>
+        <StyledSmallText color={color} bgColor={bgColor} className={className} {...passthrough}>
             {children}
         </StyledSmallText>
     );

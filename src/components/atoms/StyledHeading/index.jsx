@@ -27,9 +27,9 @@ const StyledLargeHeading = styled.h1`
 `;
 
 export const LargeHeading = (props: Props) => {
-    const { color, bgColor, className, children } = props;
+    const { color, bgColor, className, children, ...passthrough } = props;
     return (
-        <StyledLargeHeading color={color} bgColor={bgColor} className={className}>
+        <StyledLargeHeading color={color} bgColor={bgColor} className={className} {...passthrough}>
             {children}
         </StyledLargeHeading>
     );
@@ -46,9 +46,9 @@ const StyledNormalHeading = styled.h2`
 `;
 
 export const NormalHeading = (props: Props) => {
-    const { color, bgColor, className, children } = props;
+    const { color, bgColor, className, children, ...passthrough } = props;
     return (
-        <StyledNormalHeading color={color} bgColor={bgColor} className={className}>
+        <StyledNormalHeading color={color} bgColor={bgColor} className={className} {...passthrough}>
             {children}
         </StyledNormalHeading>
     );
@@ -65,9 +65,9 @@ const StyledSmallHeading = styled.h3`
 `;
 
 export const SmallHeading = (props: Props) => {
-    const { color, bgColor, className, children } = props;
+    const { color, bgColor, className, children, ...passthrough } = props;
     return (
-        <StyledSmallHeading color={color} bgColor={bgColor} className={className}>
+        <StyledSmallHeading color={color} bgColor={bgColor} className={className} {...passthrough}>
             {children}
         </StyledSmallHeading>
     );

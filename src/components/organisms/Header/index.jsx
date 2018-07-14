@@ -36,6 +36,7 @@ const LogoContainer = styled.div`
 `;
 
 const LogoLink = styled.img`
+    user-select: none;
     height: ${Measurements.headerHeight};
     align-self: center;
 `;
@@ -46,9 +47,9 @@ type Props = {
 };
 
 export default function Header(props: Props) {
-    const { className, heroFloat } = props;
+    const { className, heroFloat, ...passthrough } = props;
     return (
-        <HeaderContainer className={className} heroFloat={heroFloat}>
+        <HeaderContainer className={className} heroFloat={heroFloat} {...passthrough}>
             <LogoContainer>
                 <Link to="/">
                     <LogoLink src={LogoImg} alt="Tao Network" />
