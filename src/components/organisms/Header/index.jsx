@@ -15,6 +15,7 @@ import LogoImg from "Assets/m_tao.png";
 import HeaderContainerStyle from "./HeaderContainer.style";
 import LogoContainerStyle from "./LogoContainer.style";
 import LogoStyle from "./Logo.style";
+import NavLinksExtendedStyle from "./NavLinksExtended.style";
 
 const HeaderContainer = styled.div`
     ${HeaderContainerStyle};
@@ -26,6 +27,10 @@ const LogoContainer = styled.div`
 
 const LogoLink = styled.img`
     ${LogoStyle};
+`;
+
+const StyledNavLinks = styled(NavLinks)`
+    ${NavLinksExtendedStyle};
 `;
 
 type Props = {
@@ -42,7 +47,7 @@ export default function Header(props: Props) {
                     <LogoLink src={LogoImg} alt="Tao Network" />
                 </Link>
             </LogoContainer>
-            <NavLinks />
+            <StyledNavLinks />
         </HeaderContainer>
     );
 }

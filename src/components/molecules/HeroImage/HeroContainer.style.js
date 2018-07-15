@@ -13,6 +13,7 @@ export default css`
     min-height: 600px;
     position: relative;
     display: flex;
+    user-select: none;
 
     &::before {
         background-image: url(${props => props.srcDefault});
