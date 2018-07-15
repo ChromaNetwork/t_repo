@@ -17,8 +17,8 @@ IE	Edge	Firefox	Chrome	Safari
 Dependencies:
 
 ```
-"@material-ui/core": "^1.3.1", -- Material-UI for flexible grid and UI components
 "babel-polyfill": "^6.26.0", -- For polyfill of ES7 features to ES5
+"normalize.css": "^8.0.0", -- Normalizes the CSS of the site for cross-browser consistency
 "react": "^16.4.1", -- React
 "react-dom": "^16.4.1", -- React
 "react-feather": "^1.1.1", -- Feather Icons in React Components

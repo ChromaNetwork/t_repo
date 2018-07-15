@@ -12,6 +12,7 @@ export default css`
     min-width: 100vw;
     min-height: 600px;
     position: relative;
+    display: flex;
 
     &::before {
         background-image: url(${props => props.srcDefault});

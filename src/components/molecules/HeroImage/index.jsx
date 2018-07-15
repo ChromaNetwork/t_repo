@@ -4,6 +4,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// Components
+import Section from "Molecules/Section";
+
 // types
 import type { Node } from "react";
 
@@ -12,6 +15,10 @@ import HeroContainerStyle from "./HeroContainer.style";
 
 const HeroContainer = styled.div`
     ${HeroContainerStyle};
+`;
+
+const CenteredSection = styled(Section)`
+    align-self: center;
 `;
 
 type Props = {
@@ -27,7 +34,7 @@ export default function HeroImage(props: Props) {
     const { srcDefault, children, ...passthrough } = props;
     return (
         <HeroContainer srcDefault={srcDefault} {...passthrough}>
-            {children}
+            <CenteredSection>{children}</CenteredSection>
         </HeroContainer>
     );
 }

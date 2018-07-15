@@ -37,7 +37,7 @@ export const LargeText = (props: Props) => {
 
 LargeText.defaultProps = {
     color: Colors.black,
-    bgColor: Colors.white,
+    bgColor: "transparent",
     className: ""
 };
 
@@ -56,7 +56,7 @@ export const NormalText = (props: Props) => {
 
 NormalText.defaultProps = {
     color: Colors.black,
-    bgColor: Colors.white,
+    bgColor: "transparent",
     className: ""
 };
 
@@ -75,6 +75,6 @@ export const SmallText = (props: Props) => {
 
 SmallText.defaultProps = {
     color: Colors.black,
-    bgColor: Colors.white,
+    bgColor: "transparent",
     className: ""
 };

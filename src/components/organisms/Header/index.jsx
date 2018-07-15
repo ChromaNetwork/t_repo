@@ -5,40 +5,27 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-// Constants
-import { Measurements, Depths } from "Base/Constants";
-
 // Components
 import NavLinks from "Molecules/NavLinks";
 
 // Assets
 import LogoImg from "Assets/m_tao.png";
 
+// Styles
+import HeaderContainerStyle from "./HeaderContainer.style";
+import LogoContainerStyle from "./LogoContainer.style";
+import LogoStyle from "./Logo.style";
+
 const HeaderContainer = styled.div`
-    background-color: ${props => (props.heroFloat ? "transparent" : props.theme.black)};
-    height: ${props => (props.heroFloat ? Measurements.headerHeight : Measurements.nonHeroHeaderHeight)};
-    padding-left: ${Measurements.basePadding};
-    padding-right: ${Measurements.basePadding};
-    margin-top: ${props => (props.heroFloat ? Measurements.basePadding : 0)};
-    margin-bottom: ${props => (props.heroFloat ? Measurements.basePadding : 0)};
-    box-sizing: border-box;
-    display: flex;
-    position: ${props => (props.heroFloat ? "absolute" : "inherit")};
-    width: 100%;
-    z-index: ${Depths.highest};
+    ${HeaderContainerStyle};
 `;
 
 const LogoContainer = styled.div`
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    ${LogoContainerStyle};
 `;
 
 const LogoLink = styled.img`
-    user-select: none;
-    height: ${Measurements.headerHeight};
-    align-self: center;
+    ${LogoStyle};
 `;
 
 type Props = {

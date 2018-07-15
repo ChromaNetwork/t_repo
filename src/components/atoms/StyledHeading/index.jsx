@@ -37,7 +37,7 @@ export const LargeHeading = (props: Props) => {
 
 LargeHeading.defaultProps = {
     color: Colors.black,
-    bgColor: Colors.white,
+    bgColor: "transparent",
     className: ""
 };
 
@@ -56,7 +56,7 @@ export const NormalHeading = (props: Props) => {
 
 NormalHeading.defaultProps = {
     color: Colors.black,
-    bgColor: Colors.white,
+    bgColor: "transparent",
     className: ""
 };
 
@@ -75,6 +75,6 @@ export const SmallHeading = (props: Props) => {
 
 SmallHeading.defaultProps = {
     color: Colors.black,
-    bgColor: Colors.white,
+    bgColor: "transparent",
     className: ""
 };

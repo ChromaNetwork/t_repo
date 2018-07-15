@@ -11,7 +11,8 @@
         "react/jsx-indent": "off",
         "react/jsx-one-expression-per-line": "off",
         "react/destructuring-assignment": "off",
-        "react/jsx-indent-props": "off"
+        "react/jsx-indent-props": "off",
+        "no-use-before-define": "off"
     },
     "settings": {
         "import/resolver": "webpack"
