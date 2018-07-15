@@ -4,7 +4,7 @@
 import { css } from "styled-components";
 
 export default css`
-    background-color: ${props => props.theme.tertiaryColor};
+    background-color: ${props => props.theme.accentLightColor};
     width: 33%;
     height: 5px;
     border: none;

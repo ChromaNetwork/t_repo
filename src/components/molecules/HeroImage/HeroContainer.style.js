@@ -4,7 +4,7 @@
 import { css } from "styled-components";
 
 // Constants
-import { Depths } from "Base/Constants";
+import { Depths, Measurements, MediaBreakpoints } from "Base/Constants";
 
 export default css`
     width: 100vw;
@@ -13,7 +13,7 @@ export default css`
     min-height: 600px;
     position: relative;
     display: flex;
-    user-select: none;
+    padding-top: ${Measurements.headerHeightPadding};
 
     &::before {
         background-image: url(${props => props.srcDefault});
@@ -40,5 +40,9 @@ export default css`
         width: 100%;
         height: 100%;
         z-index: ${Depths.lower};
+    }
+
+    @media (${MediaBreakpoints.desktop}) {
+        padding-top: 0;
     }
 `;

@@ -12,13 +12,14 @@ import type { Node } from "react";
 
 // Styles
 import HeroContainerStyle from "./HeroContainer.style";
+import CenteredSectionStyle from "./CenteredSection.style";
 
 const HeroContainer = styled.div`
     ${HeroContainerStyle};
 `;
 
 const CenteredSection = styled(Section)`
-    align-self: center;
+    ${CenteredSectionStyle};
 `;
 
 type Props = {

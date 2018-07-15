@@ -9,7 +9,7 @@ import { Measurements, PlaceholderText } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Assets
-import HeroImg from "Assets/herobg2.jpg";
+import HeroImg from "Assets/herobg.jpg";
 
 // Components
 import HeroImage from "Molecules/HeroImage";
