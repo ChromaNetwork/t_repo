@@ -20,7 +20,7 @@ export const Measurements: { [key: string]: string } = {
     basePadding: "24px",
     hPadding: "15%",
     headerHeight: "70px",
-    nonHeroHeaderHeight: "118px"
+    headerHeightPadding: "118px"
 };
 
 export const Depths: { [key: string]: number } = {
@@ -40,12 +40,19 @@ export const MediaBreakpoints: { [key: string]: string } = {
 };
 
 export const FontSizes: { [key: string]: string } = {
-    largeHeading: "54px",
-    normalHeading: "36px",
-    smallHeading: "30px",
-    largeText: "24px",
-    normalText: "18px",
-    smallText: "14px"
+    largeHeading: "40px",
+    normalHeading: "28px",
+    smallHeading: "22px",
+    largeText: "18px",
+    normalText: "14px",
+    smallText: "11px",
+
+    t_largeHeading: "54px",
+    t_normalHeading: "36px",
+    t_smallHeading: "30px",
+    t_largeText: "24px",
+    t_normalText: "18px",
+    t_smallText: "14px"
 };
 
 export const Paths: { [key: string]: string } = {

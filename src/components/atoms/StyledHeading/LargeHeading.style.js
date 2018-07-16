@@ -4,12 +4,16 @@
 import { css } from "styled-components";
 
 // Constants
-import { FontSizes } from "Base/Constants";
+import { FontSizes, MediaBreakpoints } from "Base/Constants";
+
+// Styles
+import BaseHeadingStyle from "./BaseHeading.style";
 
 export default css`
-    margin: 0;
-    padding: 0;
-    color: ${props => props.color};
-    background-color: ${props => props.bgColor};
+    ${BaseHeadingStyle};
     font-size: ${FontSizes.largeHeading};
+
+    @media (${MediaBreakpoints.tablet}) {
+        font-size: ${FontSizes.t_largeHeading};
+    }
 `;

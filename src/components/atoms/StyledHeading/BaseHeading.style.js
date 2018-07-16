@@ -9,5 +9,5 @@ export default css`
     color: ${props => props.color};
     background-color: ${props => props.bgColor};
     text-rendering: optimizeLegibility;
-    line-height: 120%;
+    line-height: 125%;
 `;
