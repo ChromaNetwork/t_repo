@@ -2,9 +2,11 @@
 
 // node_modules
 import { css } from "styled-components";
+import { prop } from "styled-tools";
 
 // Constants
 import { MediaBreakpoints, Measurements, Depths } from "Base/Constants";
+import { ThemeProps } from "Base/MainTheme";
 
 export default css`
     display: flex;
@@ -12,7 +14,7 @@ export default css`
     top: 100%;
     left: 0;
     right: 0;
-    background-color: ${props => props.theme.black};
+    background-color: ${prop(ThemeProps.black)};
     z-index: ${Depths.highest};
     display: flex;
     flex-direction: column;

@@ -2,6 +2,10 @@
 
 // node_modules
 import { css } from "styled-components";
+import { prop } from "styled-tools";
+
+// Constants
+import { ThemeProps } from "Base/MainTheme";
 
 // Styles
 import NavLinkDefault from "./NavLinkDefault.style";
@@ -18,7 +22,7 @@ export default css`
         border-bottom: none;
 
         &:hover {
-            color: ${props => props.theme.accentLightColor};
+            color: ${prop(ThemeProps.accentLightColor)};
             border-bottom: none;
         }
     }

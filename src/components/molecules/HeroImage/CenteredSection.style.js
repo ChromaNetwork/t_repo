@@ -11,5 +11,5 @@ export default css`
     justify-content: center;
     padding-top: ${Measurements.basePadding};
     padding-bottom: ${Measurements.basePadding};
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
 `;

@@ -2,9 +2,11 @@
 
 // node_modules
 import { css } from "styled-components";
+import { prop } from "styled-tools";
 
 // Constants
 import { Depths, Measurements, MediaBreakpoints } from "Base/Constants";
+import { ThemeProps } from "Base/MainTheme";
 
 export default css`
     width: 100vw;
@@ -17,7 +19,7 @@ export default css`
     padding-top: ${Measurements.headerHeightPadding};
 
     &::before {
-        background-image: url(${props => props.srcDefault});
+        background-image: url(${prop("srcDefault")});
         background-size: cover;
         background-position: center;
         content: "";
@@ -31,7 +33,7 @@ export default css`
     }
 
     &::after {
-        background: linear-gradient(${props => props.theme.black}, ${props => props.theme.accentDarkColor});
+        background: linear-gradient(${prop(ThemeProps.black)}, ${prop(ThemeProps.accentDarkColor)});
         opacity: 0.4;
         content: "";
         display: block;
