@@ -10,7 +10,7 @@ import { Measurements } from "Base/Constants";
 import NormalTextStyle from "Atoms/StyledText/NormalText.style";
 
 export default css`
-    transition: 0.15s;
+    transition: border-bottom 0.15s;
     ${NormalTextStyle};
     align-self: center;
     color: ${props => props.theme.white};
@@ -19,16 +19,16 @@ export default css`
     margin-right: ${Measurements.basePadding};
     user-select: none;
     padding-bottom: 5px;
+    border-bottom: none;
 
     &:visited {
         color: ${props => props.theme.white};
     }
     &:hover {
-        transition: 0.15s;
-        color: ${props => props.theme.accentLightColor};
+        border-bottom: 5px solid ${props => props.theme.accentLightColor};
+        padding-bottom: 0;
     }
     &:active {
-        transition: 0.15s;
         color: ${props => props.theme.white};
     }
 `;

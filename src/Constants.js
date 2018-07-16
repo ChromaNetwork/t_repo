@@ -3,9 +3,32 @@
 export const PlaceholderText: string =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-export const FontFamily: string = "Mukta Malar";
+export const PlaceholderImageUrls: {
+    square: string,
+    wide: string,
+    large: string,
+    medium: string,
+    small: string,
+    irregular: string
+} = {
+    square: "http://via.placeholder.com/150x150",
+    wide: "http://via.placeholder.com/3840x2160",
+    large: "http://via.placeholder.com/2000x1200",
+    medium: "http://via.placeholder.com/1024x768",
+    irregular: "http://via.placeholder.com/300x125",
+    small: "http://via.placeholder.com/32x32"
+};
 
-export const Colors: { [key: string]: string } = {
+export const Colors: {
+    darkPurple: string,
+    lightPurple: string,
+    darkBlue: string,
+    lightBlue: string,
+    black: string,
+    white: string,
+    darkGray: string,
+    accentBlue: string
+} = {
     darkPurple: "#7C3B67",
     lightPurple: "#A5508F",
     darkBlue: "#223C4C",
@@ -16,14 +39,27 @@ export const Colors: { [key: string]: string } = {
     accentBlue: "#8FC4C9"
 };
 
-export const Measurements: { [key: string]: string } = {
+export const Measurements: {
+    basePadding: string,
+    hPadding: string,
+    headerHeight: string,
+    headerHeightPadding: string
+} = {
     basePadding: "24px",
     hPadding: "15%",
     headerHeight: "70px",
     headerHeightPadding: "118px"
 };
 
-export const Depths: { [key: string]: number } = {
+export const Depths: {
+    lowest: number,
+    lower: number,
+    low: number,
+    default: number,
+    high: number,
+    higher: number,
+    highest: number
+} = {
     lowest: -3,
     lower: -2,
     low: -1,
@@ -33,13 +69,30 @@ export const Depths: { [key: string]: number } = {
     highest: 3
 };
 
-export const MediaBreakpoints: { [key: string]: string } = {
+export const MediaBreakpoints: {
+    tablet: string,
+    desktop: string,
+    wide: string
+} = {
     tablet: "min-width: 768px",
     desktop: "min-width: 992px",
     wide: "min-width: 1200px"
 };
 
-export const FontSizes: { [key: string]: string } = {
+export const FontSizes: {
+    largeHeading: string,
+    normalHeading: string,
+    smallHeading: string,
+    largeText: string,
+    normalText: string,
+    smallText: string,
+    t_largeHeading: string,
+    t_normalHeading: string,
+    t_smallHeading: string,
+    t_largeText: string,
+    t_normalText: string,
+    t_smallText: string
+} = {
     largeHeading: "40px",
     normalHeading: "28px",
     smallHeading: "22px",
@@ -55,7 +108,13 @@ export const FontSizes: { [key: string]: string } = {
     t_smallText: "14px"
 };
 
-export const Paths: { [key: string]: string } = {
+export const Paths: {
+    home: string,
+    about: string,
+    downloads: string,
+    opportunities: string,
+    contact: string
+} = {
     home: "/",
     about: "/about",
     downloads: "/downloads",
@@ -63,7 +122,14 @@ export const Paths: { [key: string]: string } = {
     contact: "/contact"
 };
 
-export const ExternalLinks: { [key: string]: string } = {
+export const ExternalLinks: {
+    exchange: string,
+    explorer: string,
+    sourceCode: string,
+    discordInvite: string,
+    slackInvite: string,
+    store: string
+} = {
     exchange: "https://c-cex.com/?p=xto-btc",
     explorer: "http://taoexplorer.com/",
     sourceCode: "https://github.com/taoblockchain/tao-core",
@@ -74,7 +140,12 @@ export const ExternalLinks: { [key: string]: string } = {
 
 export type DownloadableFileLink = { name: string, url: string };
 export type DownloadableFileLinks = { currentLink: DownloadableFileLink, olderLinks: Array<DownloadableFileLink> };
-export const DownloadableFiles: { [key: string]: DownloadableFileLinks } = {
+export const DownloadableFiles: {
+    whitepaper: DownloadableFileLinks,
+    macOSWallet: DownloadableFileLinks,
+    windowsWallet: DownloadableFileLinks,
+    linuxWallet: DownloadableFileLinks
+} = {
     whitepaper: { currentLink: { name: "v0.3", url: "http://tao.network/XTORoadmapv0.3.pdf" }, olderLinks: [] },
     macOSWallet: {
         currentLink: { name: "0.10.0.0", url: "https://tao.network/files/Tao-Qt-0.10.0.0.dmg" },
