@@ -13,6 +13,7 @@ export default css`
     min-height: 600px;
     position: relative;
     display: flex;
+    box-sizing: border-box;
     padding-top: ${Measurements.headerHeightPadding};
 
     &::before {
