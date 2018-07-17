@@ -13,8 +13,8 @@ import HeroImg from "Assets/herobg.jpg";
 
 // Components
 import HeroImage from "Molecules/HeroImage";
+import TextBlock from "Molecules/TextBlock";
 import Header from "Organisms/Header";
-import TextBlock from "Organisms/TextBlock";
 
 const HeaderContainer = styled.div`
     padding-bottom: ${Measurements.basePadding};
