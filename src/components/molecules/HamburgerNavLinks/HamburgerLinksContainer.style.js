@@ -16,7 +16,6 @@ export default css`
     right: 0;
     background-color: ${prop(ThemeProps.black)};
     z-index: ${Depths.highest};
-    display: flex;
     flex-direction: column;
     margin-left: ${Measurements.basePadding};
     margin-right: ${Measurements.basePadding};

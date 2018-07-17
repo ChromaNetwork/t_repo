@@ -1,0 +1,45 @@
+// @flow
+
+// node_modules
+import { css } from "styled-components";
+
+// Animation Config
+import SlideDownConfig from "./SlideDown.config";
+
+export default css`
+    && {
+
+        &.${SlideDownConfig.className}-appear {
+
+        }
+
+        &.${SlideDownConfig.className}-appear {
+            
+        }
+
+        &.${SlideDownConfig.className}-enter {
+            
+        }
+
+        &.${SlideDownConfig.className}-enter-active {
+            
+        }
+
+
+        &.${SlideDownConfig.className}-enter-active {
+            
+        }
+
+        &.${SlideDownConfig.className}-exit {
+            
+        }
+
+        &.${SlideDownConfig.className}-exit-active {
+            
+        }
+
+        &.${SlideDownConfig.className}-exit-done {
+            
+        }
+    }
+`;
