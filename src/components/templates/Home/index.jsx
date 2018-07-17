@@ -15,6 +15,10 @@ import HeroImg from "Assets/herobg.jpg";
 import HeroImage from "Molecules/HeroImage";
 import TextBlock from "Molecules/TextBlock";
 import Header from "Organisms/Header";
+import Section from "Atoms/Section";
+
+// DevComponents
+import Colors from "Dev/Colors";
 
 const HeaderContainer = styled.div`
     padding-bottom: ${Measurements.basePadding};
@@ -35,6 +39,9 @@ function Home() {
                     />
                 </HeroImage>
             </HeaderContainer>
+            <Section>
+                <Colors />
+            </Section>
         </Fragment>
     );
 }

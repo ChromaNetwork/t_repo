@@ -11,6 +11,7 @@
             "Molecules/*": ["./src/components/molecules/*"],
             "Organisms/*": ["./src/components/organisms/*"],
             "Templates/*": ["./src/components/templates/*"],
+            "Dev/*": ["./src/components/dev/*"],
             "Assets/*": ["./src/assets/*"]
         }
     },

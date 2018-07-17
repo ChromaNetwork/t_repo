@@ -47,6 +47,7 @@ const webpackConfig = {
             Molecules: path.resolve(paths.components, "molecules/"),
             Organisms: path.resolve(paths.components, "organisms/"),
             Templates: path.resolve(paths.components, "templates/"),
+            Dev: path.resolve(paths.components, "dev/"),
             Assets: path.resolve(paths.src, "assets/")
         },
         extensions: [".js", ".jsx"]
