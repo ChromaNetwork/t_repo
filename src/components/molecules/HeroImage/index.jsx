@@ -5,7 +5,7 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-import Section from "Molecules/Section";
+import Section from "Atoms/Section";
 
 // types
 import type { Node } from "react";

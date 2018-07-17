@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 // Components
-import NavLinks from "Molecules/NavLinks";
+import HeaderNavLinks from "Molecules/HeaderNavLinks";
 
 // Assets
 import LogoImg from "Assets/m_tao.png";
@@ -29,7 +29,7 @@ const LogoLink = styled.img`
     ${LogoStyle};
 `;
 
-const StyledNavLinks = styled(NavLinks)`
+const StyledNavLinks = styled(HeaderNavLinks)`
     ${NavLinksExtendedStyle};
 `;
 

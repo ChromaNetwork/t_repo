@@ -21,6 +21,7 @@ export default css`
     margin-left: ${Measurements.basePadding};
     margin-right: ${Measurements.basePadding};
     padding: ${Measurements.basePadding};
+    overflow: hidden;
 
     @media (${MediaBreakpoints.desktop}) {
         display: none;
