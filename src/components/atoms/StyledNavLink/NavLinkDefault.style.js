@@ -5,23 +5,21 @@ import { css } from "styled-components";
 import { prop } from "styled-tools";
 
 // Constants
-import { Measurements } from "Base/Constants";
 import { ThemeProps } from "Base/MainTheme";
+import { Measurements } from "Base/Constants";
 
 // Styles
 import NormalTextStyle from "Atoms/StyledText/NormalText.style";
 
 export default css`
-    transition: border-bottom 0.15s;
     ${NormalTextStyle};
-    align-self: center;
     color: ${prop(ThemeProps.white)};
     text-decoration: none;
-    margin-left: ${Measurements.basePadding};
-    margin-right: ${Measurements.basePadding};
     user-select: none;
     padding-bottom: 5px;
     border-bottom: none;
+    margin-left: ${Measurements.basePadding};
+    margin-right: ${Measurements.basePadding};
 
     &:visited {
         color: ${prop(ThemeProps.white)};
