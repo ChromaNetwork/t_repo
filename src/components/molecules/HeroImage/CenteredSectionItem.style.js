@@ -8,5 +8,6 @@ import { css } from "styled-components";
 export default css`
     align-self: center;
     justify-content: center;
+    text-align: justify;
     width: 100%;
 `;

@@ -53,13 +53,19 @@ const StyledSmallText = styled(SmallText)`
     }
 `;
 
+const HeadingContainer = styled.div`
+    && {
+        text-align: left;
+    }
+`;
+
 export default function Section(props: Props) {
     const { header, headerSize, text, textSize, headerColor, textColor, ...passthrough } = props;
     const Heading = GetHeading(header, headerSize, headerColor);
     const Text = GetText(text, textSize, textColor);
     return (
         <Container {...passthrough}>
-            {Heading}
+            <HeadingContainer>{Heading}</HeadingContainer>
             {Text}
         </Container>
     );

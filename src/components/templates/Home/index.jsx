@@ -10,6 +10,7 @@ import MainTheme from "Base/MainTheme";
 
 // Assets
 import HeroImg from "Assets/herobg.jpg";
+import IconWhite from "Assets/iconwhite.png";
 import Panorama from "Assets/panorama.jpg";
 
 // Components
@@ -144,6 +145,9 @@ function Home() {
                 </SectionItem>
             </Section>
             <Section bgColor={MainTheme.primaryColor}>
+                <SectionItem style={{ justifyContent: "center" }}>
+                    <img style={{ width: "80%", alignSelf: "center" }} src={IconWhite} alt="" />
+                </SectionItem>
                 <SectionItem>
                     <TextBlock
                         header="Color Background Section"
