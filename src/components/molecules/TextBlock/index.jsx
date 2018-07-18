@@ -12,8 +12,8 @@ import MainTheme from "Base/MainTheme";
 
 // Components
 import Separator from "Atoms/Separator";
-import { LargeHeading, NormalHeading, SmallHeading } from "Atoms/StyledHeading";
-import { LargeText, NormalText, SmallText } from "Atoms/StyledText";
+import { LargeHeading, NormalHeading, SmallHeading } from "Atoms/Heading";
+import { LargeText, NormalText, SmallText } from "Atoms/Text";
 
 // Styles
 import ContainerStyle from "./Container.style";
@@ -27,7 +27,8 @@ type Props = {
     headerColor?: string,
     text: string,
     textSize?: Size,
-    textColor?: string
+    textColor?: string,
+    centerHeader?: boolean
 };
 
 const Container = styled.div`
@@ -69,7 +70,8 @@ Section.defaultProps = {
     headerSize: "normal",
     headerColor: MainTheme.black,
     textSize: "normal",
-    textColor: MainTheme.black
+    textColor: MainTheme.black,
+    centerHeader: false
 };
 
 function GetHeading(

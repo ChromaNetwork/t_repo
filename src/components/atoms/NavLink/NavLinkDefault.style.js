@@ -9,7 +9,7 @@ import { ThemeProps } from "Base/MainTheme";
 import { Measurements } from "Base/Constants";
 
 // Styles
-import NormalTextStyle from "Atoms/StyledText/NormalText.style";
+import NormalTextStyle from "Atoms/Text/NormalText.style";
 
 export default css`
     ${NormalTextStyle};

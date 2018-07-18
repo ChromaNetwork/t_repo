@@ -11,14 +11,14 @@ import { HeaderLinks } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Components
-import StyledNavLink from "Atoms/StyledNavLink";
+import StyledNavLink from "Atoms/NavLink";
 
 // Types
 import type { HeaderLink } from "Base/Constants";
 
 // Styles
-import NavLinkStyle from "Atoms/StyledNavLink/NavLinkDefault.style";
-import NavLinkVerticalStyle from "Atoms/StyledNavLink/NavLinkVertical.style";
+import NavLinkStyle from "Atoms/NavLink/NavLinkDefault.style";
+import NavLinkVerticalStyle from "Atoms/NavLink/NavLinkVertical.style";
 import HamburgerNavLinksContainerStyle from "./HamburgerNavLinksContainer.style";
 import HamburgerToggleStyle from "./Hamburger.style";
 import HamburgerLinksContainerStyle from "./HamburgerLinksContainer.style";

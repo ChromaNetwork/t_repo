@@ -22,6 +22,12 @@ const BgImageCss = css`
     }
 `;
 
+const BgColorCss = css`
+    && {
+        background-color: ${ifProp("bgColor", prop("bgColor"), "transparent")};
+    }
+`;
+
 export default css`
     display: flex;
     flex-direction: column;
@@ -31,6 +37,7 @@ export default css`
     padding-bottom: ${Measurements.basePadding};
 
     ${ifProp("bgSrcDefault", BgImageCss, "")};
+    ${ifProp("bgColor", BgColorCss, "")};
 
     @media (${MediaBreakpoints.tablet}) {
         flex-direction: row;

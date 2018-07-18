@@ -13,7 +13,6 @@ export default css`
     margin: ${Measurements.gutter} 0 ${Measurements.gutter} 0;
 
     @media (${MediaBreakpoints.tablet}) {
-        flex-direction: row;
         margin: 0 ${Measurements.gutter} 0 ${Measurements.gutter};
     }
 `;

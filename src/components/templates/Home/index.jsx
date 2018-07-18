@@ -2,9 +2,10 @@
 
 // node_modules
 import React, { Fragment } from "react";
+import styled from "styled-components";
 
 // Constants and Utils
-import { PlaceholderText } from "Base/Constants";
+import { PlaceholderText, Measurements } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Assets
@@ -17,9 +18,16 @@ import TextBlock from "Molecules/TextBlock";
 import Header from "Organisms/Header";
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
+import CircleButton from "Atoms/CircleButton";
+import { LargeHeading } from "Atoms/Heading";
 
 // DevComponents
 import Colors from "Dev/Colors";
+
+const CenteredLargeTitle = styled(LargeHeading)`
+    align-self: center;
+    padding-bottom: ${Measurements.basePadding};
+`;
 
 function Home() {
     return (
@@ -60,6 +68,99 @@ function Home() {
                         textColor={MainTheme.white}
                         headerColor={MainTheme.white}
                     />
+                </SectionItem>
+            </Section>
+            <Section>
+                <SectionItem>
+                    <CenteredLargeTitle>Icon Tests</CenteredLargeTitle>
+                    <div style={{ flexDirection: "row", display: "flex", justifyContent: "center" }}>
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            size="small"
+                            iconName="Twitter"
+                        />
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            iconName="Twitter"
+                        />
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            size="large"
+                            iconName="Twitter"
+                        />
+                    </div>
+
+                    <div style={{ flexDirection: "row", display: "flex", justifyContent: "center" }}>
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            size="small"
+                            iconName="Github"
+                        />
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            iconName="Github"
+                        />
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            size="large"
+                            iconName="Github"
+                        />
+                    </div>
+
+                    <div style={{ flexDirection: "row", display: "flex", justifyContent: "center" }}>
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            size="small"
+                            iconName="Slack"
+                        />
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            iconName="Slack"
+                        />
+                        <CircleButton
+                            onClick={() => {
+                                console.log("click");
+                            }}
+                            size="large"
+                            iconName="Slack"
+                        />
+                    </div>
+                </SectionItem>
+            </Section>
+            <Section bgColor={MainTheme.primaryColor}>
+                <SectionItem>
+                    <TextBlock
+                        header="Color Background Section"
+                        headerSize="normal"
+                        text={PlaceholderText}
+                        textSize="normal"
+                        textColor={MainTheme.white}
+                        headerColor={MainTheme.white}
+                    />
+
+                    <TextBlock text={PlaceholderText} textSize="normal" textColor={MainTheme.white} />
+                </SectionItem>
+            </Section>
+            <Section>
+                <SectionItem>
+                    <CenteredLargeTitle>Our Partners</CenteredLargeTitle>
+                    <TextBlock text={PlaceholderText} textSize="normal" />
                 </SectionItem>
             </Section>
         </Fragment>
