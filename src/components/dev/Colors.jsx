@@ -65,14 +65,6 @@ const White = styled(LargeText)`
     display: inline-block;
 `;
 
-const Disabled = styled(LargeText)`
-    color: ${props => props.theme.white};
-    background-color: ${props => props.theme.disabledColor};
-    height: ${size};
-    width: ${size};
-    display: inline-block;
-`;
-
 const Container = styled.div`
     flex: 1;
 `;
@@ -89,7 +81,6 @@ export default function() {
             <br />
             <Black>Black</Black>
             <White>White</White>
-            <Disabled>Disabled</Disabled>
         </Container>
     );
 }
