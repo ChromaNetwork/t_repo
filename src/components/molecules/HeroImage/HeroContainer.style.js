@@ -33,7 +33,7 @@ export default css`
     }
 
     &::after {
-        background: linear-gradient(${prop(ThemeProps.black)}, ${prop(ThemeProps.accentDarkColor)});
+        background: linear-gradient(${prop(ThemeProps.black)}, ${prop(ThemeProps.primaryColor)});
         opacity: 0.4;
         content: "";
         display: block;

@@ -43,12 +43,14 @@ export const Measurements: {
     basePadding: string,
     hPadding: string,
     headerHeight: string,
-    headerHeightPadding: string
+    headerHeightPadding: string,
+    gutter: string
 } = {
     basePadding: "24px",
-    hPadding: "15%",
+    hPadding: "10%",
     headerHeight: "70px",
-    headerHeightPadding: "118px"
+    headerHeightPadding: "118px",
+    gutter: "12px"
 };
 
 export const Depths: {

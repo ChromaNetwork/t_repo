@@ -4,7 +4,7 @@
 import React from "react";
 import styled from "styled-components";
 
-// components
+// Components
 import { LargeText } from "Atoms/StyledText";
 
 const size: string = "200px";

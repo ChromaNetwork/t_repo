@@ -19,6 +19,8 @@ export default css`
         padding: 5px 0;
         text-align: center;
         border-bottom: none;
+        margin-left: auto;
+        margin-right: auto;
 
         &:hover {
             color: ${prop(ThemeProps.accentLightColor)};
