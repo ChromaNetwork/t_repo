@@ -20,6 +20,7 @@ export default css`
     background-color: ${prop(ThemeProps.white)};
     cursor: ${ifProp({ hover: true }, "pointer", "initial")};
     padding: ${Measurements.gutter};
+    border-radius: 2px;
 
     ${switchProp(prop("level", "1"), {
         "1": css`
