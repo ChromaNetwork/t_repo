@@ -2,7 +2,7 @@
 
 // node_modules
 import { css } from "styled-components";
-import { prop } from "styled-tools";
+import { prop, ifProp } from "styled-tools";
 
 // Constants
 import { Depths, Measurements, MediaBreakpoints } from "Base/Constants";
@@ -10,7 +10,12 @@ import { ThemeProps } from "Base/MainTheme";
 
 export default css`
     width: 100vw;
-    height: 100vh;
+    ${ifProp(
+        "fullscreen",
+        css`
+            height: 100vh;
+        `
+    )};
     min-width: 100vw;
     min-height: 600px;
     position: relative;

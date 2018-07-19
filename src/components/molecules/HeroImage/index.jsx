@@ -33,6 +33,7 @@ type Props = {
     // srcTablet?: string,
     // srcDesktop?: string,
     // srcWide?: string,
+    fullscreen?: boolean,
     srcDefault: string,
     children?: Node
 };
@@ -53,5 +54,6 @@ HeroImage.defaultProps = {
     // srcTablet: "",
     // srcDesktop: "",
     // srcWide: "",
+    fullscreen: false,
     children: null
 };

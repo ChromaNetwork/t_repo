@@ -35,7 +35,7 @@ function Home() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage srcDefault={HeroImg}>
+            <HeroImage fullscreen srcDefault={HeroImg}>
                 <TextBlock
                     header="Here's to the Artists."
                     headerSize="large"
