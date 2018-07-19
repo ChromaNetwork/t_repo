@@ -55,7 +55,7 @@ function Home() {
                     <TextBlock
                         header="Full-Art Section"
                         headerSize="normal"
-                        text={`${PlaceholderText}${PlaceholderText}`}
+                        text={`${PlaceholderText} ${PlaceholderText}`}
                         textSize="normal"
                         textColor={MainTheme.white}
                         headerColor={MainTheme.white}

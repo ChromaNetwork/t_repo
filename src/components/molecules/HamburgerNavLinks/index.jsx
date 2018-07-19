@@ -4,7 +4,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Menu, X } from "react-feather";
-import OnClickOutside from "react-onclickoutside";
 
 // Constants
 import { HeaderLinks } from "Base/Constants";
@@ -52,60 +51,54 @@ type State = {
     show: boolean
 };
 
-export default OnClickOutside(
-    class NavLinks extends React.Component<any, State> {
-        constructor(props: any) {
-            super(props);
-            this.state = {
-                show: false
-            };
-        }
-
-        getLinks = (vertical: boolean): Array<any> =>
-            HeaderLinks.map((link: HeaderLink) => {
-                if (link.external) {
-                    return vertical ? (
-                        <StyledAnchorVertical key={link.label} href={link.url}>
-                            {link.label}
-                        </StyledAnchorVertical>
-                    ) : (
-                        <StyledAnchor key={link.label} href={link.url}>
-                            {link.label}
-                        </StyledAnchor>
-                    );
-                }
-                return <StyledNavLink vertical={vertical} key={link.label} label={link.label} to={link.url} />;
-            });
-
-        toggleHamburgerMenu = (e: SyntheticMouseEvent<*>) => {
-            this.setState(prevState => ({ show: !prevState.show }));
-            e.preventDefault();
-            e.stopPropagation();
+export default class NavLinks extends React.Component<any, State> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            show: false
         };
-
-        handleClickOutside = (evt: SyntheticMouseEvent<*>) => {
-            const { show } = this.state;
-            if (!show) {
-                return;
-            }
-            this.setState({ show: false });
-            evt.stopPropagation();
-            evt.preventDefault();
-        };
-
-        render() {
-            const { show } = this.state;
-            return (
-                <HamburgerNavLinksContainer {...this.props}>
-                    {!show && (
-                        <HamburgerToggleOn onClick={this.toggleHamburgerMenu} color={MainTheme.white} size={32} />
-                    )}
-                    {show && (
-                        <HamburgerToggleOff onClick={this.toggleHamburgerMenu} color={MainTheme.white} size={32} />
-                    )}
-                    {show && <HamburgerLinksContainer show={show}>{this.getLinks(true)}</HamburgerLinksContainer>}
-                </HamburgerNavLinksContainer>
-            );
-        }
     }
-);
+
+    getLinks = (vertical: boolean): Array<any> =>
+        HeaderLinks.map((link: HeaderLink) => {
+            if (link.external) {
+                return vertical ? (
+                    <StyledAnchorVertical key={link.label} href={link.url}>
+                        {link.label}
+                    </StyledAnchorVertical>
+                ) : (
+                    <StyledAnchor key={link.label} href={link.url}>
+                        {link.label}
+                    </StyledAnchor>
+                );
+            }
+            return <StyledNavLink vertical={vertical} key={link.label} label={link.label} to={link.url} />;
+        });
+
+    toggleHamburgerMenu = (e: SyntheticMouseEvent<*>) => {
+        this.setState(prevState => ({ show: !prevState.show }));
+        e.preventDefault();
+        e.stopPropagation();
+    };
+
+    handleClickOutside = (evt: SyntheticMouseEvent<*>) => {
+        const { show } = this.state;
+        if (!show) {
+            return;
+        }
+        this.setState({ show: false });
+        evt.stopPropagation();
+        evt.preventDefault();
+    };
+
+    render() {
+        const { show } = this.state;
+        return (
+            <HamburgerNavLinksContainer {...this.props}>
+                {!show && <HamburgerToggleOn onClick={this.toggleHamburgerMenu} color={MainTheme.white} size={32} />}
+                {show && <HamburgerToggleOff onClick={this.toggleHamburgerMenu} color={MainTheme.white} size={32} />}
+                {show && <HamburgerLinksContainer show={show}>{this.getLinks(true)}</HamburgerLinksContainer>}
+            </HamburgerNavLinksContainer>
+        );
+    }
+}
