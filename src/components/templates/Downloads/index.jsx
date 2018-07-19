@@ -18,6 +18,7 @@ import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import { LargeHeading } from "Base/components/atoms/Heading";
+import Footer from "Organisms/Footer";
 
 function Downloads() {
     return (
@@ -115,6 +116,7 @@ function Downloads() {
                     />
                 </SectionItem>
             </Section>
+            <Footer />
         </Fragment>
     );
 }

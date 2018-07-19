@@ -23,6 +23,7 @@ import CircleButton from "Atoms/CircleButton";
 import Button from "Atoms/Button";
 import Card from "Atoms/Card";
 import { LargeHeading } from "Atoms/Heading";
+import Footer from "Organisms/Footer";
 
 // DevComponents
 import Colors from "Dev/Colors";
@@ -179,25 +180,21 @@ function Home() {
             <Section>
                 <SectionItem>
                     <Card level={1}>
-                        <TextBlock
-                            header="Full-Art Section"
-                            headerSize="normal"
-                            text={`${PlaceholderText} ${PlaceholderText}`}
-                            textSize="normal"
-                        />
+                        <TextBlock header="Card" headerSize="normal" text={PlaceholderText} textSize="normal" />
                     </Card>
                 </SectionItem>
                 <SectionItem>
                     <Card level={1} hover>
                         <TextBlock
-                            header="Full-Art Section"
+                            header="Clickable Card"
                             headerSize="normal"
-                            text={`${PlaceholderText} ${PlaceholderText}`}
+                            text={PlaceholderText}
                             textSize="normal"
                         />
                     </Card>
                 </SectionItem>
             </Section>
+            <Footer />
         </Fragment>
     );
 }

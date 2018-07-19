@@ -18,6 +18,7 @@ import Header from "Organisms/Header";
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
+import Footer from "Organisms/Footer";
 
 function About() {
     return (
@@ -57,6 +58,7 @@ function About() {
                     />
                 </SectionItem>
             </Section>
+            <Footer />
         </Fragment>
     );
 }

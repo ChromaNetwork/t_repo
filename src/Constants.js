@@ -174,7 +174,6 @@ export const HeaderLinks: Array<HeaderLink> = [
     { label: "About", url: Paths.about },
     { label: "Downloads", url: Paths.downloads },
     { label: "Opportunities", url: Paths.opportunities },
-    { label: "Contact", url: Paths.contact },
     { label: "Explorer", url: ExternalLinks.explorer, external: true },
     { label: "Store", url: ExternalLinks.store, external: true }
 ];

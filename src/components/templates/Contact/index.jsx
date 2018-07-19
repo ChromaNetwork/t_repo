@@ -5,6 +5,7 @@ import React from "react";
 
 // Components
 import Header from "Organisms/Header";
+import Footer from "Organisms/Footer";
 
 type Props = {
     message: string
@@ -16,6 +17,7 @@ function Contact(props: Props) {
         <div>
             <Header />
             {message}
+            <Footer />
         </div>
     );
 }
