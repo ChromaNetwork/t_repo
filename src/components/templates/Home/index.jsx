@@ -21,6 +21,7 @@ import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import CircleButton from "Atoms/CircleButton";
 import Button from "Atoms/Button";
+import Card from "Atoms/Card";
 import { LargeHeading } from "Atoms/Heading";
 
 // DevComponents
@@ -173,6 +174,28 @@ function Home() {
                 <SectionItem>
                     <CenteredLargeTitle>Our Partners</CenteredLargeTitle>
                     <TextBlock text={PlaceholderText} textSize="normal" />
+                </SectionItem>
+            </Section>
+            <Section>
+                <SectionItem>
+                    <Card level={1}>
+                        <TextBlock
+                            header="Full-Art Section"
+                            headerSize="normal"
+                            text={`${PlaceholderText} ${PlaceholderText}`}
+                            textSize="normal"
+                        />
+                    </Card>
+                </SectionItem>
+                <SectionItem>
+                    <Card level={1} hover>
+                        <TextBlock
+                            header="Full-Art Section"
+                            headerSize="normal"
+                            text={`${PlaceholderText} ${PlaceholderText}`}
+                            textSize="normal"
+                        />
+                    </Card>
                 </SectionItem>
             </Section>
         </Fragment>

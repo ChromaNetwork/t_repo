@@ -23,10 +23,7 @@ function About() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage
-                srcDefault={HeroImg}
-                style={{ boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)" }}
-            >
+            <HeroImage srcDefault={HeroImg}>
                 <TextBlock
                     header="What is Tao?"
                     headerSize="large"

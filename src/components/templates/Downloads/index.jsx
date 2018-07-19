@@ -4,7 +4,7 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { PlaceholderText } from "Base/Constants";
+import { PlaceholderText, Measurements } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Assets
@@ -17,15 +17,13 @@ import Header from "Organisms/Header";
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
+import { LargeHeading } from "Base/components/atoms/Heading";
 
 function Downloads() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage
-                srcDefault={HeroImg}
-                style={{ boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)" }}
-            >
+            <HeroImage srcDefault={HeroImg}>
                 <TextBlock
                     header="Downloads"
                     headerSize="large"
@@ -35,6 +33,31 @@ function Downloads() {
                     textColor={MainTheme.white}
                 />
             </HeroImage>
+
+            <Section>
+                <SectionItem>
+                    <LargeHeading style={{ alignSelf: "center", paddingBottom: Measurements.basePadding }}>
+                        Read the Whitepaper
+                    </LargeHeading>
+                    <TextBlock text={PlaceholderText} />
+
+                    <Button
+                        onClick={() => {
+                            console.log("clicked btn");
+                        }}
+                        text="Read More"
+                        iconName="ArrowRight"
+                        style={{ marginTop: "24px", alignSelf: "flex-end" }}
+                    />
+                </SectionItem>
+            </Section>
+            <Section bgColor={MainTheme.primaryColor} style={{ paddingBottom: "0" }}>
+                <SectionItem>
+                    <LargeHeading color={MainTheme.white} style={{ alignSelf: "center" }}>
+                        Wallet Software
+                    </LargeHeading>
+                </SectionItem>
+            </Section>
             <Section bgColor={MainTheme.primaryColor}>
                 <SectionItem>
                     <TextBlock
