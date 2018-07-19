@@ -31,6 +31,7 @@ const BgColorCss = css`
 export default css`
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding-left: ${Measurements.basePadding};
     padding-right: ${Measurements.basePadding};
     padding-top: ${Measurements.basePadding};

@@ -28,7 +28,8 @@ type Props = {
     text: string,
     textSize?: Size,
     textColor?: string,
-    centerHeader?: boolean
+    centerHeader?: boolean,
+    separator?: boolean
 };
 
 const Container = styled.div`
@@ -59,9 +60,21 @@ const HeadingContainer = styled.div`
     }
 `;
 
+const StyledLargeHeading = styled(LargeHeading)`
+    margin-bottom: 15px;
+`;
+
+const StyledNormalHeading = styled(NormalHeading)`
+    margin-bottom: 15px;
+`;
+
+const StyledSmallHeading = styled(SmallHeading)`
+    margin-bottom: 15px;
+`;
+
 export default function Section(props: Props) {
-    const { header, headerSize, text, textSize, headerColor, textColor, ...passthrough } = props;
-    const Heading = GetHeading(header, headerSize, headerColor);
+    const { separator, header, headerSize, text, textSize, headerColor, textColor, ...passthrough } = props;
+    const Heading = GetHeading(header, headerSize, headerColor, separator);
     const Text = GetText(text, textSize, textColor);
     return (
         <Container {...passthrough}>
@@ -77,13 +90,15 @@ Section.defaultProps = {
     headerColor: MainTheme.black,
     textSize: "normal",
     textColor: MainTheme.black,
-    centerHeader: false
+    centerHeader: false,
+    separator: false
 };
 
 function GetHeading(
     header: string = "",
     headerSize: Size = Section.defaultProps.headerSize,
-    headerColor: string = Section.defaultProps.headerColor
+    headerColor: string = Section.defaultProps.headerColor,
+    separator: boolean = false
 ): Node {
     if (!header) {
         return null;
@@ -92,22 +107,22 @@ function GetHeading(
         case "large":
             return (
                 <Fragment>
-                    <LargeHeading color={headerColor}>{header}</LargeHeading>
-                    <Separator />
+                    <StyledLargeHeading color={headerColor}>{header}</StyledLargeHeading>
+                    {separator && <Separator />}
                 </Fragment>
             );
         case "normal":
             return (
                 <Fragment>
-                    <NormalHeading color={headerColor}>{header}</NormalHeading>
-                    <Separator />
+                    <StyledNormalHeading color={headerColor}>{header}</StyledNormalHeading>
+                    {separator && <Separator />}
                 </Fragment>
             );
         case "small":
             return (
                 <Fragment>
-                    <SmallHeading color={headerColor}>{header}</SmallHeading>
-                    <Separator />
+                    <StyledSmallHeading color={headerColor}>{header}</StyledSmallHeading>
+                    {separator && <Separator />}
                 </Fragment>
             );
         default:

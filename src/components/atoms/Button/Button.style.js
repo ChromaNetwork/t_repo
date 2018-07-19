@@ -32,7 +32,11 @@ export default css`
     }
 
     @media (${MediaBreakpoints.tablet}) {
-        width: 200px;
+        width: 185px;
         padding: 10px;
+    }
+
+    @media (${MediaBreakpoints.desktop}) {
+        width: 200px;
     }
 `;
