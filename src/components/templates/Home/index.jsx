@@ -20,6 +20,7 @@ import Header from "Organisms/Header";
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import CircleButton from "Atoms/CircleButton";
+import Button from "Atoms/Button";
 import { LargeHeading } from "Atoms/Heading";
 
 // DevComponents
@@ -36,7 +37,7 @@ function Home() {
             <Header heroFloat />
             <HeroImage srcDefault={HeroImg}>
                 <TextBlock
-                    header="Tao Network Hero Image"
+                    header="Here's to the Artists."
                     headerSize="large"
                     text={PlaceholderText}
                     textSize="large"
@@ -157,8 +158,15 @@ function Home() {
                         textColor={MainTheme.white}
                         headerColor={MainTheme.white}
                     />
-
                     <TextBlock text={PlaceholderText} textSize="normal" textColor={MainTheme.white} />
+                    <Button
+                        onClick={() => {
+                            console.log("clicked btn");
+                        }}
+                        text="Read More"
+                        iconName="ArrowRight"
+                        style={{ marginTop: "24px", alignSelf: "flex-end" }}
+                    />
                 </SectionItem>
             </Section>
             <Section>

@@ -45,11 +45,11 @@ export const ThemeProps: { [key: ThemePropNames]: any } & ThemePropsType = {
 };
 
 export default ({
-    primaryColor: Colors.darkBlue,
-    secondaryColor: Colors.lightBlue,
+    accentDarkColor: Colors.darkBlue,
+    accentLightColor: Colors.lightBlue,
     tertiaryColor: Colors.accentBlue,
-    accentLightColor: Colors.lightPurple,
-    accentDarkColor: Colors.darkPurple,
+    secondaryColor: Colors.lightPurple,
+    primaryColor: Colors.darkPurple,
     black: Colors.black,
     white: Colors.white
 }: { [key: ThemePropNames]: any } & ThemePropsType);
