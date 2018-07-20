@@ -190,12 +190,15 @@ export type PartnerLink = {
 export const PartnerLinks: Array<PartnerLink> = [
     { label: "Partner1", logoUrl: TaoLogo, url: "https://www.google.com" },
     { label: "Partner2", logoUrl: PlaceholderImageUrls.irregular, url: "https://www.google.com" },
-    { label: "Partner3", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner3", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner6", logoUrl: TaoLogo, url: "https://www.google.com" },
     { label: "Partner5", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner7", logoUrl: TaoLogo, url: "https://www.google.com" },
-    { label: "Partner8", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner8", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner9", logoUrl: TaoLogo, url: "https://www.google.com" },
     { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner11", logoUrl: TaoLogo, url: "https://www.google.com" }
+    { label: "Partner11", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner12", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner13", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
+    { label: "Partner14", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
 ];

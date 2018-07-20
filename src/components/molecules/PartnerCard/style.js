@@ -5,9 +5,12 @@
 import { css } from "styled-components";
 
 export default css`
-    width: 150px;
-    height: 150px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    && {
+        width: 175px;
+        height: 175px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 12px;
+    }
 `;
