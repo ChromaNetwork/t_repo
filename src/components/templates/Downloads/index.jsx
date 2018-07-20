@@ -40,6 +40,7 @@ function Downloads() {
                     <TextBlock text={PlaceholderText} />
 
                     <Button
+                        aria-label="Read more button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}
@@ -67,6 +68,7 @@ function Downloads() {
                         headerColor={MainTheme.white}
                     />
                     <Button
+                        aria-label="Read more button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}
@@ -86,6 +88,7 @@ function Downloads() {
                         headerColor={MainTheme.white}
                     />
                     <Button
+                        aria-label="Read more button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}
@@ -104,6 +107,7 @@ function Downloads() {
                         headerColor={MainTheme.white}
                     />
                     <Button
+                        aria-label="Read more button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}

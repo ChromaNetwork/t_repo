@@ -29,7 +29,7 @@ export default function CircleButton(props: Props) {
     const { size, iconName, ...passThrough } = props;
     const Icon = iconName ? Feather[iconName] : "";
     return (
-        <StyledCircleButton size={size} {...passThrough}>
+        <StyledCircleButton role="button" size={size} {...passThrough}>
             {iconName && <Icon color="white" size={sizes[size || "normal"]} />}
         </StyledCircleButton>
     );

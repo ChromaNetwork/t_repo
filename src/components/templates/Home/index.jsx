@@ -79,6 +79,7 @@ function Home() {
                     <CenteredLargeTitle>Icon Tests</CenteredLargeTitle>
                     <div style={{ flexDirection: "row", display: "flex", justifyContent: "center" }}>
                         <CircleButton
+                            aria-label="Twitter"
                             onClick={() => {
                                 console.log("click");
                             }}
@@ -86,12 +87,14 @@ function Home() {
                             iconName="Twitter"
                         />
                         <CircleButton
+                            aria-label="Twitter"
                             onClick={() => {
                                 console.log("click");
                             }}
                             iconName="Twitter"
                         />
                         <CircleButton
+                            aria-label="Twitter"
                             onClick={() => {
                                 console.log("click");
                             }}
@@ -102,6 +105,7 @@ function Home() {
 
                     <div style={{ flexDirection: "row", display: "flex", justifyContent: "center" }}>
                         <CircleButton
+                            aria-label="Github"
                             onClick={() => {
                                 console.log("click");
                             }}
@@ -109,12 +113,14 @@ function Home() {
                             iconName="Github"
                         />
                         <CircleButton
+                            aria-label="Github"
                             onClick={() => {
                                 console.log("click");
                             }}
                             iconName="Github"
                         />
                         <CircleButton
+                            aria-label="Github"
                             onClick={() => {
                                 console.log("click");
                             }}
@@ -125,6 +131,7 @@ function Home() {
 
                     <div style={{ flexDirection: "row", display: "flex", justifyContent: "center" }}>
                         <CircleButton
+                            aria-label="Slack"
                             onClick={() => {
                                 console.log("click");
                             }}
@@ -132,12 +139,14 @@ function Home() {
                             iconName="Slack"
                         />
                         <CircleButton
+                            aria-label="Slack"
                             onClick={() => {
                                 console.log("click");
                             }}
                             iconName="Slack"
                         />
                         <CircleButton
+                            aria-label="Slack"
                             onClick={() => {
                                 console.log("click");
                             }}
@@ -162,6 +171,7 @@ function Home() {
                     />
                     <TextBlock text={PlaceholderText} textSize="normal" textColor={MainTheme.white} />
                     <Button
+                        name="Read More Button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}

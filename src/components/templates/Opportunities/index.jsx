@@ -52,6 +52,7 @@ function Opportunities() {
                     />
                     <TextBlock text={PlaceholderText} textSize="normal" textColor={MainTheme.white} />
                     <Button
+                        aria-label="Read More Button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}
@@ -67,6 +68,7 @@ function Opportunities() {
                     <TextBlock header="Other Section" headerSize="normal" text={PlaceholderText} textSize="normal" />
                     <TextBlock text={PlaceholderText} textSize="normal" />
                     <Button
+                        aria-label="Read More Button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}

@@ -133,8 +133,8 @@ export const FontSizes: {
     normalHeading: "28px",
     smallHeading: "22px",
     largeText: "18px",
-    normalText: "14px",
-    smallText: "11px",
+    normalText: "16px",
+    smallText: "12px",
 
     t_largeHeading: "54px",
     t_normalHeading: "36px",
