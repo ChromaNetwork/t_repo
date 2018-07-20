@@ -34,26 +34,50 @@ type Props = {
     // srcDesktop?: string,
     // srcWide?: string,
     fullscreen?: boolean,
+    srcPlaceholder: string,
     srcDefault: string,
     children?: Node
 };
 
-export default function HeroImage(props: Props) {
-    const { srcDefault, children, ...passthrough } = props;
-    return (
-        <HeroContainer srcDefault={srcDefault} {...passthrough}>
-            <CenteredSection>
-                <CenteredSectionItem>{children}</CenteredSectionItem>
-            </CenteredSection>
-        </HeroContainer>
-    );
-}
-
-HeroImage.defaultProps = {
-    // srcMobile: "",
-    // srcTablet: "",
-    // srcDesktop: "",
-    // srcWide: "",
-    fullscreen: false,
-    children: null
+type State = {
+    loaded: boolean
 };
+
+export default class HeroImage extends React.Component<Props, State> {
+    static defaultProps = {
+        // srcMobile: "",
+        // srcTablet: "",
+        // srcDesktop: "",
+        // srcWide: "",
+        fullscreen: false,
+        children: null
+    };
+
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            loaded: false
+        };
+    }
+
+    componentDidMount() {
+        const { srcDefault } = this.props;
+        const imageLoader = new Image();
+        imageLoader.src = srcDefault;
+        imageLoader.onload = () => {
+            this.setState({ loaded: true });
+        };
+    }
+
+    render() {
+        const { children, ...passthrough } = this.props;
+        const { loaded } = this.state;
+        return (
+            <HeroContainer loaded={loaded} {...passthrough}>
+                <CenteredSection>
+                    <CenteredSectionItem>{children}</CenteredSectionItem>
+                </CenteredSection>
+            </HeroContainer>
+        );
+    }
+}

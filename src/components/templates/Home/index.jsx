@@ -5,18 +5,14 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 // Constants and Utils
-import { PlaceholderText, Measurements } from "Base/Constants";
+import { PlaceholderText, Measurements, ImageAssets } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
-
-// Assets
-import HeroImg from "Assets/herobg.jpg";
-import IconWhite from "Assets/iconwhite.png";
-import Panorama from "Assets/panorama.jpg";
 
 // Components
 import HeroImage from "Molecules/HeroImage";
 import TextBlock from "Molecules/TextBlock";
 import Header from "Organisms/Header";
+import SectionWithImage from "Atoms/SectionWithImage";
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import CircleButton from "Atoms/CircleButton";
@@ -38,7 +34,7 @@ function Home() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage fullscreen srcDefault={HeroImg}>
+            <HeroImage fullscreen {...ImageAssets.heroBg}>
                 <TextBlock
                     header="Here's to the Artists."
                     headerSize="large"
@@ -53,7 +49,10 @@ function Home() {
                     <Colors />
                 </SectionItem>
             </Section>
-            <Section bgSrcDefault={Panorama}>
+            <SectionWithImage
+                bgSrcPlaceholder={ImageAssets.panorama.srcPlaceholder}
+                bgSrcDefault={ImageAssets.panorama.srcDefault}
+            >
                 <SectionItem>
                     <TextBlock
                         header="Full-Art Section"
@@ -74,7 +73,7 @@ function Home() {
                         headerColor={MainTheme.white}
                     />
                 </SectionItem>
-            </Section>
+            </SectionWithImage>
             <Section>
                 <SectionItem>
                     <CenteredLargeTitle>Icon Tests</CenteredLargeTitle>
@@ -150,7 +149,7 @@ function Home() {
             </Section>
             <Section bgColor={MainTheme.primaryColor}>
                 <SectionItem style={{ justifyContent: "center" }}>
-                    <img style={{ width: "80%", alignSelf: "center" }} src={IconWhite} alt="" />
+                    <img style={{ width: "80%", alignSelf: "center" }} src={ImageAssets.TaoLogoBig.srcDefault} alt="" />
                 </SectionItem>
                 <SectionItem>
                     <TextBlock

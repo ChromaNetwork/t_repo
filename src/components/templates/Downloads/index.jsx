@@ -4,11 +4,8 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { PlaceholderText, Measurements } from "Base/Constants";
+import { PlaceholderText, Measurements, ImageAssets } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
-
-// Assets
-import HeroImg from "Assets/panorama.jpg";
 
 // Components
 import HeroImage from "Molecules/HeroImage";
@@ -24,7 +21,7 @@ function Downloads() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage srcDefault={HeroImg}>
+            <HeroImage {...ImageAssets.panorama}>
                 <TextBlock
                     header="Downloads"
                     headerSize="large"

@@ -4,12 +4,8 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { PlaceholderText } from "Base/Constants";
+import { PlaceholderText, ImageAssets } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
-
-// Assets
-import HeroImg from "Assets/herobg2.jpg";
-import IconWhite from "Assets/iconwhite.png";
 
 // Components
 import HeroImage from "Molecules/HeroImage";
@@ -24,7 +20,7 @@ function About() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage srcDefault={HeroImg}>
+            <HeroImage {...ImageAssets.heroBg2}>
                 <TextBlock
                     header="What is Tao?"
                     headerSize="large"
@@ -36,7 +32,7 @@ function About() {
             </HeroImage>
             <Section bgColor={MainTheme.primaryColor}>
                 <SectionItem style={{ justifyContent: "center" }}>
-                    <img style={{ width: "80%", alignSelf: "center" }} src={IconWhite} alt="" />
+                    <img style={{ width: "80%", alignSelf: "center" }} src={ImageAssets.TaoLogoBig.srcDefault} alt="" />
                 </SectionItem>
                 <SectionItem>
                     <TextBlock

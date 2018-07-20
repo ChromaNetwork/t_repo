@@ -3,14 +3,28 @@
 // node_modules
 import { css } from "styled-components";
 import { prop, ifProp } from "styled-tools";
+import { transparentize } from "polished";
 
 // Constants
 import { Measurements, MediaBreakpoints } from "Base/Constants";
 // import { ThemeProps } from "Base/MainTheme";
 
-const BgColorCss = css`
+const BgImageCss = css`
     && {
-        background-color: ${ifProp("bgColor", prop("bgColor"), "transparent")};
+        background: linear-gradient(
+                ${props => transparentize(0.7, props.theme.black)},
+                ${props => transparentize(0.6, props.theme.primaryColor)}
+            ),
+            url(${prop("bgSrcPlaceholder")});
+        ${ifProp(
+            "loaded",
+            css`
+                background-image: url(${prop("bgSrcDefault")});
+            `
+        )};
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 `;
 
@@ -22,7 +36,8 @@ export default css`
     padding-right: ${Measurements.basePadding};
     padding-top: ${Measurements.basePadding};
     padding-bottom: ${Measurements.basePadding};
-    ${ifProp("bgColor", BgColorCss, "")};
+
+    ${BgImageCss};
 
     @media (${MediaBreakpoints.tablet}) {
         flex-direction: row;

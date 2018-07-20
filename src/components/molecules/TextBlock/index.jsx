@@ -17,7 +17,6 @@ import { LargeText, NormalText, SmallText } from "Atoms/Text";
 
 // Styles
 import ContainerStyle from "./Container.style";
-import TextStyle from "./Text.style";
 
 type Size = "large" | "normal" | "small";
 
@@ -34,24 +33,6 @@ type Props = {
 
 const Container = styled.div`
     ${ContainerStyle};
-`;
-
-const StyledLargeText = styled(LargeText)`
-    && {
-        ${TextStyle};
-    }
-`;
-
-const StyledNormalText = styled(NormalText)`
-    && {
-        ${TextStyle};
-    }
-`;
-
-const StyledSmallText = styled(SmallText)`
-    && {
-        ${TextStyle};
-    }
 `;
 
 const HeadingContainer = styled.div`
@@ -140,11 +121,11 @@ function GetText(
     }
     switch (textSize) {
         case "large":
-            return <StyledLargeText color={textColor}>{text}</StyledLargeText>;
+            return <LargeText color={textColor}>{text}</LargeText>;
         case "normal":
-            return <StyledNormalText color={textColor}>{text}</StyledNormalText>;
+            return <NormalText color={textColor}>{text}</NormalText>;
         case "small":
-            return <StyledSmallText color={textColor}>{text}</StyledSmallText>;
+            return <SmallText color={textColor}>{text}</SmallText>;
         default:
             return null;
     }

@@ -15,11 +15,7 @@ const StyledSection = styled.div`
 `;
 
 type Props = {
-    // bgSrcMobile?: string,
-    // bgSrcTablet?: string,
-    // bgSrcDesktop?: string,
-    // bgSrcWide?: string,
-    bgSrcDefault?: string,
+    bgColor?: string,
     children?: Node
 };
 
@@ -29,6 +25,6 @@ export default function Section(props: Props) {
 }
 
 Section.defaultProps = {
-    bgSrcDefault: "",
+    bgColor: "",
     children: null
 };

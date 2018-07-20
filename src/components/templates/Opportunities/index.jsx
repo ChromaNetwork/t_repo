@@ -4,12 +4,8 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { PlaceholderText } from "Base/Constants";
+import { PlaceholderText, ImageAssets } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
-
-// Assets
-import HeroImg from "Assets/herobg2.jpg";
-import IconWhite from "Assets/iconwhite.png";
 
 // Components
 import HeroImage from "Molecules/HeroImage";
@@ -24,7 +20,7 @@ function Opportunities() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage srcDefault={HeroImg}>
+            <HeroImage {...ImageAssets.heroBg}>
                 <TextBlock
                     header="Opportunities"
                     headerSize="large"
@@ -41,7 +37,7 @@ function Opportunities() {
                             width: "80%",
                             alignSelf: "center"
                         }}
-                        src={IconWhite}
+                        src={ImageAssets.TaoLogoBig.srcDefault}
                         alt=""
                     />
                 </SectionItem>
@@ -86,7 +82,7 @@ function Opportunities() {
                             alignSelf: "center",
                             filter: "invert(100%)"
                         }}
-                        src={IconWhite}
+                        src={ImageAssets.TaoLogoBig.srcDefault}
                         alt=""
                     />
                 </SectionItem>
