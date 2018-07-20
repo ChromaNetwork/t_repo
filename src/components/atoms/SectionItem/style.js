@@ -11,5 +11,4 @@ export default css`
     flex-direction: column;
     flex: 1;
     margin: ${Measurements.gutter};
-    min-width: 250px;
 `;

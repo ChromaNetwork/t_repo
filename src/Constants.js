@@ -1,5 +1,8 @@
 // @flow
 
+// Assets
+import TaoLogo from "Assets/icon192.png";
+
 export const PlaceholderText: string =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -176,4 +179,26 @@ export const HeaderLinks: Array<HeaderLink> = [
     { label: "Opportunities", url: Paths.opportunities },
     { label: "Explorer", url: ExternalLinks.explorer, external: true },
     { label: "Store", url: ExternalLinks.store, external: true }
+];
+
+export type PartnerLink = {
+    label: string,
+    logoUrl: string,
+    url?: string
+};
+
+export const PartnerLinks: Array<PartnerLink> = [
+    { label: "Alt Market", logoUrl: TaoLogo, url: "https://alt.market/" },
+    { label: "Google", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "DEM", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
+    { label: "Partner1", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner2", logoUrl: PlaceholderImageUrls.irregular, url: "https://www.google.com" },
+    { label: "Partner3", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner6", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner5", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
+    { label: "Partner7", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner8", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner9", logoUrl: TaoLogo, url: "https://www.google.com" },
+    { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
+    { label: "Partner11", logoUrl: TaoLogo, url: "https://www.google.com" }
 ];

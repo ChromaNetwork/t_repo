@@ -24,6 +24,7 @@ import Button from "Atoms/Button";
 import Card from "Atoms/Card";
 import { LargeHeading } from "Atoms/Heading";
 import Footer from "Organisms/Footer";
+import PartnersSection from "Organisms/PartnersSection";
 
 // DevComponents
 import Colors from "Dev/Colors";
@@ -171,13 +172,7 @@ function Home() {
                     />
                 </SectionItem>
             </Section>
-            <Section>
-                <SectionItem>
-                    <CenteredLargeTitle>Our Partners</CenteredLargeTitle>
-                    <TextBlock text={PlaceholderText} textSize="normal" />
-                </SectionItem>
-            </Section>
-            <Section>
+            <Section bgColor={MainTheme.secondaryColor}>
                 <SectionItem>
                     <Card level={1}>
                         <TextBlock header="Card" headerSize="normal" text={PlaceholderText} textSize="normal" />
@@ -194,6 +189,7 @@ function Home() {
                     </Card>
                 </SectionItem>
             </Section>
+            <PartnersSection />
             <Footer />
         </Fragment>
     );
