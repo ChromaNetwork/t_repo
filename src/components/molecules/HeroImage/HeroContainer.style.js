@@ -37,6 +37,7 @@ export default css`
     padding-top: ${Measurements.headerHeightPadding};
 
     &::before {
+        background-color: black;
         background-size: cover;
         background-position: center;
         content: "";
