@@ -188,9 +188,6 @@ export type PartnerLink = {
 };
 
 export const PartnerLinks: Array<PartnerLink> = [
-    { label: "Alt Market", logoUrl: TaoLogo, url: "https://alt.market/" },
-    { label: "Google", logoUrl: TaoLogo, url: "https://www.google.com" },
-    { label: "DEM", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner1", logoUrl: TaoLogo, url: "https://www.google.com" },
     { label: "Partner2", logoUrl: PlaceholderImageUrls.irregular, url: "https://www.google.com" },
     { label: "Partner3", logoUrl: TaoLogo, url: "https://www.google.com" },
