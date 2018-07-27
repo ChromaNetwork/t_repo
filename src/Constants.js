@@ -67,8 +67,8 @@ export const Colors: {
     lightPurple: "#A5508F",
     darkBlue: "#223C4C",
     lightBlue: "#4B6F81",
-    black: "#000000",
-    white: "#FFFFFF",
+    black: "#1A1A1A",
+    white: "#F8F7FF",
     darkGray: "#454545",
     accentBlue: "#8FC4C9"
 };

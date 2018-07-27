@@ -6,8 +6,8 @@ import { css } from "styled-components";
 
 export default css`
     && {
-        width: 175px;
-        height: 175px;
+        width: 150px;
+        height: 150px;
         align-items: center;
         justify-content: center;
         display: flex;

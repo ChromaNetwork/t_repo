@@ -11,7 +11,9 @@ type ThemePropNames =
     | "accentLightColor"
     | "accentDarkColor"
     | "black"
-    | "white";
+    | "white"
+    | "pureBlack"
+    | "pureWhite";
 
 type ThemePropsType = {
     primaryColor: mixed,
@@ -20,7 +22,9 @@ type ThemePropsType = {
     accentLightColor: mixed,
     accentDarkColor: mixed,
     black: mixed,
-    white: mixed
+    white: mixed,
+    pureBlack: mixed,
+    pureWhite: mixed
 };
 
 // Exists solely to prevent fatfinger typos for ThemeProps values which are strings representing the theme prop values in all themed components.
@@ -31,7 +35,9 @@ const ThemeNames: { [key: ThemePropNames]: ThemePropNames } & ThemePropsType = {
     accentLightColor: "accentLightColor",
     accentDarkColor: "accentDarkColor",
     black: "black",
-    white: "white"
+    white: "white",
+    pureBlack: "pureBlack",
+    pureWhite: "pureWhite"
 };
 
 export const ThemeProps: { [key: ThemePropNames]: any } & ThemePropsType = {
@@ -41,7 +47,9 @@ export const ThemeProps: { [key: ThemePropNames]: any } & ThemePropsType = {
     accentLightColor: `theme.${ThemeNames.accentLightColor}`,
     accentDarkColor: `theme.${ThemeNames.accentDarkColor}`,
     black: `theme.${ThemeNames.black}`,
-    white: `theme.${ThemeNames.white}`
+    white: `theme.${ThemeNames.white}`,
+    pureBlack: `theme.${ThemeNames.pureBlack}`,
+    pureWhite: `theme.${ThemeNames.pureWhite}`
 };
 
 export default ({
@@ -51,5 +59,7 @@ export default ({
     secondaryColor: Colors.lightPurple,
     primaryColor: Colors.darkPurple,
     black: Colors.black,
-    white: Colors.white
+    white: Colors.white,
+    pureBlack: "#000000",
+    pureWhite: "#FFFFFF"
 }: { [key: ThemePropNames]: any } & ThemePropsType);

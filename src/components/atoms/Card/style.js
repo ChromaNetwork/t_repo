@@ -17,7 +17,7 @@ const hoverStyle = css`
 `;
 
 export default css`
-    background-color: ${prop(ThemeProps.white)};
+    background-color: ${prop(ThemeProps.pureWhite)};
     cursor: ${ifProp({ hover: true }, "pointer", "initial")};
     padding: ${Measurements.basePadding};
     border-radius: 2px;
