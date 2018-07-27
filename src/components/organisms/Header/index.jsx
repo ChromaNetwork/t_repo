@@ -5,11 +5,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+// Constants
+import { ImageAssets } from "Base/Constants";
+
 // Components
 import HeaderNavLinks from "Molecules/HeaderNavLinks";
-
-// Assets
-import LogoImg from "Assets/m_tao.png";
 
 // Styles
 import HeaderContainerStyle from "./HeaderContainer.style";
@@ -44,7 +44,7 @@ export default function Header(props: Props) {
         <HeaderContainer className={className} heroFloat={heroFloat} {...passthrough}>
             <LogoContainer>
                 <Link to="/">
-                    <LogoLink src={LogoImg} alt="Tao Network" />
+                    <LogoLink src={ImageAssets.TaoLogoFull.srcDefault} alt="Tao Network" />
                 </Link>
             </LogoContainer>
             <StyledNavLinks />
