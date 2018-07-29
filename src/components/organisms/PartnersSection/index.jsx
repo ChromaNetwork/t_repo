@@ -5,13 +5,12 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 // Constants and Utils
-import { PlaceholderText, Measurements, PartnerLinks } from "Base/Constants";
+import { Measurements, PartnerLinks } from "Base/Constants";
 
 // Components
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import PartnerCard from "Molecules/PartnerCard";
-import TextBlock from "Molecules/TextBlock";
 import { LargeHeading } from "Atoms/Heading";
 
 // Styles
@@ -37,7 +36,6 @@ function Home() {
             <Section>
                 <SectionItem>
                     <CenteredLargeTitle>Our Partners</CenteredLargeTitle>
-                    <TextBlock text={PlaceholderText} textSize="normal" />
                 </SectionItem>
             </Section>
             <StyledSection>

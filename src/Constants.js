@@ -216,6 +216,20 @@ export const HeaderLinks: Array<HeaderLink> = [
     { label: "Store", url: ExternalLinks.store, external: true }
 ];
 
+export type FooterLink = {
+    icon: string,
+    url: string
+};
+
+export const FooterLinks: Array<FooterLink> = [
+    { icon: "Slack", url: ExternalLinks.slackInvite },
+    { icon: "Twitter", url: ExternalLinks.slackInvite },
+    { icon: "Facebook", url: ExternalLinks.slackInvite },
+    { icon: "Youtube", url: ExternalLinks.slackInvite },
+    { icon: "Github", url: ExternalLinks.slackInvite },
+    { icon: "Gitlab", url: ExternalLinks.slackInvite }
+];
+
 export type PartnerLink = {
     label: string,
     logoUrl: string,

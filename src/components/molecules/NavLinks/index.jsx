@@ -36,13 +36,22 @@ const StyledAnchorVertical = styled.a`
     ${NavLinkVerticalStyle};
 `;
 
-export default function NavLinks(props: {}) {
+type Props = {
+    vertical?: boolean
+};
+
+export default function NavLinks(props: Props) {
+    const { vertical, ...passthrough } = props;
     return (
-        <NavLinksContainer {...props}>
-            <LinksContainer>{getLinks(false)}</LinksContainer>
+        <NavLinksContainer {...passthrough}>
+            <LinksContainer>{getLinks(!!vertical)}</LinksContainer>
         </NavLinksContainer>
     );
 }
+
+NavLinks.defaultProps = {
+    vertical: false
+};
 
 function getLinks(vertical: boolean): Array<any> {
     return HeaderLinks.map((link: HeaderLink) => {

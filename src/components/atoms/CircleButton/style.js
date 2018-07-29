@@ -28,14 +28,20 @@ export default css`
         small: css`
             height: ${sizes.small};
             width: ${sizes.small};
+            min-height: ${sizes.small};
+            min-width: ${sizes.small};
         `,
         normal: css`
             height: ${sizes.normal};
             width: ${sizes.normal};
+            min-height: ${sizes.normal};
+            min-width: ${sizes.normal};
         `,
         large: css`
             height: ${sizes.large};
             width: ${sizes.large};
+            min-height: ${sizes.large};
+            min-width: ${sizes.large};
         `
     })};
     border-radius: 50%;
