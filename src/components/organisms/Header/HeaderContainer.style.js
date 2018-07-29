@@ -2,19 +2,20 @@
 
 // node_modules
 import { css } from "styled-components";
-import { ifProp, prop } from "styled-tools";
+import { prop } from "styled-tools";
 
 // Constants
 import { Measurements, Depths } from "Base/Constants";
 import { ThemeProps } from "Base/MainTheme";
 
 export default css`
-    background-color: ${ifProp("heroFloat", "transparent", prop(ThemeProps.black))};
+    background-color: ${prop(ThemeProps.white)};
     height: ${Measurements.headerHeight};
-    padding-top: ${Measurements.basePadding};
-    padding-bottom: ${Measurements.basePadding};
     display: flex;
-    position: ${ifProp("heroFloat", "absolute", "relative")};
+    position: fixed;
     width: 100%;
     z-index: ${Depths.highest};
+    box-sizing: border-box;
+    top: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 `;

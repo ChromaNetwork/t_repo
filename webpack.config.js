@@ -29,7 +29,7 @@ const webpackConfig = {
     },
     plugins: [
         // https://github.com/jantimon/favicons-webpack-plugin -- see for cofig
-        new FaviconsWebpackPlugin(path.join(paths.assets, "icon192.png")),
+        new FaviconsWebpackPlugin(path.join(paths.assets, "logo_75x75.png")),
         // https://github.com/jantimon/html-webpack-plugin#options -- See for config.
         new HtmlWebpackPlugin({
             template: path.join(paths.src, "index.html")

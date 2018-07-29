@@ -13,22 +13,20 @@ import NormalTextStyle from "Atoms/Text/NormalText.style";
 
 export default css`
     ${NormalTextStyle};
-    color: ${prop(ThemeProps.white)};
+    color: ${prop(ThemeProps.black)};
     text-decoration: none;
     user-select: none;
-    padding-bottom: 5px;
     border-bottom: none;
     margin-left: ${Measurements.basePadding};
     margin-right: ${Measurements.basePadding};
 
     &:visited {
-        color: ${prop(ThemeProps.white)};
+        color: ${prop(ThemeProps.black)};
     }
     &:hover {
         border-bottom: 5px solid ${prop(ThemeProps.accentLightColor)};
-        padding-bottom: 0;
     }
     &:active {
-        color: ${prop(ThemeProps.white)};
+        color: ${prop(ThemeProps.black)};
     }
 `;

@@ -5,7 +5,7 @@ import { css } from "styled-components";
 import { prop, ifProp } from "styled-tools";
 
 // Constants
-import { Depths, Measurements, MediaBreakpoints } from "Base/Constants";
+import { Depths, MediaBreakpoints } from "Base/Constants";
 import { ThemeProps } from "Base/MainTheme";
 
 const loadedImageCss = css`
@@ -34,7 +34,6 @@ export default css`
     display: flex;
     box-sizing: border-box;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    padding-top: ${Measurements.headerHeightPadding};
 
     &::before {
         background-color: black;

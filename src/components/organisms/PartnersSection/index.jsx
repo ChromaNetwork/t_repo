@@ -25,6 +25,7 @@ const CenteredLargeTitle = styled(LargeHeading)`
 
 const StyledSection = styled(Section)`
     ${PartnerSectionContainerStyle};
+    padding-bottom: 48px;
 `;
 const StyledSectionItem = styled(SectionItem)`
     ${PartnerSectionItemStyle};

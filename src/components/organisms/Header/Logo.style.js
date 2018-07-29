@@ -3,11 +3,8 @@
 // node_modules
 import { css } from "styled-components";
 
-// Constants
-import { Measurements } from "Base/Constants";
-
 export default css`
     user-select: none;
-    height: ${Measurements.headerHeight};
+    height: 50px;
     align-self: center;
 `;

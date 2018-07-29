@@ -9,6 +9,8 @@ import TaoLogoBig from "Assets/iconwhite.png";
 import Panorama from "Assets/panorama.jpg";
 import PanoramaPre from "Assets/panorama_pre.jpg";
 import TaoLogoFull from "Assets/logo_full.png";
+import TaoLogo250 from "Assets/logo_250x250.png";
+import TaoLogo75 from "Assets/logo_75x75.png";
 
 export const PlaceholderText: string =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -44,13 +46,17 @@ export const ImageAssets: {
     heroBg2: ImageSource,
     TaoLogoBig: ImageSource,
     panorama: ImageSource,
-    TaoLogoFull: ImageSource
+    TaoLogoFull: ImageSource,
+    TaoLogo250: ImageSource,
+    TaoLogo75: ImageSource
 } = {
     heroBg: { srcDefault: HeroBg, srcPlaceholder: HeroBgPre },
     heroBg2: { srcDefault: HeroBg2, srcPlaceholder: HeroBg2Pre },
     TaoLogoBig: { srcDefault: TaoLogoBig, srcPlaceholder: "" },
     panorama: { srcDefault: Panorama, srcPlaceholder: PanoramaPre },
-    TaoLogoFull: { srcDefault: TaoLogoFull, srcPlaceholder: "" }
+    TaoLogoFull: { srcDefault: TaoLogoFull, srcPlaceholder: "" },
+    TaoLogo250: { srcDefault: TaoLogo250, srcPlaceholder: "" },
+    TaoLogo75: { srcDefault: TaoLogo75, srcPlaceholder: "" }
 };
 
 export const Colors: {
@@ -77,13 +83,11 @@ export const Measurements: {
     basePadding: string,
     hPadding: string,
     headerHeight: string,
-    headerHeightPadding: string,
     gutter: string
 } = {
     basePadding: "24px",
     hPadding: "10%",
-    headerHeight: "70px",
-    headerHeightPadding: "118px",
+    headerHeight: "75px",
     gutter: "12px"
 };
 
@@ -219,17 +223,17 @@ export type PartnerLink = {
 };
 
 export const PartnerLinks: Array<PartnerLink> = [
-    { label: "Partner1", logoUrl: ImageAssets.TaoLogoFull.srcDefault, url: "https://www.google.com" },
+    { label: "Partner1", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner2", logoUrl: PlaceholderImageUrls.irregular, url: "https://www.google.com" },
     { label: "Partner3", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner6", logoUrl: ImageAssets.TaoLogoFull.srcDefault, url: "https://www.google.com" },
+    { label: "Partner6", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner5", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner7", logoUrl: ImageAssets.TaoLogoFull.srcDefault, url: "https://www.google.com" },
+    { label: "Partner7", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner8", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner9", logoUrl: ImageAssets.TaoLogoFull.srcDefault, url: "https://www.google.com" },
+    { label: "Partner9", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner11", logoUrl: ImageAssets.TaoLogoFull.srcDefault, url: "https://www.google.com" },
-    { label: "Partner12", logoUrl: ImageAssets.TaoLogoFull.srcDefault, url: "https://www.google.com" },
+    { label: "Partner11", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
+    { label: "Partner12", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner13", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner14", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
 ];

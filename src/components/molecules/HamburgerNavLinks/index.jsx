@@ -95,8 +95,8 @@ export default class NavLinks extends React.Component<any, State> {
         const { show } = this.state;
         return (
             <HamburgerNavLinksContainer {...this.props}>
-                {!show && <HamburgerToggleOn onClick={this.toggleHamburgerMenu} color={MainTheme.white} size={32} />}
-                {show && <HamburgerToggleOff onClick={this.toggleHamburgerMenu} color={MainTheme.white} size={32} />}
+                {!show && <HamburgerToggleOn onClick={this.toggleHamburgerMenu} color={MainTheme.black} size={32} />}
+                {show && <HamburgerToggleOff onClick={this.toggleHamburgerMenu} color={MainTheme.black} size={32} />}
                 {show && <HamburgerLinksContainer show={show}>{this.getLinks(true)}</HamburgerLinksContainer>}
             </HamburgerNavLinksContainer>
         );

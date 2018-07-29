@@ -30,8 +30,8 @@ export default function CircleButton(props: Props) {
     const Icon = iconName ? Feather[iconName] : "";
     return (
         <StyleButton role="button" {...passThrough}>
-            <NormalText color={MainTheme.white}>{text}</NormalText>
-            {iconName && <Icon color={MainTheme.white} size={24} style={{ marginLeft: "10px" }} />}
+            <NormalText color={MainTheme.accentDarkColor}>{text}</NormalText>
+            {iconName && <Icon color={MainTheme.accentDarkColor} size={24} style={{ marginLeft: "10px" }} />}
         </StyleButton>
     );
 }

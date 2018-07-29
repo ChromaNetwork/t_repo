@@ -14,6 +14,10 @@ const hoverStyle = css`
     &:hover {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
+    &:active {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: box-shadow 0s linear;
+    }
 `;
 
 export default css`
