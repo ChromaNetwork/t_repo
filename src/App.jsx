@@ -12,6 +12,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
+// Components
+import ScrollToTop from "Atoms/ScrollToTop";
+
 // Routes
 import Home from "Templates/Home";
 import About from "Templates/About";
@@ -32,13 +35,15 @@ function App() {
     return (
         <ThemeProvider theme={MainTheme}>
             <BrowserRouter>
-                <Switch>
-                    <Route exact path={Paths.home} component={HomeComponent} />
-                    <Route exact path={Paths.about} component={AboutComponent} />
-                    <Route exact path={Paths.downloads} component={DownloadsComponent} />
-                    <Route exact path={Paths.opportunities} component={OpportunitiesComponent} />
-                    <Route exact path={Paths.contact} component={ContactComponent} />
-                </Switch>
+                <ScrollToTop>
+                    <Switch>
+                        <Route exact path={Paths.home} component={HomeComponent} />
+                        <Route exact path={Paths.about} component={AboutComponent} />
+                        <Route exact path={Paths.downloads} component={DownloadsComponent} />
+                        <Route exact path={Paths.opportunities} component={OpportunitiesComponent} />
+                        <Route exact path={Paths.contact} component={ContactComponent} />
+                    </Switch>
+                </ScrollToTop>
             </BrowserRouter>
         </ThemeProvider>
     );
