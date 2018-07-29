@@ -11,7 +11,7 @@ import { FooterLinks, Measurements } from "Base/Constants";
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import CircleButton from "Atoms/CircleButton";
-import { LargeHeading } from "Atoms/Heading";
+import { NormalHeading } from "Atoms/Heading";
 
 const FooterContainer = styled(Section)`
     display: flex;
@@ -35,8 +35,9 @@ const TitleContainer = styled(SectionItem)`
     align-items: center;
 `;
 
-const CenteredLargeTitle = styled(LargeHeading)`
+const CenteredTitle = styled(NormalHeading)`
     align-self: center;
+    text-align: center;
 `;
 
 const StyledCircleButton = styled(CircleButton)`
@@ -47,7 +48,7 @@ export default function Footer() {
     return (
         <FooterContainer>
             <TitleContainer>
-                <CenteredLargeTitle> Connect with Tao </CenteredLargeTitle>
+                <CenteredTitle> Contact Header </CenteredTitle>
             </TitleContainer>
             <FooterLinksContainer>
                 {FooterLinks.map(footerLink => (

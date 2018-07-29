@@ -5,6 +5,9 @@ import React from "react";
 import styled from "styled-components";
 import * as Feather from "react-feather";
 
+// Constants
+import MainTheme from "Base/MainTheme";
+
 // Styles
 import CircleButtonStyle from "./style";
 
@@ -30,7 +33,7 @@ export default function CircleButton(props: Props) {
     const Icon = iconName ? Feather[iconName] : "";
     return (
         <StyledCircleButton role="button" size={size} {...passThrough}>
-            {iconName && <Icon color="white" size={sizes[size || "normal"]} />}
+            {iconName && <Icon color={MainTheme.accentDarkColor} size={sizes[size || "normal"]} />}
         </StyledCircleButton>
     );
 }

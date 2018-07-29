@@ -16,13 +16,14 @@ const sizes = {
 export default css`
     text-align: center;
     color: ${prop(ThemeProps.white)};
-    background-color: ${prop(ThemeProps.accentLightColor)};
+    background-color: ${prop(ThemeProps.tertiaryColor)};
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     cursor: pointer;
     outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
     ${switchProp(prop("size", "normal"), {
         small: css`
@@ -48,10 +49,11 @@ export default css`
 
     &:hover {
         transition: background-color 150ms linear;
-        background-color: ${prop(ThemeProps.accentDarkColor)};
+        background-color: ${prop(ThemeProps.accentLightColor)};
     }
 
     &:active {
-        background-color: ${prop(ThemeProps.black)};
+        transition: background-color 0ms linear;
+        background-color: ${prop(ThemeProps.tertiaryColor)};
     }
 `;
