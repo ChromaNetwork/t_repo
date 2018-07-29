@@ -5,7 +5,7 @@ import React from "react";
 import styled from "styled-components";
 
 // Constants
-import { FooterLinks, Measurements } from "Base/Constants";
+import { FooterLinks } from "Base/Constants";
 
 // Components
 import Section from "Atoms/Section";
@@ -13,35 +13,31 @@ import SectionItem from "Atoms/SectionItem";
 import CircleButton from "Atoms/CircleButton";
 import { NormalHeading } from "Atoms/Heading";
 
+// Styles
+import FooterContainerStyle from "./FooterContainer.style";
+import FooterLinksContainerStyle from "./FooterLinksContainer.style";
+import TitleContainerStyle from "./TitleContainer.style";
+import CenteredTitleStyle from "./CenteredTitle.style";
+import CircleButtonStyle from "./CircleButton.style";
+
 const FooterContainer = styled(Section)`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 225px;
+    ${FooterContainerStyle};
 `;
 
 const FooterLinksContainer = styled(SectionItem)`
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    ${FooterLinksContainerStyle};
 `;
 
 const TitleContainer = styled(SectionItem)`
-    justify-content: center;
-    align-items: center;
+    ${TitleContainerStyle};
 `;
 
 const CenteredTitle = styled(NormalHeading)`
-    align-self: center;
-    text-align: center;
+    ${CenteredTitleStyle};
 `;
 
 const StyledCircleButton = styled(CircleButton)`
-    margin: ${Measurements.gutter};
+    ${CircleButtonStyle};
 `;
 
 export default function Footer() {

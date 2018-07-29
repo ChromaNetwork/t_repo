@@ -33,7 +33,6 @@ export default css`
     position: relative;
     display: flex;
     box-sizing: border-box;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
     &::before {
         background-color: black;
