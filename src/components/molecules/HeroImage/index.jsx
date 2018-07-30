@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 // Components
 import Section from "Atoms/Section";
-import SectionItem from "Atoms/SectionItem";
+// import SectionItem from "Atoms/SectionItem";
 import SectionDivide from "Atoms/SectionDivide";
 
 // types
@@ -15,7 +15,7 @@ import type { Node } from "react";
 // Styles
 import HeroContainerStyle from "./HeroContainer.style";
 import CenteredSectionStyle from "./CenteredSection.style";
-import CenteredSectionItemStyle from "./CenteredSectionItem.style";
+// import CenteredSectionItemStyle from "./CenteredSectionItem.style";
 
 const HeroContainer = styled.div`
     ${HeroContainerStyle};
@@ -23,10 +23,6 @@ const HeroContainer = styled.div`
 
 const CenteredSection = styled(Section)`
     ${CenteredSectionStyle};
-`;
-
-const CenteredSectionItem = styled(SectionItem)`
-    ${CenteredSectionItemStyle};
 `;
 
 const PositionedCenterDivide = styled(SectionDivide)`
@@ -83,9 +79,7 @@ export default class HeroImage extends React.Component<Props, State> {
         const { loaded } = this.state;
         return (
             <HeroContainer loaded={loaded} {...passthrough}>
-                <CenteredSection>
-                    <CenteredSectionItem>{children}</CenteredSectionItem>
-                </CenteredSection>
+                <CenteredSection>{children}</CenteredSection>
                 {divideType && <PositionedCenterDivide direction="top" type={divideType} transparent />}
             </HeroContainer>
         );

@@ -24,22 +24,24 @@ function Home() {
         <Fragment>
             <Header heroFloat />
             <HeroImage divideType="blue" fullscreen {...ImageAssets.heroBg}>
-                <TextBlock
-                    header="Here's to the Artists."
-                    headerSize="large"
-                    text={PlaceholderText}
-                    textSize="large"
-                    headerColor={MainTheme.white}
-                    textColor={MainTheme.white}
-                />
-                <Button
-                    name="Read More Button"
-                    onClick={() => {
-                        console.log("clicked btn");
-                    }}
-                    text="Read More"
-                    style={{ marginTop: "24px", alignSelf: "center" }}
-                />
+                <SectionItem>
+                    <TextBlock
+                        header="Here's to the Artists."
+                        headerSize="large"
+                        text={PlaceholderText}
+                        textSize="large"
+                        headerColor={MainTheme.white}
+                        textColor={MainTheme.white}
+                    />
+                    <Button
+                        name="Read More Button"
+                        onClick={() => {
+                            console.log("clicked btn");
+                        }}
+                        text="Read More"
+                        style={{ marginTop: "24px", alignSelf: "center" }}
+                    />
+                </SectionItem>
             </HeroImage>
 
             <Section bgColor={MainTheme.accentLightColor}>

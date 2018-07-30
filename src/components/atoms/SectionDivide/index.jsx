@@ -3,6 +3,7 @@
 // node_modules
 import React from "react";
 import styled from "styled-components";
+import { ArrowDownCircle } from "react-feather";
 
 // SVG
 import BottomLeftBlue from "Assets/svg/BottomLeftB.svg";
@@ -18,7 +19,8 @@ import TopLeftPurple from "Assets/svg/TopLeftP.svg";
 import TopRightPurple from "Assets/svg/TopRightP.svg";
 
 // Styles
-import SectionStyle from "./style";
+import SectionStyle from "./SectionDivideContainer.style";
+import ScrollBtnStyle from "./ScrollBtn.style";
 
 const StyledSectionDivide = styled.div`
     ${SectionStyle};
@@ -28,11 +30,16 @@ type Props = {
     direction: "top" | "bottom",
     type: "blue" | "purple",
     transparent?: boolean,
+    scrollDown?: boolean,
     className?: string
 };
 
+const ScrollDownBtn = styled(ArrowDownCircle)`
+    ${ScrollBtnStyle};
+`;
+
 export default function SectionDivide(props: Props) {
-    const { direction, type, ...passthrough } = props;
+    const { direction, type, scrollDown, ...passthrough } = props;
     let LeftSvg = null;
     let RightSvg = null;
     switch (direction) {
@@ -71,6 +78,7 @@ export default function SectionDivide(props: Props) {
     return (
         <StyledSectionDivide {...passthrough}>
             <img src={LeftSvg} alt="" />
+            {scrollDown && <ScrollDownBtn color="white" size="56" />}
             <img src={RightSvg} alt="" />
         </StyledSectionDivide>
     );
@@ -78,5 +86,6 @@ export default function SectionDivide(props: Props) {
 
 SectionDivide.defaultProps = {
     transparent: false,
+    scrollDown: false,
     className: ""
 };

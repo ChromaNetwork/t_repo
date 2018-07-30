@@ -32,7 +32,7 @@ function Opportunities() {
                 />
             </HeroImage>
             <Section bgColor={MainTheme.secondaryColor}>
-                <SectionItem style={{ justifyContent: "center" }}>
+                <SectionItem style={{ justifyContent: "center", flex: "0.25" }}>
                     <img
                         style={{
                             width: "80%",
@@ -42,7 +42,7 @@ function Opportunities() {
                         alt=""
                     />
                 </SectionItem>
-                <SectionItem>
+                <SectionItem style={{ justifyContent: "center", flex: "0.75" }}>
                     <TextBlock
                         header="Color Background Section"
                         headerSize="normal"
