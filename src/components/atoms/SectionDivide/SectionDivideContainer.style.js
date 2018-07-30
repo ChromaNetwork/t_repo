@@ -11,10 +11,11 @@ import { MediaBreakpoints } from "Base/Constants";
 export default css`
     width: 100%
     background-color: ${ifProp("transparent", "transparent", prop(ThemeProps.white))};
-    justify-content: space-between;
-    display: none;
+    justify-content: center;
+    user-select: none;
+    display: flex;
 
     @media (${MediaBreakpoints.tablet}) {
-        display: flex;
+        justify-content: space-between;
     }
 `;

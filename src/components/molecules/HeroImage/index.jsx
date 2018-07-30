@@ -40,6 +40,7 @@ type Props = {
     srcPlaceholder: string,
     srcDefault: string,
     divideType?: null | "blue" | "purple",
+    scrollDown?: boolean,
     children?: Node
 };
 
@@ -55,6 +56,7 @@ export default class HeroImage extends React.Component<Props, State> {
         // srcWide: "",
         fullscreen: false,
         divideType: null,
+        scrollDown: false,
         children: null
     };
 
@@ -75,12 +77,12 @@ export default class HeroImage extends React.Component<Props, State> {
     }
 
     render() {
-        const { children, divideType, ...passthrough } = this.props;
+        const { children, divideType, scrollDown, ...passthrough } = this.props;
         const { loaded } = this.state;
         return (
             <HeroContainer loaded={loaded} {...passthrough}>
                 <CenteredSection>{children}</CenteredSection>
-                {divideType && <PositionedCenterDivide direction="top" type={divideType} transparent />}
+                {divideType && <PositionedCenterDivide scrollDown direction="top" type={divideType} transparent />}
             </HeroContainer>
         );
     }

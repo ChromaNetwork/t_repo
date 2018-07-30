@@ -4,6 +4,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ArrowDownCircle } from "react-feather";
+import * as Scroll from "react-scroll";
 
 // SVG
 import BottomLeftBlue from "Assets/svg/BottomLeftB.svg";
@@ -21,10 +22,23 @@ import TopRightPurple from "Assets/svg/TopRightP.svg";
 // Styles
 import SectionStyle from "./SectionDivideContainer.style";
 import ScrollBtnStyle from "./ScrollBtn.style";
+import ImageStyle from "./Image.style";
 
 const StyledSectionDivide = styled.div`
     ${SectionStyle};
 `;
+
+const ScrollDownBtn = styled(ArrowDownCircle)`
+    ${ScrollBtnStyle};
+`;
+
+const Image = styled.img.attrs({ alt: "" })`
+    ${ImageStyle};
+`;
+
+function ScrollDown() {
+    Scroll.animateScroll.scrollMore(window.innerHeight - 50);
+}
 
 type Props = {
     direction: "top" | "bottom",
@@ -33,10 +47,6 @@ type Props = {
     scrollDown?: boolean,
     className?: string
 };
-
-const ScrollDownBtn = styled(ArrowDownCircle)`
-    ${ScrollBtnStyle};
-`;
 
 export default function SectionDivide(props: Props) {
     const { direction, type, scrollDown, ...passthrough } = props;
@@ -77,9 +87,9 @@ export default function SectionDivide(props: Props) {
 
     return (
         <StyledSectionDivide {...passthrough}>
-            <img src={LeftSvg} alt="" />
-            {scrollDown && <ScrollDownBtn color="white" size="56" />}
-            <img src={RightSvg} alt="" />
+            <Image src={LeftSvg} />
+            {scrollDown && <ScrollDownBtn color="white" size="56" onClick={() => ScrollDown()} />}
+            <Image src={RightSvg} />
         </StyledSectionDivide>
     );
 }
