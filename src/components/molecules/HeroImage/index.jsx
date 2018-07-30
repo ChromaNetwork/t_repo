@@ -7,6 +7,7 @@ import styled from "styled-components";
 // Components
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
+import SectionDivide from "Atoms/SectionDivide";
 
 // types
 import type { Node } from "react";
@@ -28,6 +29,12 @@ const CenteredSectionItem = styled(SectionItem)`
     ${CenteredSectionItemStyle};
 `;
 
+const PositionedCenterDivide = styled(SectionDivide)`
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+`;
+
 type Props = {
     // srcMobile?: string,
     // srcTablet?: string,
@@ -36,6 +43,7 @@ type Props = {
     fullscreen?: boolean,
     srcPlaceholder: string,
     srcDefault: string,
+    divideType?: null | "blue" | "purple",
     children?: Node
 };
 
@@ -50,6 +58,7 @@ export default class HeroImage extends React.Component<Props, State> {
         // srcDesktop: "",
         // srcWide: "",
         fullscreen: false,
+        divideType: null,
         children: null
     };
 
@@ -70,13 +79,14 @@ export default class HeroImage extends React.Component<Props, State> {
     }
 
     render() {
-        const { children, ...passthrough } = this.props;
+        const { children, divideType, ...passthrough } = this.props;
         const { loaded } = this.state;
         return (
             <HeroContainer loaded={loaded} {...passthrough}>
                 <CenteredSection>
                     <CenteredSectionItem>{children}</CenteredSectionItem>
                 </CenteredSection>
+                {divideType && <PositionedCenterDivide direction="top" type={divideType} transparent />}
             </HeroContainer>
         );
     }

@@ -17,12 +17,13 @@ import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";
 import PartnersSection from "Organisms/PartnersSection";
 import TestimonialsSection from "Organisms/TestimonialsSection";
+import SectionDivide from "Atoms/SectionDivide";
 
 function Home() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage fullscreen {...ImageAssets.heroBg}>
+            <HeroImage divideType="blue" fullscreen {...ImageAssets.heroBg}>
                 <TextBlock
                     header="Here's to the Artists."
                     headerSize="large"
@@ -40,6 +41,7 @@ function Home() {
                     style={{ marginTop: "24px", alignSelf: "center" }}
                 />
             </HeroImage>
+
             <Section bgColor={MainTheme.accentLightColor}>
                 <SectionItem>
                     <TextBlock
@@ -61,9 +63,13 @@ function Home() {
                     />
                 </SectionItem>
             </Section>
+            <SectionDivide type="blue" direction="bottom" />
 
             <PartnersSection />
+
+            <SectionDivide type="purple" direction="top" />
             <TestimonialsSection />
+            <SectionDivide type="purple" direction="bottom" />
 
             <Footer />
         </Fragment>

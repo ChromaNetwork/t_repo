@@ -69,10 +69,10 @@ export const Colors: {
     darkGray: string,
     accentBlue: string
 } = {
-    darkPurple: "#7C3B67",
-    lightPurple: "#A5508F",
+    darkPurple: "#733F65",
+    lightPurple: "#9A558C",
     darkBlue: "#223C4C",
-    lightBlue: "#4B6F81",
+    lightBlue: "#526E7F",
     black: "#1A1A1A",
     white: "#F8F7FF",
     darkGray: "#454545",
@@ -152,14 +152,12 @@ export const Paths: {
     home: string,
     about: string,
     downloads: string,
-    opportunities: string,
-    contact: string
+    opportunities: string
 } = {
     home: "/",
     about: "/about",
     downloads: "/downloads",
-    opportunities: "/opportunities",
-    contact: "/contact"
+    opportunities: "/opportunities"
 };
 
 export const ExternalLinks: {
@@ -245,11 +243,7 @@ export const PartnerLinks: Array<PartnerLink> = [
     { label: "Partner7", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner8", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner9", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner11", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner12", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner13", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner14", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
+    { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
 ];
 
 export type Testimonial = {

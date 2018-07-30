@@ -20,7 +20,6 @@ import Home from "Templates/Home";
 import About from "Templates/About";
 import Downloads from "Templates/Downloads";
 import Opportunities from "Templates/Opportunities";
-import Contact from "Templates/Contact";
 
 // Constants and Utils
 import { Paths } from "Base/Constants";
@@ -31,7 +30,6 @@ function App() {
     const AboutComponent = () => <About message="About" />;
     const DownloadsComponent = () => <Downloads message="Downloads" />;
     const OpportunitiesComponent = () => <Opportunities message="Opportunities" />;
-    const ContactComponent = () => <Contact message="Contact" />;
     return (
         <ThemeProvider theme={MainTheme}>
             <BrowserRouter>
@@ -41,7 +39,6 @@ function App() {
                         <Route exact path={Paths.about} component={AboutComponent} />
                         <Route exact path={Paths.downloads} component={DownloadsComponent} />
                         <Route exact path={Paths.opportunities} component={OpportunitiesComponent} />
-                        <Route exact path={Paths.contact} component={ContactComponent} />
                     </Switch>
                 </ScrollToTop>
             </BrowserRouter>

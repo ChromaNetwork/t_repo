@@ -15,12 +15,13 @@ import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";
+import SectionDivide from "Atoms/SectionDivide";
 
 function Opportunities() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage {...ImageAssets.heroBg}>
+            <HeroImage divideType="purple" {...ImageAssets.heroBg}>
                 <TextBlock
                     header="Opportunities"
                     headerSize="large"
@@ -30,7 +31,7 @@ function Opportunities() {
                     textColor={MainTheme.white}
                 />
             </HeroImage>
-            <Section bgColor={MainTheme.primaryColor}>
+            <Section bgColor={MainTheme.secondaryColor}>
                 <SectionItem style={{ justifyContent: "center" }}>
                     <img
                         style={{
@@ -62,6 +63,7 @@ function Opportunities() {
                     />
                 </SectionItem>
             </Section>
+            <SectionDivide direction="bottom" type="purple" />
 
             <Section>
                 <SectionItem>

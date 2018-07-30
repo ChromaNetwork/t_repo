@@ -15,12 +15,13 @@ import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";
+import SectionDivide from "Atoms/SectionDivide";
 
 function About() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage {...ImageAssets.heroBg2}>
+            <HeroImage divideType="purple" {...ImageAssets.heroBg2}>
                 <TextBlock
                     header="What is Tao?"
                     headerSize="large"
@@ -30,7 +31,8 @@ function About() {
                     textColor={MainTheme.white}
                 />
             </HeroImage>
-            <Section bgColor={MainTheme.primaryColor}>
+
+            <Section bgColor={MainTheme.secondaryColor}>
                 <SectionItem style={{ justifyContent: "center" }}>
                     <img style={{ width: "80%", alignSelf: "center" }} src={ImageAssets.TaoLogoBig.srcDefault} alt="" />
                 </SectionItem>
@@ -55,6 +57,7 @@ function About() {
                     />
                 </SectionItem>
             </Section>
+            <SectionDivide direction="bottom" type="purple" />
             <Footer />
         </Fragment>
     );

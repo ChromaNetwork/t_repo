@@ -22,6 +22,7 @@ import CenteredTitleStyle from "./CenteredTitle.style";
 import QuoteStyle from "./Quote.style";
 import NameTextStyle from "./NameText.style";
 import TitleTextStyle from "./TitleText.style";
+import SliderStyle from "./Slider.style";
 
 const CenteredLargeTitle = styled(LargeHeading)`
     ${CenteredTitleStyle};
@@ -48,10 +49,7 @@ const TitleText = styled(SmallText)`
 `;
 
 const StyledSlider = styled(Slider)`
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    ${SliderStyle};
 `;
 
 function PrevArrow(props: { onClick: any }) {

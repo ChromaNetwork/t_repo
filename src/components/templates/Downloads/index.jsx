@@ -16,6 +16,7 @@ import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import { LargeHeading } from "Base/components/atoms/Heading";
 import Footer from "Organisms/Footer";
+import SectionDivide from "Atoms/SectionDivide";
 
 function Downloads() {
     return (
@@ -50,14 +51,16 @@ function Downloads() {
                     />
                 </SectionItem>
             </Section>
-            <Section bgColor={MainTheme.primaryColor} style={{ paddingBottom: "0" }}>
+
+            <SectionDivide direction="top" type="purple" />
+            <Section bgColor={MainTheme.secondaryColor} style={{ paddingBottom: "0" }}>
                 <SectionItem>
                     <LargeHeading color={MainTheme.white} style={{ alignSelf: "center" }}>
                         Wallet Software
                     </LargeHeading>
                 </SectionItem>
             </Section>
-            <Section bgColor={MainTheme.primaryColor}>
+            <Section bgColor={MainTheme.secondaryColor}>
                 <SectionItem>
                     <TextBlock
                         header="Color Background Section"
@@ -117,6 +120,7 @@ function Downloads() {
                     />
                 </SectionItem>
             </Section>
+            <SectionDivide type="purple" direction="bottom" />
             <Footer />
         </Fragment>
     );
