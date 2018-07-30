@@ -23,7 +23,7 @@ function Home() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage divideType="blue" fullscreen {...ImageAssets.heroBg}>
+            <HeroImage scrollDown divideType="blue" fullscreen {...ImageAssets.heroBg}>
                 <SectionItem>
                     <TextBlock
                         header="Here's to the Artists."
