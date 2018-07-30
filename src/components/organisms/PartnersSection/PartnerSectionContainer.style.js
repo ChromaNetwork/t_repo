@@ -5,6 +5,7 @@ import { css } from "styled-components";
 
 export default css`
     && {
-        flex-direction: row;
+        flex-direction: column;
+        padding-bottom: 48px;
     }
 `;

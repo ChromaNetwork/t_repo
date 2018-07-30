@@ -251,3 +251,29 @@ export const PartnerLinks: Array<PartnerLink> = [
     { label: "Partner13", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner14", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
 ];
+
+export type Testimonial = {
+    sourceName: string,
+    sourceTitle: string,
+    quote: string
+};
+
+export const Testimonials: Array<Testimonial> = [
+    {
+        sourceName: "Young Dirty",
+        sourceTitle: "Son of Ol' Dirty Bastard",
+        quote: `"Bitcoin is the future of money and all the fans want a part of the future of Ol’ Dirty Bastard. In the past, Dad’s music was ahead of its time, so it makes sense that he would be ahead of the technology of money now. Tao is how we are going to start."`
+    },
+
+    {
+        sourceName: "Bryce Weiner",
+        sourceTitle: "CEO, AltMarket, Inc.",
+        quote: `"Music thrives creatively and financially when it’s in the hands of the artist themselves. By removing the price tag of experimentation, we’re able to deliver for both the artist and their fans."`
+    },
+
+    {
+        sourceName: "Messiah Jacobs",
+        sourceTitle: "Manager, Estate of Russell Jones/ODB",
+        quote: `"I’ve been involved with crypto-currency for three years.  When Hakim and Tao approached the Estate of ODB about making a token that fans can enjoy, we saw nothing but a positive outcome.  Four Screens Production is always looking for more deals that align with the spirit of ODB."`
+    }
+];

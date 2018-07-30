@@ -24,26 +24,32 @@ const CenteredLargeTitle = styled(LargeHeading)`
 
 const StyledSection = styled(Section)`
     ${PartnerSectionContainerStyle};
-    padding-bottom: 48px;
 `;
 const StyledSectionItem = styled(SectionItem)`
     ${PartnerSectionItemStyle};
 `;
 
+const PartnerCardsContainer = styled.div`
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+`;
+
 function Home() {
     return (
         <Fragment>
-            <Section>
+            <StyledSection>
                 <SectionItem>
                     <CenteredLargeTitle>Our Partners</CenteredLargeTitle>
                 </SectionItem>
-            </Section>
-            <StyledSection>
-                {PartnerLinks.map(partnerLink => (
-                    <StyledSectionItem key={partnerLink.label}>
-                        <PartnerCard partnerLink={partnerLink} />
-                    </StyledSectionItem>
-                ))}
+                <PartnerCardsContainer>
+                    {PartnerLinks.map(partnerLink => (
+                        <StyledSectionItem key={partnerLink.label}>
+                            <PartnerCard partnerLink={partnerLink} />
+                        </StyledSectionItem>
+                    ))}
+                </PartnerCardsContainer>
             </StyledSection>
         </Fragment>
     );

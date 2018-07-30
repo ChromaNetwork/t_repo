@@ -16,6 +16,7 @@ import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";
 import PartnersSection from "Organisms/PartnersSection";
+import TestimonialsSection from "Organisms/TestimonialsSection";
 
 function Home() {
     return (
@@ -62,28 +63,8 @@ function Home() {
             </Section>
 
             <PartnersSection />
+            <TestimonialsSection />
 
-            <Section bgColor={MainTheme.secondaryColor}>
-                <SectionItem>
-                    <TextBlock
-                        header="What is Tao?"
-                        headerSize="large"
-                        text={PlaceholderText}
-                        textSize="large"
-                        headerColor={MainTheme.white}
-                        textColor={MainTheme.white}
-                    />
-                    <Button
-                        name="Read More Button"
-                        onClick={() => {
-                            console.log("clicked btn");
-                        }}
-                        text="Read More"
-                        iconName="ArrowRight"
-                        style={{ marginTop: "24px", alignSelf: "flex-end" }}
-                    />
-                </SectionItem>
-            </Section>
             <Footer />
         </Fragment>
     );
