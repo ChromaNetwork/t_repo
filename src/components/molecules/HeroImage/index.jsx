@@ -82,7 +82,9 @@ export default class HeroImage extends React.Component<Props, State> {
         return (
             <HeroContainer loaded={loaded} {...passthrough}>
                 <CenteredSection>{children}</CenteredSection>
-                {divideType && <PositionedCenterDivide scrollDown direction="top" type={divideType} transparent />}
+                {divideType && (
+                    <PositionedCenterDivide scrollDown={scrollDown} direction="top" type={divideType} transparent />
+                )}
             </HeroContainer>
         );
     }
