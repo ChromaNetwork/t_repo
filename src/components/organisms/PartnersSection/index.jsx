@@ -5,7 +5,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 // Constants and Utils
-import { Measurements, PartnerLinks } from "Base/Constants";
+import { PartnerLinks } from "Base/Constants";
 
 // Components
 import Section from "Atoms/Section";
@@ -16,10 +16,10 @@ import { LargeHeading } from "Atoms/Heading";
 // Styles
 import PartnerSectionContainerStyle from "./PartnerSectionContainer.style";
 import PartnerSectionItemStyle from "./PartnerSectionItem.style";
+import CenteredLargeTitleStyle from "./CenteredLargeHeading.style";
 
 const CenteredLargeTitle = styled(LargeHeading)`
-    align-self: center;
-    padding-bottom: ${Measurements.basePadding};
+    ${CenteredLargeTitleStyle};
 `;
 
 const StyledSection = styled(Section)`

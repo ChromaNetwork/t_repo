@@ -18,14 +18,14 @@ import CircleButton from "Atoms/CircleButton";
 // Styles
 import TestimonialSectionContainerStyle from "./TestimonialSectionContainer.style";
 import TestimonialContainerStyle from "./TestimonialContainer.style";
-import CenteredTitleStyle from "./CenteredTitle.style";
+import TitleStyle from "./Title.style";
 import QuoteStyle from "./Quote.style";
 import NameTextStyle from "./NameText.style";
 import TitleTextStyle from "./TitleText.style";
 import SliderStyle from "./Slider.style";
 
-const CenteredLargeTitle = styled(LargeHeading)`
-    ${CenteredTitleStyle};
+const LargeTitle = styled(LargeHeading)`
+    ${TitleStyle};
 `;
 
 const StyledSection = styled(Section)`
@@ -53,11 +53,11 @@ const StyledSlider = styled(Slider)`
 `;
 
 function PrevArrow(props: { onClick: any }) {
-    return <CircleButton onClick={props.onClick} size="small" iconName="ArrowLeft" />;
+    return <CircleButton blue onClick={props.onClick} iconName="ArrowLeft" />;
 }
 
 function NextArrow(props: { onClick: any }) {
-    return <CircleButton onClick={props.onClick} size="small" iconName="ArrowRight" />;
+    return <CircleButton blue onClick={props.onClick} iconName="ArrowRight" />;
 }
 
 function Home() {
@@ -78,7 +78,7 @@ function Home() {
         <Fragment>
             <StyledSection>
                 <SectionItem>
-                    <CenteredLargeTitle>Testimonials</CenteredLargeTitle>
+                    <LargeTitle>Testimonials</LargeTitle>
                 </SectionItem>
                 <StyledSlider {...settings}>
                     {Testimonials.map(testimonial => (

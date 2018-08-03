@@ -66,29 +66,31 @@ export const Colors: {
     lightBlue: string,
     black: string,
     white: string,
-    darkGray: string,
     accentBlue: string
 } = {
-    darkPurple: "#733F65",
-    lightPurple: "#9A558C",
-    darkBlue: "#223C4C",
-    lightBlue: "#526E7F",
-    black: "#1A1A1A",
+    darkPurple: "#872964",
+    lightPurple: "#BD3A93",
+    darkBlue: "#203548",
+    lightBlue: "#7992A3",
+    black: "#192028",
     white: "#F8F7FF",
-    darkGray: "#454545",
-    accentBlue: "#8FC4C9"
+    accentBlue: "#23599F"
 };
 
 export const Measurements: {
     basePadding: string,
     hPadding: string,
     headerHeight: string,
-    gutter: string
+    gutter: string,
+    sectionMargin: string,
+    sectionMargin_t: string
 } = {
     basePadding: "24px",
     hPadding: "10%",
     headerHeight: "75px",
-    gutter: "12px"
+    gutter: "12px",
+    sectionMargin: "24px",
+    sectionMargin_t: "48px"
 };
 
 export const Depths: {
@@ -243,7 +245,8 @@ export const PartnerLinks: Array<PartnerLink> = [
     { label: "Partner7", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner8", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner9", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
+    { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
+    { label: "Partner11", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
 ];
 
 export type Testimonial = {

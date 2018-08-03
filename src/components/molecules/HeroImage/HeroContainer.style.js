@@ -5,7 +5,7 @@ import { css } from "styled-components";
 import { prop, ifProp } from "styled-tools";
 
 // Constants
-import { Depths, MediaBreakpoints } from "Base/Constants";
+import { Depths, MediaBreakpoints, Measurements } from "Base/Constants";
 import { ThemeProps } from "Base/MainTheme";
 
 const loadedImageCss = css`
@@ -21,21 +21,21 @@ const loadedImageCss = css`
 `;
 
 export default css`
-    width: 100vw;
+    width: 100%;
     ${ifProp(
         "fullscreen",
         css`
-            height: 100vh;
+            height: calc(100vh - ${Measurements.headerHeight});
         `
     )};
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 600px;
     position: relative;
     display: flex;
     box-sizing: border-box;
+    margin-bottom: ${Measurements.sectionMargin};
 
     &::before {
-        background-color: black;
         background-size: cover;
         background-position: center;
         content: "";
@@ -45,14 +45,14 @@ export default css`
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: ${Depths.lowest};
+        z-index: ${Depths.default};
         filter: blur(3px);
         ${loadedImageCss};
     }
 
     &::after {
-        background: linear-gradient(${prop(ThemeProps.black)}, ${prop(ThemeProps.primaryColor)});
-        opacity: 0.5;
+        background: linear-gradient(${prop(ThemeProps.pureBlack)}, ${prop(ThemeProps.black)});
+        opacity: 0.6;
         content: "";
         display: block;
         position: absolute;
@@ -60,10 +60,10 @@ export default css`
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: ${Depths.lower};
+        z-index: ${Depths.default};
     }
 
-    @media (${MediaBreakpoints.desktop}) {
-        padding-top: 0;
+    @media (${MediaBreakpoints.tablet}) {
+        margin-bottom: ${Measurements.sectionMargin_t};
     }
 `;

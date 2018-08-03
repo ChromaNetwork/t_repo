@@ -8,6 +8,9 @@ import { prop } from "styled-tools";
 import { ThemeProps } from "Base/MainTheme";
 
 export default css`
-    cursor: pointer;
-    color: ${prop(ThemeProps.white)};
+    && {
+        text-align: right;
+        padding-bottom: 24px;
+        color: ${prop(ThemeProps.white)};
+    }
 `;

@@ -12,6 +12,7 @@ import BaseHeadingStyle from "./BaseHeading.style";
 export default css`
     ${BaseHeadingStyle};
     font-size: ${FontSizes.smallHeading};
+    margin-bottom: 18px;
 
     @media (${MediaBreakpoints.tablet}) {
         font-size: ${FontSizes.t_smallHeading};

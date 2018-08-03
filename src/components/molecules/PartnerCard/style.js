@@ -6,11 +6,11 @@ import { css } from "styled-components";
 
 export default css`
     && {
-        width: 150px;
-        height: 150px;
+        width: 135px;
+        height: 135px;
         align-items: center;
         justify-content: center;
         display: flex;
-        padding: 12px;
+        padding: 24px;
     }
 `;

@@ -24,7 +24,7 @@ export default css`
         color: ${prop(ThemeProps.black)};
     }
     &:hover {
-        border-bottom: 5px solid ${prop(ThemeProps.accentLightColor)};
+        border-bottom: 5px solid ${prop(ThemeProps.tertiaryColor)};
     }
     &:active {
         color: ${prop(ThemeProps.black)};

@@ -10,8 +10,8 @@ import { ThemeProps } from "Base/MainTheme";
 
 export default css`
     && {
+        text-align: center;
         padding: 0px ${Measurements.basePadding};
         color: ${prop(ThemeProps.white)};
-        text-align: justify;
     }
 `;

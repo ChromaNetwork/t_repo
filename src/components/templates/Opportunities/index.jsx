@@ -15,13 +15,12 @@ import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";
-import SectionDivide from "Atoms/SectionDivide";
 
 function Opportunities() {
     return (
         <Fragment>
-            <Header heroFloat />
-            <HeroImage divideType="purple" {...ImageAssets.heroBg}>
+            <Header />
+            <HeroImage {...ImageAssets.heroBg}>
                 <TextBlock
                     header="Opportunities"
                     headerSize="large"
@@ -29,9 +28,10 @@ function Opportunities() {
                     textSize="large"
                     headerColor={MainTheme.white}
                     textColor={MainTheme.white}
+                    align="center"
                 />
             </HeroImage>
-            <Section bgColor={MainTheme.secondaryColor}>
+            <Section>
                 <SectionItem style={{ justifyContent: "center", flex: "0.25" }}>
                     <img
                         style={{
@@ -63,7 +63,6 @@ function Opportunities() {
                     />
                 </SectionItem>
             </Section>
-            <SectionDivide direction="bottom" type="purple" />
 
             <Section>
                 <SectionItem>
@@ -83,8 +82,7 @@ function Opportunities() {
                     <img
                         style={{
                             width: "80%",
-                            alignSelf: "center",
-                            filter: "invert(100%)"
+                            alignSelf: "center"
                         }}
                         src={ImageAssets.TaoLogoBig.srcDefault}
                         alt=""

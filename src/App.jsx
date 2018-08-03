@@ -14,6 +14,7 @@ import { ThemeProvider } from "styled-components";
 
 // Components
 import ScrollToTop from "Atoms/ScrollToTop";
+import HeaderPadding from "Atoms/HeaderPadding";
 
 // Routes
 import Home from "Templates/Home";
@@ -34,6 +35,7 @@ function App() {
         <ThemeProvider theme={MainTheme}>
             <BrowserRouter>
                 <ScrollToTop>
+                    <HeaderPadding />
                     <Switch>
                         <Route exact path={Paths.home} component={HomeComponent} />
                         <Route exact path={Paths.about} component={AboutComponent} />

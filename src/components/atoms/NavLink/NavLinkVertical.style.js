@@ -23,7 +23,7 @@ export default css`
         margin-right: auto;
 
         &:hover {
-            color: ${prop(ThemeProps.accentLightColor)};
+            color: ${prop(ThemeProps.tertiaryColor)};
             border-bottom: none;
         }
     }

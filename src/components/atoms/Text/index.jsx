@@ -4,9 +4,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// Constants
-import { Colors } from "Base/Constants";
-
 // Types
 import type { Node } from "react";
 
@@ -17,8 +14,6 @@ import SmallTextStyle from "./Smalltext.style";
 
 type Props = {
     className?: string,
-    color?: string,
-    bgColor?: string,
     children: Node
 };
 
@@ -27,17 +22,11 @@ const StyledLargeText = styled.p`
 `;
 
 export const LargeText = (props: Props) => {
-    const { color, bgColor, className, children, ...passThrough } = props;
-    return (
-        <StyledLargeText color={color} bgColor={bgColor} className={className} {...passThrough}>
-            {children}
-        </StyledLargeText>
-    );
+    const { children, ...passThrough } = props;
+    return <StyledLargeText {...passThrough}>{children}</StyledLargeText>;
 };
 
 LargeText.defaultProps = {
-    color: Colors.black,
-    bgColor: "transparent",
     className: ""
 };
 
@@ -46,17 +35,11 @@ const StyledNormalText = styled.p`
 `;
 
 export const NormalText = (props: Props) => {
-    const { color, bgColor, className, children, ...passThrough } = props;
-    return (
-        <StyledNormalText color={color} bgColor={bgColor} className={className} {...passThrough}>
-            {children}
-        </StyledNormalText>
-    );
+    const { children, ...passThrough } = props;
+    return <StyledNormalText {...passThrough}>{children}</StyledNormalText>;
 };
 
 NormalText.defaultProps = {
-    color: Colors.black,
-    bgColor: "transparent",
     className: ""
 };
 
@@ -65,16 +48,10 @@ const StyledSmallText = styled.p`
 `;
 
 export const SmallText = (props: Props) => {
-    const { color, bgColor, className, children, ...passthrough } = props;
-    return (
-        <StyledSmallText color={color} bgColor={bgColor} className={className} {...passthrough}>
-            {children}
-        </StyledSmallText>
-    );
+    const { children, ...passthrough } = props;
+    return <StyledSmallText {...passthrough}>{children}</StyledSmallText>;
 };
 
 SmallText.defaultProps = {
-    color: Colors.black,
-    bgColor: "transparent",
     className: ""
 };

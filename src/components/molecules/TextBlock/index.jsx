@@ -11,7 +11,6 @@ import type { Node } from "react";
 import MainTheme from "Base/MainTheme";
 
 // Components
-import Separator from "Atoms/Separator";
 import { LargeHeading, NormalHeading, SmallHeading } from "Atoms/Heading";
 import { LargeText, NormalText, SmallText } from "Atoms/Text";
 
@@ -25,10 +24,10 @@ type Props = {
     headerSize?: Size,
     headerColor?: string,
     text: string,
+    align?: "left" | "right" | "center",
     textSize?: Size,
     textColor?: string,
-    centerHeader?: boolean,
-    separator?: boolean
+    centerHeader?: boolean
 };
 
 const Container = styled.div`
@@ -41,21 +40,9 @@ const HeadingContainer = styled.div`
     }
 `;
 
-const StyledLargeHeading = styled(LargeHeading)`
-    margin-bottom: 15px;
-`;
-
-const StyledNormalHeading = styled(NormalHeading)`
-    margin-bottom: 15px;
-`;
-
-const StyledSmallHeading = styled(SmallHeading)`
-    margin-bottom: 15px;
-`;
-
 export default function Section(props: Props) {
-    const { separator, header, headerSize, text, textSize, headerColor, textColor, ...passthrough } = props;
-    const Heading = GetHeading(header, headerSize, headerColor, separator);
+    const { align, header, headerSize, text, textSize, headerColor, textColor, ...passthrough } = props;
+    const Heading = GetHeading(header, headerSize, headerColor, align || Section.defaultProps.align);
     const Text = GetText(text, textSize, textColor);
     return (
         <Container {...passthrough}>
@@ -72,14 +59,14 @@ Section.defaultProps = {
     textSize: "normal",
     textColor: MainTheme.black,
     centerHeader: false,
-    separator: false
+    align: "left"
 };
 
 function GetHeading(
     header: string = "",
     headerSize: Size = Section.defaultProps.headerSize,
     headerColor: string = Section.defaultProps.headerColor,
-    separator: boolean = false
+    align: "left" | "right" | "center"
 ): Node {
     if (!header) {
         return null;
@@ -88,22 +75,25 @@ function GetHeading(
         case "large":
             return (
                 <Fragment>
-                    <StyledLargeHeading color={headerColor}>{header}</StyledLargeHeading>
-                    {separator && <Separator />}
+                    <LargeHeading align={align} color={headerColor}>
+                        {header}
+                    </LargeHeading>
                 </Fragment>
             );
         case "normal":
             return (
                 <Fragment>
-                    <StyledNormalHeading color={headerColor}>{header}</StyledNormalHeading>
-                    {separator && <Separator />}
+                    <NormalHeading align={align} color={headerColor}>
+                        {header}
+                    </NormalHeading>
                 </Fragment>
             );
         case "small":
             return (
                 <Fragment>
-                    <StyledSmallHeading color={headerColor}>{header}</StyledSmallHeading>
-                    {separator && <Separator />}
+                    <SmallHeading align={align} color={headerColor}>
+                        {header}
+                    </SmallHeading>
                 </Fragment>
             );
         default:

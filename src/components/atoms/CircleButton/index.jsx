@@ -15,7 +15,8 @@ type Props = {
     onClick: () => mixed,
     className?: string,
     size?: "large" | "normal" | "small",
-    iconName?: string
+    iconName?: string,
+    blue?: boolean
 };
 
 const StyledCircleButton = styled.button`
@@ -29,11 +30,11 @@ const sizes = {
 };
 
 export default function CircleButton(props: Props) {
-    const { size, iconName, ...passThrough } = props;
+    const { blue, size, iconName, ...passThrough } = props;
     const Icon = iconName ? Feather[iconName] : "";
     return (
-        <StyledCircleButton role="button" size={size} {...passThrough}>
-            {iconName && <Icon color={MainTheme.accentDarkColor} size={sizes[size || "normal"]} />}
+        <StyledCircleButton blue={blue} role="button" size={size} {...passThrough}>
+            {iconName && <Icon color={blue ? MainTheme.white : MainTheme.black} size={sizes[size || "normal"]} />}
         </StyledCircleButton>
     );
 }
@@ -41,5 +42,6 @@ export default function CircleButton(props: Props) {
 CircleButton.defaultProps = {
     className: "",
     size: "normal",
-    iconName: ""
+    iconName: "",
+    blue: false
 };

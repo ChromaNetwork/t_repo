@@ -33,15 +33,9 @@ const StyledNavLinks = styled(HeaderNavLinks)`
     ${NavLinksExtendedStyle};
 `;
 
-type Props = {
-    className?: string,
-    heroFloat?: boolean
-};
-
-export default function Header(props: Props) {
-    const { className, heroFloat, ...passthrough } = props;
+export default function Header(props: mixed) {
     return (
-        <HeaderContainer className={className} heroFloat={heroFloat} {...passthrough}>
+        <HeaderContainer {...props}>
             <LogoContainer>
                 <Link to="/">
                     <LogoLink src={ImageAssets.TaoLogoFull.srcDefault} alt="Tao Network" />
@@ -51,8 +45,3 @@ export default function Header(props: Props) {
         </HeaderContainer>
     );
 }
-
-Header.defaultProps = {
-    className: "",
-    heroFloat: false
-};

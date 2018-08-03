@@ -24,14 +24,14 @@ export default css`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: background-color 150ms linear;
 
-    &:hover {
+    /* &:hover {
         background-color: ${prop(ThemeProps.accentLightColor)};
     }
 
     &:active {
         transition: background-color 0ms linear;
         background-color: ${prop(ThemeProps.tertiaryColor)};
-    }
+    } */
 
     @media (${MediaBreakpoints.tablet}) {
         width: 185px;

@@ -16,12 +16,11 @@ import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import { LargeHeading } from "Base/components/atoms/Heading";
 import Footer from "Organisms/Footer";
-import SectionDivide from "Atoms/SectionDivide";
 
 function Downloads() {
     return (
         <Fragment>
-            <Header heroFloat />
+            <Header />
             <HeroImage {...ImageAssets.panorama}>
                 <TextBlock
                     header="Downloads"
@@ -30,6 +29,7 @@ function Downloads() {
                     textSize="large"
                     headerColor={MainTheme.white}
                     textColor={MainTheme.white}
+                    align="center"
                 />
             </HeroImage>
 
@@ -52,75 +52,71 @@ function Downloads() {
                 </SectionItem>
             </Section>
 
-            <SectionDivide direction="top" type="purple" />
-            <Section bgColor={MainTheme.secondaryColor} style={{ paddingBottom: "0" }}>
-                <SectionItem>
-                    <LargeHeading color={MainTheme.white} style={{ alignSelf: "center" }}>
-                        Wallet Software
-                    </LargeHeading>
-                </SectionItem>
-            </Section>
-            <Section bgColor={MainTheme.secondaryColor}>
-                <SectionItem>
-                    <TextBlock
-                        header="Color Background Section"
-                        headerSize="normal"
-                        text={PlaceholderText}
-                        textSize="normal"
-                        textColor={MainTheme.white}
-                        headerColor={MainTheme.white}
-                    />
-                    <Button
-                        aria-label="Read more button"
-                        onClick={() => {
-                            console.log("clicked btn");
-                        }}
-                        text="Read More"
-                        iconName="ArrowRight"
-                        style={{ marginTop: "24px", alignSelf: "flex-end" }}
-                    />
-                </SectionItem>
+            <Section style={{ flexDirection: "column" }}>
+                <LargeHeading color={MainTheme.white} style={{ alignSelf: "center" }}>
+                    Wallet Software
+                </LargeHeading>
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                    <SectionItem>
+                        <TextBlock
+                            header="Color Background Section"
+                            headerSize="normal"
+                            text={PlaceholderText}
+                            textSize="normal"
+                            textColor={MainTheme.white}
+                            headerColor={MainTheme.white}
+                        />
+                        <Button
+                            aria-label="Read more button"
+                            onClick={() => {
+                                console.log("clicked btn");
+                            }}
+                            text="Read More"
+                            iconName="ArrowRight"
+                            style={{ marginTop: "24px", alignSelf: "flex-end" }}
+                        />
+                    </SectionItem>
 
-                <SectionItem>
-                    <TextBlock
-                        header="Color Background Section"
-                        headerSize="normal"
-                        text={PlaceholderText}
-                        textSize="normal"
-                        textColor={MainTheme.white}
-                        headerColor={MainTheme.white}
-                    />
-                    <Button
-                        aria-label="Read more button"
-                        onClick={() => {
-                            console.log("clicked btn");
-                        }}
-                        text="Read More"
-                        iconName="ArrowRight"
-                        style={{ marginTop: "24px", alignSelf: "flex-end" }}
-                    />
-                </SectionItem>
-                <SectionItem>
-                    <TextBlock
-                        header="Color Background Section"
-                        headerSize="normal"
-                        text={PlaceholderText}
-                        textSize="normal"
-                        textColor={MainTheme.white}
-                        headerColor={MainTheme.white}
-                    />
-                    <Button
-                        aria-label="Read more button"
-                        onClick={() => {
-                            console.log("clicked btn");
-                        }}
-                        text="Read More"
-                        iconName="ArrowRight"
-                        style={{ marginTop: "24px", alignSelf: "flex-end" }}
-                    />
-                </SectionItem>
+                    <SectionItem>
+                        <TextBlock
+                            header="Color Background Section"
+                            headerSize="normal"
+                            text={PlaceholderText}
+                            textSize="normal"
+                            textColor={MainTheme.white}
+                            headerColor={MainTheme.white}
+                        />
+                        <Button
+                            aria-label="Read more button"
+                            onClick={() => {
+                                console.log("clicked btn");
+                            }}
+                            text="Read More"
+                            iconName="ArrowRight"
+                            style={{ marginTop: "24px", alignSelf: "flex-end" }}
+                        />
+                    </SectionItem>
+                    <SectionItem>
+                        <TextBlock
+                            header="Color Background Section"
+                            headerSize="normal"
+                            text={PlaceholderText}
+                            textSize="normal"
+                            textColor={MainTheme.white}
+                            headerColor={MainTheme.white}
+                        />
+                        <Button
+                            aria-label="Read more button"
+                            onClick={() => {
+                                console.log("clicked btn");
+                            }}
+                            text="Read More"
+                            iconName="ArrowRight"
+                            style={{ marginTop: "24px", alignSelf: "flex-end" }}
+                        />
+                    </SectionItem>
+                </div>
             </Section>
-            <SectionDivide type="purple" direction="bottom" />
             <Footer />
         </Fragment>
     );

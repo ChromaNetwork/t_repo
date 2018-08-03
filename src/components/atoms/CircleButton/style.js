@@ -2,7 +2,7 @@
 
 // node_modules
 import { css } from "styled-components";
-import { prop, switchProp } from "styled-tools";
+import { ifProp, prop, switchProp } from "styled-tools";
 
 // Constants
 import { ThemeProps } from "Base/MainTheme";
@@ -15,8 +15,7 @@ const sizes = {
 
 export default css`
     text-align: center;
-    color: ${prop(ThemeProps.white)};
-    background-color: ${prop(ThemeProps.tertiaryColor)};
+    background-color: ${ifProp("blue", prop(ThemeProps.tertiaryColor), prop(ThemeProps.white))};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +46,7 @@ export default css`
     })};
     border-radius: 50%;
 
-    &:hover {
+    /* &:hover {
         transition: background-color 150ms linear;
         background-color: ${prop(ThemeProps.accentLightColor)};
     }
@@ -55,5 +54,5 @@ export default css`
     &:active {
         transition: background-color 0ms linear;
         background-color: ${prop(ThemeProps.tertiaryColor)};
-    }
+    } */
 `;

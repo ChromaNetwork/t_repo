@@ -17,16 +17,16 @@ import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";
 import PartnersSection from "Organisms/PartnersSection";
 import TestimonialsSection from "Organisms/TestimonialsSection";
-import SectionDivide from "Atoms/SectionDivide";
 
 function Home() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage scrollDown divideType="blue" fullscreen {...ImageAssets.heroBg}>
+            <HeroImage scrollDown divideType="blue" fullscreen {...ImageAssets.heroBg2}>
                 <SectionItem>
                     <TextBlock
                         header="Here's to the Artists."
+                        align="center"
                         headerSize="large"
                         text={PlaceholderText}
                         textSize="large"
@@ -34,17 +34,17 @@ function Home() {
                         textColor={MainTheme.white}
                     />
                     <Button
-                        name="Read More Button"
+                        name="Download Wallet Button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}
-                        text="Read More"
-                        style={{ marginTop: "24px", alignSelf: "center" }}
+                        text="Download Wallet"
+                        style={{ marginTop: "24px", alignSelf: "center", fontWeight: 300 }}
                     />
                 </SectionItem>
             </HeroImage>
 
-            <Section bgColor={MainTheme.accentLightColor}>
+            <Section>
                 <SectionItem>
                     <TextBlock
                         header="What is Tao?"
@@ -65,14 +65,9 @@ function Home() {
                     />
                 </SectionItem>
             </Section>
-            <SectionDivide type="blue" direction="bottom" />
 
             <PartnersSection />
-
-            <SectionDivide type="purple" direction="top" />
             <TestimonialsSection />
-            <SectionDivide type="purple" direction="bottom" />
-
             <Footer />
         </Fragment>
     );

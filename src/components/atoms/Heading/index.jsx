@@ -4,9 +4,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// Constants
-import { Colors } from "Base/Constants";
-
 // Types
 import type { Node } from "react";
 
@@ -16,9 +13,6 @@ import NormalHeadingStyle from "./NormalHeading.style";
 import SmallHeadingStyle from "./SmallHeading.style";
 
 type Props = {
-    className?: string,
-    color?: string,
-    bgColor?: string,
     children: Node
 };
 
@@ -27,18 +21,8 @@ const StyledLargeHeading = styled.h1`
 `;
 
 export const LargeHeading = (props: Props) => {
-    const { color, bgColor, className, children, ...passthrough } = props;
-    return (
-        <StyledLargeHeading color={color} bgColor={bgColor} className={className} {...passthrough}>
-            {children}
-        </StyledLargeHeading>
-    );
-};
-
-LargeHeading.defaultProps = {
-    color: Colors.black,
-    bgColor: "transparent",
-    className: ""
+    const { children, ...passthrough } = props;
+    return <StyledLargeHeading {...passthrough}>{children}</StyledLargeHeading>;
 };
 
 const StyledNormalHeading = styled.h2`
@@ -46,18 +30,8 @@ const StyledNormalHeading = styled.h2`
 `;
 
 export const NormalHeading = (props: Props) => {
-    const { color, bgColor, className, children, ...passthrough } = props;
-    return (
-        <StyledNormalHeading color={color} bgColor={bgColor} className={className} {...passthrough}>
-            {children}
-        </StyledNormalHeading>
-    );
-};
-
-NormalHeading.defaultProps = {
-    color: Colors.black,
-    bgColor: "transparent",
-    className: ""
+    const { children, ...passthrough } = props;
+    return <StyledNormalHeading {...passthrough}>{children}</StyledNormalHeading>;
 };
 
 const StyledSmallHeading = styled.h3`
@@ -65,16 +39,6 @@ const StyledSmallHeading = styled.h3`
 `;
 
 export const SmallHeading = (props: Props) => {
-    const { color, bgColor, className, children, ...passthrough } = props;
-    return (
-        <StyledSmallHeading color={color} bgColor={bgColor} className={className} {...passthrough}>
-            {children}
-        </StyledSmallHeading>
-    );
-};
-
-SmallHeading.defaultProps = {
-    color: Colors.black,
-    bgColor: "transparent",
-    className: ""
+    const { children, ...passthrough } = props;
+    return <StyledSmallHeading {...passthrough}>{children}</StyledSmallHeading>;
 };

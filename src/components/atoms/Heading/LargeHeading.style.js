@@ -12,6 +12,7 @@ import BaseHeadingStyle from "./BaseHeading.style";
 export default css`
     ${BaseHeadingStyle};
     font-size: ${FontSizes.largeHeading};
+    margin-bottom: 56px;
 
     @media (${MediaBreakpoints.tablet}) {
         font-size: ${FontSizes.t_largeHeading};

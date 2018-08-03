@@ -44,7 +44,7 @@ export default function Footer() {
     return (
         <FooterContainer>
             <TitleContainer>
-                <CenteredTitle> Contact Header </CenteredTitle>
+                <CenteredTitle>Contact</CenteredTitle>
             </TitleContainer>
             <FooterLinksContainer>
                 {FooterLinks.map(footerLink => (

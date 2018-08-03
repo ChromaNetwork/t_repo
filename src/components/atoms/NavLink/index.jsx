@@ -41,7 +41,7 @@ export default function StyledNavLink(props: Props) {
             to={to}
             activeStyle={{
                 paddingBottom: "5px 0",
-                borderBottom: `solid 5px ${MainTheme.accentLightColor}`
+                borderBottom: `solid 5px ${MainTheme.tertiaryColor}`
             }}
             {...passthrough}
         >
@@ -54,7 +54,7 @@ export default function StyledNavLink(props: Props) {
             to={to}
             activeStyle={{
                 paddingBottom: 0,
-                borderBottom: `solid 5px ${MainTheme.accentLightColor}`
+                borderBottom: `solid 5px ${MainTheme.tertiaryColor}`
             }}
             {...passthrough}
         >
