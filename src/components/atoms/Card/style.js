@@ -9,16 +9,16 @@ import { prop, switchProp, ifProp } from "styled-tools";
 import { Measurements } from "Base/Constants";
 import { ThemeProps } from "Base/MainTheme";
 
-const hoverStyle = css`
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    &:hover {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    }
-    &:active {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: box-shadow 0s linear;
-    }
-`;
+// const hoverStyle = css`
+//     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+//     &:hover {
+//         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+//     }
+//     &:active {
+//         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+//         transition: box-shadow 0s linear;
+//     }
+// `;
 
 export default css`
     background-color: ${prop(ThemeProps.pureWhite)};
@@ -43,6 +43,4 @@ export default css`
             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
         `
     })};
-
-    ${ifProp("hover", hoverStyle, "")};
 `;

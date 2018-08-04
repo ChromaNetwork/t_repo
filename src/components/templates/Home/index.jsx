@@ -44,11 +44,9 @@ function Home() {
                 </SectionItem>
             </HeroImage>
 
-            <Section>
+            <Section title="What is Tao?">
                 <SectionItem>
                     <TextBlock
-                        header="What is Tao?"
-                        headerSize="large"
                         text={PlaceholderText}
                         textSize="large"
                         headerColor={MainTheme.white}
@@ -60,7 +58,6 @@ function Home() {
                             console.log("clicked btn");
                         }}
                         text="Read More"
-                        iconName="ArrowRight"
                         style={{ marginTop: "24px", alignSelf: "flex-end" }}
                     />
                 </SectionItem>

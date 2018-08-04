@@ -22,12 +22,10 @@ type Size = "large" | "normal" | "small";
 type Props = {
     header?: string,
     headerSize?: Size,
-    headerColor?: string,
     text: string,
     align?: "left" | "right" | "center",
     textSize?: Size,
-    textColor?: string,
-    centerHeader?: boolean
+    textColor?: string
 };
 
 const Container = styled.div`
@@ -36,13 +34,15 @@ const Container = styled.div`
 
 const HeadingContainer = styled.div`
     && {
+        display: flex;
+        flex-direction: row;
         text-align: left;
     }
 `;
 
 export default function Section(props: Props) {
-    const { align, header, headerSize, text, textSize, headerColor, textColor, ...passthrough } = props;
-    const Heading = GetHeading(header, headerSize, headerColor, align || Section.defaultProps.align);
+    const { align, header, headerSize, text, textSize, textColor, ...passthrough } = props;
+    const Heading = GetHeading(header, headerSize, align || Section.defaultProps.align);
     const Text = GetText(text, textSize, textColor);
     return (
         <Container {...passthrough}>
@@ -55,17 +55,14 @@ export default function Section(props: Props) {
 Section.defaultProps = {
     header: "",
     headerSize: "normal",
-    headerColor: MainTheme.black,
     textSize: "normal",
     textColor: MainTheme.black,
-    centerHeader: false,
     align: "left"
 };
 
 function GetHeading(
     header: string = "",
     headerSize: Size = Section.defaultProps.headerSize,
-    headerColor: string = Section.defaultProps.headerColor,
     align: "left" | "right" | "center"
 ): Node {
     if (!header) {
@@ -75,7 +72,7 @@ function GetHeading(
         case "large":
             return (
                 <Fragment>
-                    <LargeHeading align={align} color={headerColor}>
+                    <LargeHeading align={align} style={{ width: "100%" }}>
                         {header}
                     </LargeHeading>
                 </Fragment>
@@ -83,7 +80,7 @@ function GetHeading(
         case "normal":
             return (
                 <Fragment>
-                    <NormalHeading align={align} color={headerColor}>
+                    <NormalHeading align={align} style={{ width: "100%" }}>
                         {header}
                     </NormalHeading>
                 </Fragment>
@@ -91,7 +88,7 @@ function GetHeading(
         case "small":
             return (
                 <Fragment>
-                    <SmallHeading align={align} color={headerColor}>
+                    <SmallHeading align={align} style={{ width: "100%" }}>
                         {header}
                     </SmallHeading>
                 </Fragment>

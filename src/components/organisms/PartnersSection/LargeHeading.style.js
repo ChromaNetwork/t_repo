@@ -10,7 +10,7 @@ import { ThemeProps } from "Base/MainTheme";
 export default css`
     && {
         text-align: right;
-        padding-bottom: 24px;
+        margin-bottom: 0px;
         color: ${prop(ThemeProps.white)};
     }
 `;

@@ -1,11 +1,14 @@
 // @flow
 
 // node_modules
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
 // types
 import type { Node } from "react";
+
+// Components
+import ArrowHeading from "Molecules//ArrowHeading";
 
 // Styles
 import SectionStyle from "./style";
@@ -15,16 +18,25 @@ const StyledSection = styled.div`
 `;
 
 type Props = {
-    bgColor?: string,
+    background?: boolean,
+    title?: string,
+    titleAlign?: "left" | "right",
     children?: Node
 };
 
 export default function Section(props: Props) {
-    const { children, ...passthrough } = props;
-    return <StyledSection {...passthrough}>{children}</StyledSection>;
+    const { children, title, titleAlign, ...passthrough } = props;
+    return (
+        <Fragment>
+            {title && <ArrowHeading text={title} align={titleAlign || "left"} />}
+            <StyledSection {...passthrough}>{children}</StyledSection>
+        </Fragment>
+    );
 }
 
 Section.defaultProps = {
-    bgColor: "",
+    background: false,
+    title: "",
+    titleAlign: "left",
     children: null
 };

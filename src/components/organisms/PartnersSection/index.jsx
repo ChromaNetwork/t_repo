@@ -11,16 +11,12 @@ import { PartnerLinks } from "Base/Constants";
 import Section from "Atoms/Section";
 import SectionItem from "Atoms/SectionItem";
 import PartnerCard from "Molecules/PartnerCard";
-import { LargeHeading } from "Atoms/Heading";
+import ArrowHeading from "Molecules/ArrowHeading";
 
 // Styles
 import PartnerSectionContainerStyle from "./PartnerSectionContainer.style";
 import PartnerSectionItemStyle from "./PartnerSectionItem.style";
-import CenteredLargeTitleStyle from "./CenteredLargeHeading.style";
-
-const CenteredLargeTitle = styled(LargeHeading)`
-    ${CenteredLargeTitleStyle};
-`;
+import PartnerCardsContainerStyle from "./PartnerCardsContainer.style";
 
 const StyledSection = styled(Section)`
     ${PartnerSectionContainerStyle};
@@ -30,19 +26,14 @@ const StyledSectionItem = styled(SectionItem)`
 `;
 
 const PartnerCardsContainer = styled.div`
-    flex-direction: row;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+    ${PartnerCardsContainerStyle};
 `;
 
 function Home() {
     return (
         <Fragment>
+            <ArrowHeading text="Our Partners" align="right" />
             <StyledSection>
-                <SectionItem>
-                    <CenteredLargeTitle>Our Partners</CenteredLargeTitle>
-                </SectionItem>
                 <PartnerCardsContainer>
                     {PartnerLinks.map(partnerLink => (
                         <StyledSectionItem key={partnerLink.label}>

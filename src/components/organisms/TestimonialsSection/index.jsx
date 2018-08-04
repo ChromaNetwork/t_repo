@@ -10,23 +10,16 @@ import { Testimonials } from "Base/Constants";
 
 // Components
 import Section from "Atoms/Section";
-import SectionItem from "Atoms/SectionItem";
-import { LargeHeading } from "Atoms/Heading";
 import { NormalText, SmallText } from "Atoms/Text";
 import CircleButton from "Atoms/CircleButton";
 
 // Styles
 import TestimonialSectionContainerStyle from "./TestimonialSectionContainer.style";
 import TestimonialContainerStyle from "./TestimonialContainer.style";
-import TitleStyle from "./Title.style";
 import QuoteStyle from "./Quote.style";
 import NameTextStyle from "./NameText.style";
 import TitleTextStyle from "./TitleText.style";
 import SliderStyle from "./Slider.style";
-
-const LargeTitle = styled(LargeHeading)`
-    ${TitleStyle};
-`;
 
 const StyledSection = styled(Section)`
     ${TestimonialSectionContainerStyle};
@@ -76,10 +69,7 @@ function Home() {
     };
     return (
         <Fragment>
-            <StyledSection>
-                <SectionItem>
-                    <LargeTitle>Testimonials</LargeTitle>
-                </SectionItem>
+            <StyledSection title="Testimonials">
                 <StyledSlider {...settings}>
                     {Testimonials.map(testimonial => (
                         <TestimonialContainer key={testimonial.sourceName}>

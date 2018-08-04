@@ -2,10 +2,20 @@
 
 // node_modules
 import { css } from "styled-components";
-import { prop, ifProp } from "styled-tools";
+import { ifProp } from "styled-tools";
 
 // Constants
 import { Measurements, MediaBreakpoints } from "Base/Constants";
+
+// Assets
+import SectionBG from "Assets/svg/section_bg.svg";
+
+const ImageCss = css`
+    background-image: url(${SectionBG});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+`;
 
 export default css`
     display: flex;
@@ -17,7 +27,8 @@ export default css`
     padding-bottom: ${Measurements.basePadding};
     margin-top: ${Measurements.sectionMargin};
     margin-bottom: ${Measurements.sectionMargin};
-    background-color: ${ifProp("bgColor", prop("bgColor"), "transparent")};
+
+    ${ifProp("background", ImageCss, "")};
 
     @media (${MediaBreakpoints.tablet}) {
         flex-direction: row;
