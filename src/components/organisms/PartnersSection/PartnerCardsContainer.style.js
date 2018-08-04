@@ -8,4 +8,6 @@ export default css`
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 `;
