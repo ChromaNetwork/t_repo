@@ -5,6 +5,6 @@ import { css } from "styled-components";
 
 export default css`
     user-select: none;
-    height: 50px;
+    height: 40px;
     align-self: center;
 `;

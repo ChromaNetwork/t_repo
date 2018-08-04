@@ -46,11 +46,11 @@ const StyledSlider = styled(Slider)`
 `;
 
 function PrevArrow(props: { onClick: any }) {
-    return <CircleButton blue onClick={props.onClick} iconName="ArrowLeft" />;
+    return <CircleButton blue onClick={props.onClick} iconName="ChevronLeft" />;
 }
 
 function NextArrow(props: { onClick: any }) {
-    return <CircleButton blue onClick={props.onClick} iconName="ArrowRight" />;
+    return <CircleButton blue onClick={props.onClick} iconName="ChevronRight" />;
 }
 
 function Home() {

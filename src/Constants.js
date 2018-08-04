@@ -87,7 +87,7 @@ export const Measurements: {
 } = {
     basePadding: "24px",
     hPadding: "10%",
-    headerHeight: "75px",
+    headerHeight: "50px",
     gutter: "12px",
     sectionMargin: "24px",
     sectionMargin_t: "48px"
