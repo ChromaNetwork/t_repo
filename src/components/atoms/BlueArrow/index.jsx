@@ -17,6 +17,7 @@ const Container = styled.div`
 
 const StyledArrowTip = styled.img.attrs({ src: BlueArrowTip })`
     height: 76px;
+    margin-left: -1px;
 `;
 
 const StyledArrowBody = styled.img.attrs({ src: BlueArrowBody })`

@@ -17,6 +17,7 @@ import ArrowHeading from "Molecules/ArrowHeading";
 import PartnerSectionContainerStyle from "./PartnerSectionContainer.style";
 import PartnerSectionItemStyle from "./PartnerSectionItem.style";
 import PartnerCardsContainerStyle from "./PartnerCardsContainer.style";
+import ArrowHeadingStyle from "./ArrowHeading.style";
 
 const StyledSection = styled(Section)`
     ${PartnerSectionContainerStyle};
@@ -29,10 +30,14 @@ const PartnerCardsContainer = styled.div`
     ${PartnerCardsContainerStyle};
 `;
 
+const StyledArrowHeading = styled(ArrowHeading)`
+    ${ArrowHeadingStyle};
+`;
+
 function Home() {
     return (
         <Fragment>
-            <ArrowHeading text="Our Partners" align="right" />
+            <StyledArrowHeading text="Our Partners" align="right" />
             <StyledSection>
                 <PartnerCardsContainer>
                     {PartnerLinks.map(partnerLink => (

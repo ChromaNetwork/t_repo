@@ -226,8 +226,7 @@ export const FooterLinks: Array<FooterLink> = [
     { icon: "Twitter", url: ExternalLinks.slackInvite },
     { icon: "Facebook", url: ExternalLinks.slackInvite },
     { icon: "Youtube", url: ExternalLinks.slackInvite },
-    { icon: "Github", url: ExternalLinks.slackInvite },
-    { icon: "Gitlab", url: ExternalLinks.slackInvite }
+    { icon: "Github", url: ExternalLinks.slackInvite }
 ];
 
 export type PartnerLink = {

@@ -8,11 +8,11 @@ import { MediaBreakpoints } from "Base/Constants";
 
 export default css`
     && {
-        flex-direction: row;
         padding-bottom: 48px;
+        padding-top: 24px;
 
-        @media (${MediaBreakpoints.tablet}) {
-            padding-top: 0;
-        }
+        /* @media (${MediaBreakpoints.tablet}) {
+            padding-bottom: 48px;
+        } */
     }
 `;

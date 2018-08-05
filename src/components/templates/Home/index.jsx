@@ -30,6 +30,7 @@ function Home() {
                         headerSize="large"
                         text={PlaceholderText}
                         textSize="large"
+                        textAlign="justify"
                         headerColor={MainTheme.white}
                         textColor={MainTheme.white}
                     />
@@ -39,7 +40,7 @@ function Home() {
                             console.log("clicked btn");
                         }}
                         text="Download Wallet"
-                        style={{ marginTop: "24px", alignSelf: "center", fontWeight: 300 }}
+                        style={{ marginTop: "56px", alignSelf: "center", fontWeight: 300 }}
                     />
                 </SectionItem>
             </HeroImage>

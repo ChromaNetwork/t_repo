@@ -25,7 +25,8 @@ type Props = {
     text: string,
     align?: "left" | "right" | "center",
     textSize?: Size,
-    textColor?: string
+    textColor?: string,
+    textAlign?: "left" | "center" | "right" | "justify"
 };
 
 const Container = styled.div`
@@ -41,9 +42,9 @@ const HeadingContainer = styled.div`
 `;
 
 export default function Section(props: Props) {
-    const { align, header, headerSize, text, textSize, textColor, ...passthrough } = props;
+    const { align, header, headerSize, text, textSize, textColor, textAlign, ...passthrough } = props;
     const Heading = GetHeading(header, headerSize, align || Section.defaultProps.align);
-    const Text = GetText(text, textSize, textColor);
+    const Text = GetText(text, textSize, textColor, textAlign);
     return (
         <Container {...passthrough}>
             <HeadingContainer>{Heading}</HeadingContainer>
@@ -57,7 +58,8 @@ Section.defaultProps = {
     headerSize: "normal",
     textSize: "normal",
     textColor: MainTheme.black,
-    align: "left"
+    align: "left",
+    textAlign: "left"
 };
 
 function GetHeading(
@@ -101,18 +103,31 @@ function GetHeading(
 function GetText(
     text: string = "",
     textSize: Size = Section.defaultProps.textSize,
-    textColor: string = Section.defaultProps.textColor
+    textColor: string = Section.defaultProps.textColor,
+    textAlign: string = Section.defaultProps.textAlign
 ): Node {
     if (!text) {
         return null;
     }
     switch (textSize) {
         case "large":
-            return <LargeText color={textColor}>{text}</LargeText>;
+            return (
+                <LargeText color={textColor} style={{ textAlign }}>
+                    {text}
+                </LargeText>
+            );
         case "normal":
-            return <NormalText color={textColor}>{text}</NormalText>;
+            return (
+                <NormalText color={textColor} style={{ textAlign }}>
+                    {text}
+                </NormalText>
+            );
         case "small":
-            return <SmallText color={textColor}>{text}</SmallText>;
+            return (
+                <SmallText color={textColor} style={{ textAlign }}>
+                    {text}
+                </SmallText>
+            );
         default:
             return null;
     }

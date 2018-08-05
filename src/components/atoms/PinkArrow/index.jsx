@@ -17,6 +17,7 @@ const Container = styled.div`
 
 const StyledArrowTip = styled.img.attrs({ src: PinkArrowTip })`
     height: 76px;
+    margin-right: -1px;
 `;
 
 const StyledArrowBody = styled.img.attrs({ src: PinkArrowBody })`
