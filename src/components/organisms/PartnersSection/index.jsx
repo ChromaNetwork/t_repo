@@ -8,7 +8,7 @@ import styled from "styled-components";
 import { PartnerLinks } from "Base/Constants";
 
 // Components
-import Section from "Atoms/Section";
+import Section from "Molecules/Section";
 import SectionItem from "Atoms/SectionItem";
 import PartnerCard from "Molecules/PartnerCard";
 import ArrowHeading from "Molecules/ArrowHeading";

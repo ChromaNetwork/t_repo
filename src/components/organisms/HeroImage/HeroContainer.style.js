@@ -34,6 +34,7 @@ export default css`
     display: flex;
     box-sizing: border-box;
     margin-bottom: ${Measurements.sectionMargin};
+    overflow: hidden;
 
     &::before {
         background-size: cover;

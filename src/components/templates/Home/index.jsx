@@ -4,14 +4,14 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { PlaceholderText, ImageAssets } from "Base/Constants";
+import { PlaceholderText } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Components
-import HeroImage from "Molecules/HeroImage";
+import HeroImage from "Organisms//HeroImage";
 import TextBlock from "Molecules/TextBlock";
 import Header from "Organisms/Header";
-import Section from "Atoms/Section";
+import Section from "Molecules/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";
@@ -22,7 +22,7 @@ function Home() {
     return (
         <Fragment>
             <Header heroFloat />
-            <HeroImage scrollDown divideType="blue" fullscreen {...ImageAssets.heroBg2}>
+            <HeroImage scrollDown divideType="blue" fullscreen srcPlaceholder="" srcDefault="">
                 <SectionItem>
                     <TextBlock
                         header="Here's to the Artists."

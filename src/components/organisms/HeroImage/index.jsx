@@ -1,13 +1,15 @@
 // @flow
+// Video player background styles adapted from https://codebushi.com/react-youtube-background/
 
 // node_modules
 import React from "react";
 import styled from "styled-components";
 import * as Scroll from "react-scroll";
 import { ChevronsDown } from "react-feather";
+import YouTubePlayer from "react-player/lib/players/YouTube";
 
 // Components
-import Section from "Atoms/Section";
+import Section from "Molecules/Section";
 // import SectionItem from "Atoms/SectionItem";
 
 // types
@@ -17,6 +19,9 @@ import type { Node } from "react";
 import HeroContainerStyle from "./HeroContainer.style";
 import CenteredSectionStyle from "./CenteredSection.style";
 import ScrollBtnStyle from "./ScrollBtnDown.style";
+import VideoBackgroundStyle from "./VideoBackground.style";
+import VideoForegroundStyle from "./VideoForeground.style";
+import PlayerStyle from "./Player.style";
 
 const HeroContainer = styled.div`
     ${HeroContainerStyle};
@@ -28,6 +33,18 @@ const CenteredSection = styled(Section)`
 
 const ScrollDownBtn = styled(ChevronsDown)`
     ${ScrollBtnStyle};
+`;
+
+const VideoBackground = styled.div`
+    ${VideoBackgroundStyle};
+`;
+
+const VideoForeground = styled.div`
+    ${VideoForegroundStyle};
+`;
+
+const StyledPlayer = styled(YouTubePlayer)`
+    ${PlayerStyle};
 `;
 
 type Props = {
@@ -48,7 +65,7 @@ type State = {
 };
 
 function ScrollDown() {
-    Scroll.animateScroll.scrollMore(window.innerHeight - window.pageYOffset - 50); // Header height magic number
+    Scroll.animateScroll.scrollMore(window.innerHeight - window.pageYOffset - 50); // Header height magic number :/
 }
 
 export default class HeroImage extends React.Component<Props, State> {
@@ -84,6 +101,20 @@ export default class HeroImage extends React.Component<Props, State> {
         const { loaded } = this.state;
         return (
             <HeroContainer fullscreen={fullscreen} loaded={loaded} {...passthrough}>
+                {fullscreen && (
+                    <VideoBackground>
+                        <VideoForeground>
+                            <StyledPlayer
+                                style={{ objectFit: "cover" }}
+                                muted
+                                loop
+                                preload="true"
+                                url="https://www.youtube.com/watch?v=sjekGOb95IM"
+                                playing
+                            />
+                        </VideoForeground>
+                    </VideoBackground>
+                )}
                 <CenteredSection>{children}</CenteredSection>
                 {fullscreen && <ScrollDownBtn color="white" size="56" onClick={() => ScrollDown()} />}
             </HeroContainer>

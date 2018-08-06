@@ -21,7 +21,7 @@ const float = keyframes`
 `;
 
 export default css`
-animation: ${float} 2s ease-in-out infinite
+    animation: ${float} 2s ease-in-out infinite
     cursor: pointer;
     color: ${prop(ThemeProps.white)};
     z-index: ${Depths.high};

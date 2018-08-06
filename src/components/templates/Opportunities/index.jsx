@@ -8,10 +8,10 @@ import { PlaceholderText, ImageAssets } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Components
-import HeroImage from "Molecules/HeroImage";
+import HeroImage from "Organisms/HeroImage";
 import TextBlock from "Molecules/TextBlock";
 import Header from "Organisms/Header";
-import Section from "Atoms/Section";
+import Section from "Molecules/Section";
 import SectionItem from "Atoms/SectionItem";
 import Button from "Atoms/Button";
 import Footer from "Organisms/Footer";

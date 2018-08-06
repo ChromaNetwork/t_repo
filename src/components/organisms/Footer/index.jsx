@@ -8,7 +8,7 @@ import styled from "styled-components";
 import { FooterLinks } from "Base/Constants";
 
 // Components
-import Section from "Atoms/Section";
+import Section from "Molecules/Section";
 import SectionItem from "Atoms/SectionItem";
 import CircleButton from "Atoms/CircleButton";
 import { NormalHeading } from "Atoms/Heading";

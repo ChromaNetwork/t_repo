@@ -9,7 +9,7 @@ import Slider from "react-slick";
 import { Testimonials } from "Base/Constants";
 
 // Components
-import Section from "Atoms/Section";
+import Section from "Molecules/Section";
 import { NormalText, SmallText } from "Atoms/Text";
 import CircleButton from "Atoms/CircleButton";
 
