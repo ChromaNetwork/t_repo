@@ -28,9 +28,9 @@ function Home() {
                         header="Here's to the Artists."
                         align="center"
                         headerSize="large"
-                        text={PlaceholderText}
+                        text="More fans. More music. More opportunity. Tao is bridging the gap between artists and followers."
                         textSize="large"
-                        textAlign="justify"
+                        textAlign="center"
                         headerColor={MainTheme.white}
                         textColor={MainTheme.white}
                     />
@@ -39,7 +39,7 @@ function Home() {
                         onClick={() => {
                             console.log("clicked btn");
                         }}
-                        text="Download Wallet"
+                        text="Get the Wallet"
                         style={{ marginTop: "56px", alignSelf: "center", fontWeight: 300 }}
                     />
                 </SectionItem>

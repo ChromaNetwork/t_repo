@@ -13,5 +13,6 @@ export default css`
         padding-top: ${Measurements.basePadding};
         padding-bottom: ${Measurements.basePadding};
         z-index: ${Depths.high};
+        width: 100%;
     }
 `;

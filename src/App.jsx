@@ -20,17 +20,15 @@ import HeaderPadding from "Atoms/HeaderPadding";
 import Home from "Templates/Home";
 import About from "Templates/About";
 import Downloads from "Templates/Downloads";
-import Opportunities from "Templates/Opportunities";
 
 // Constants and Utils
 import { Paths } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 function App() {
-    const HomeComponent = () => <Home message="Home" />;
-    const AboutComponent = () => <About message="About" />;
-    const DownloadsComponent = () => <Downloads message="Downloads" />;
-    const OpportunitiesComponent = () => <Opportunities message="Opportunities" />;
+    const HomeComponent = () => <Home />;
+    const AboutComponent = () => <About />;
+    const DownloadsComponent = () => <Downloads />;
     return (
         <ThemeProvider theme={MainTheme}>
             <BrowserRouter>
@@ -40,7 +38,6 @@ function App() {
                         <Route exact path={Paths.home} component={HomeComponent} />
                         <Route exact path={Paths.about} component={AboutComponent} />
                         <Route exact path={Paths.downloads} component={DownloadsComponent} />
-                        <Route exact path={Paths.opportunities} component={OpportunitiesComponent} />
                     </Switch>
                 </ScrollToTop>
             </BrowserRouter>

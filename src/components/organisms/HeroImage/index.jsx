@@ -61,7 +61,8 @@ type Props = {
 };
 
 type State = {
-    loaded: boolean
+    loaded: boolean,
+    videoStarted: boolean
 };
 
 function ScrollDown() {
@@ -83,7 +84,8 @@ export default class HeroImage extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            loaded: false
+            loaded: false,
+            videoStarted: false
         };
     }
 
@@ -96,21 +98,27 @@ export default class HeroImage extends React.Component<Props, State> {
         };
     }
 
+    VideoStarted = (): void => {
+        console.log("Video started");
+        this.setState({ videoStarted: true });
+    };
+
     render() {
         const { children, divideType, scrollDown, fullscreen, ...passthrough } = this.props;
-        const { loaded } = this.state;
+        const { loaded, videoStarted } = this.state;
         return (
             <HeroContainer fullscreen={fullscreen} loaded={loaded} {...passthrough}>
                 {fullscreen && (
-                    <VideoBackground>
+                    <VideoBackground videoStarted={videoStarted}>
                         <VideoForeground>
                             <StyledPlayer
                                 style={{ objectFit: "cover" }}
                                 muted
                                 loop
                                 preload="true"
-                                url="https://www.youtube.com/watch?v=sjekGOb95IM"
+                                url="https://youtu.be/ZDurU6vpW_w?t=38"
                                 playing
+                                onPlay={this.VideoStarted}
                             />
                         </VideoForeground>
                     </VideoBackground>

@@ -153,13 +153,11 @@ export const FontSizes: {
 export const Paths: {
     home: string,
     about: string,
-    downloads: string,
-    opportunities: string
+    downloads: string
 } = {
     home: "/",
     about: "/about",
-    downloads: "/downloads",
-    opportunities: "/opportunities"
+    downloads: "/downloads"
 };
 
 export const ExternalLinks: {
@@ -168,14 +166,16 @@ export const ExternalLinks: {
     sourceCode: string,
     discordInvite: string,
     slackInvite: string,
-    store: string
+    store: string,
+    github: string
 } = {
     exchange: "https://c-cex.com/?p=xto-btc",
     explorer: "http://taoexplorer.com/",
     sourceCode: "https://github.com/taoblockchain/tao-core",
     discordInvite: "https://discord.gg/6nNdQC7",
     slackInvite: "https://tao11.typeform.com/to/ws8MgM",
-    store: "https://teespring.com/stores/tao-blockchain"
+    store: "https://teespring.com/stores/tao-blockchain",
+    github: "https://www.github.com"
 };
 
 export type DownloadableFileLink = { name: string, url: string };
@@ -211,7 +211,7 @@ export const HeaderLinks: Array<HeaderLink> = [
     { label: "Home", url: Paths.home },
     { label: "About", url: Paths.about },
     { label: "Downloads", url: Paths.downloads },
-    { label: "Opportunities", url: Paths.opportunities },
+    { label: "Github", url: ExternalLinks.github, external: true },
     { label: "Explorer", url: ExternalLinks.explorer, external: true },
     { label: "Store", url: ExternalLinks.store, external: true }
 ];

@@ -35,7 +35,9 @@ function Downloads() {
 
             <Section>
                 <SectionItem>
-                    <LargeHeading style={{ alignSelf: "center", paddingBottom: Measurements.basePadding }}>
+                    <LargeHeading
+                        style={{ alignSelf: "center", textAlign: "center", paddingBottom: Measurements.basePadding }}
+                    >
                         Read the Whitepaper
                     </LargeHeading>
                     <TextBlock text={PlaceholderText} />
