@@ -166,21 +166,21 @@ export const Paths: {
 export const ExternalLinks: {
     exchange: string,
     explorer: string,
-    sourceCode: string,
     discordInvite: string,
     slackInvite: string,
     store: string,
     github: string,
-    reddit: string
+    reddit: string,
+    mail: string
 } = {
     exchange: "https://c-cex.com/?p=xto-btc",
     explorer: "http://taoexplorer.com/",
-    sourceCode: "https://github.com/taoblockchain/tao-core",
     discordInvite: "https://discord.gg/WBxAnCx",
     slackInvite: "https://tao11.typeform.com/to/ws8MgM",
     store: "https://teespring.com/stores/tao-blockchain",
-    github: "https://www.github.com",
-    reddit: "https://www.reddit.com/r/taonetwork/"
+    github: "https://github.com/taoblockchain/tao-core",
+    reddit: "https://www.reddit.com/r/taonetwork/",
+    mail: "mailto:info@tao.network"
 };
 
 export type DownloadableFileLink = { name: string, url: string };
@@ -229,7 +229,8 @@ export type FooterLink = {
 export const FooterLinks: Array<FooterLink> = [
     { icon: "Slack", url: ExternalLinks.slackInvite },
     { icon: "FaDiscord", url: ExternalLinks.discordInvite },
-    { icon: "FaRedditAlien", url: ExternalLinks.reddit }
+    { icon: "FaRedditAlien", url: ExternalLinks.reddit },
+    { icon: "Mail", url: ExternalLinks.mail }
 ];
 
 export type PartnerLink = {
