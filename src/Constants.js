@@ -11,6 +11,7 @@ import PanoramaPre from "Assets/panorama_pre.jpg";
 import TaoLogoFull from "Assets/logo_full.png";
 import TaoLogo250 from "Assets/logo_250x250.png";
 import TaoLogo75 from "Assets/logo_75x75.png";
+import DemLogo from "Assets/dem_logo.png";
 
 export const PlaceholderText: string =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -48,7 +49,8 @@ export const ImageAssets: {
     panorama: ImageSource,
     TaoLogoFull: ImageSource,
     TaoLogo250: ImageSource,
-    TaoLogo75: ImageSource
+    TaoLogo75: ImageSource,
+    DemLogo: ImageSource
 } = {
     heroBg: { srcDefault: HeroBg, srcPlaceholder: HeroBgPre },
     heroBg2: { srcDefault: HeroBg2, srcPlaceholder: HeroBg2Pre },
@@ -56,7 +58,8 @@ export const ImageAssets: {
     panorama: { srcDefault: Panorama, srcPlaceholder: PanoramaPre },
     TaoLogoFull: { srcDefault: TaoLogoFull, srcPlaceholder: "" },
     TaoLogo250: { srcDefault: TaoLogo250, srcPlaceholder: "" },
-    TaoLogo75: { srcDefault: TaoLogo75, srcPlaceholder: "" }
+    TaoLogo75: { srcDefault: TaoLogo75, srcPlaceholder: "" },
+    DemLogo: { srcDefault: DemLogo, srcPlaceholder: "" }
 };
 
 export const Colors: {
@@ -172,7 +175,7 @@ export const ExternalLinks: {
     exchange: "https://c-cex.com/?p=xto-btc",
     explorer: "http://taoexplorer.com/",
     sourceCode: "https://github.com/taoblockchain/tao-core",
-    discordInvite: "https://discord.gg/6nNdQC7",
+    discordInvite: "https://discord.gg/WBxAnCx",
     slackInvite: "https://tao11.typeform.com/to/ws8MgM",
     store: "https://teespring.com/stores/tao-blockchain",
     github: "https://www.github.com"
@@ -223,7 +226,7 @@ export type FooterLink = {
 
 export const FooterLinks: Array<FooterLink> = [
     { icon: "Slack", url: ExternalLinks.slackInvite },
-    { icon: "Twitter", url: ExternalLinks.slackInvite },
+    { icon: "FaDiscord", url: ExternalLinks.discordInvite },
     { icon: "Facebook", url: ExternalLinks.slackInvite },
     { icon: "Youtube", url: ExternalLinks.slackInvite },
     { icon: "Github", url: ExternalLinks.slackInvite }
@@ -242,7 +245,7 @@ export const PartnerLinks: Array<PartnerLink> = [
     { label: "Partner6", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner5", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner7", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner8", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
+    { label: "Partner8", logoUrl: ImageAssets.DemLogo.srcDefault, url: "http://www.dem.capital" },
     { label: "Partner9", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner11", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }

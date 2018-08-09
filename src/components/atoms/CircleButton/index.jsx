@@ -4,6 +4,7 @@
 import React from "react";
 import styled from "styled-components";
 import * as Feather from "react-feather";
+import * as FontAwesome from "react-icons/fa";
 
 // Constants
 import MainTheme from "Base/MainTheme";
@@ -12,14 +13,15 @@ import MainTheme from "Base/MainTheme";
 import CircleButtonStyle from "./style";
 
 type Props = {
-    onClick: () => mixed,
+    onClick?: () => mixed,
     className?: string,
     size?: "large" | "normal" | "small",
     iconName?: string,
-    blue?: boolean
+    blue?: boolean,
+    href?: ?string
 };
 
-const StyledCircleButton = styled.button`
+const StyledCircleButton = styled.a`
     ${CircleButtonStyle};
 `;
 
@@ -31,9 +33,10 @@ const sizes = {
 
 export default function CircleButton(props: Props) {
     const { blue, size, iconName, ...passThrough } = props;
-    const Icon = iconName ? Feather[iconName] : "";
+    let Icon = iconName ? Feather[iconName] : "";
+    Icon = Icon ? Icon : FontAwesome[iconName];
     return (
-        <StyledCircleButton blue={blue} role="button" size={size} {...passThrough}>
+        <StyledCircleButton blue={blue} size={size} {...passThrough}>
             {iconName && <Icon color={blue ? MainTheme.white : MainTheme.black} size={sizes[size || "normal"]} />}
         </StyledCircleButton>
     );
@@ -43,5 +46,7 @@ CircleButton.defaultProps = {
     className: "",
     size: "normal",
     iconName: "",
-    blue: false
+    blue: false,
+    onClick: () => {},
+    href: null
 };

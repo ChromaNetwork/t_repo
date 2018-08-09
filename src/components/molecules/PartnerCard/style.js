@@ -9,22 +9,22 @@ import { MediaBreakpoints } from "Base/Constants";
 
 export default css`
     && {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
         align-items: center;
         justify-content: center;
         display: flex;
         padding: 8px;
 
         @media (${MediaBreakpoints.tablet}) {
-            width: 100px;
-            height: 100px;
+            width: 135px;
+            height: 135px;
             padding: 18px;
         }
 
         @media (${MediaBreakpoints.desktop}) {
-            width: 135px;
-            height: 135px;
+            width: 150px;
+            height: 150px;
             padding: 24px;
         }
     }

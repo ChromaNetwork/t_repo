@@ -40,6 +40,15 @@ const StyledCircleButton = styled(CircleButton)`
     ${CircleButtonStyle};
 `;
 
+// function onClick(url: ?string): void {
+//     // https://stackoverflow.com/questions/47789347/open-link-in-new-tab-in-react-router-programmatically?rq=1
+//     if (!url) {
+//         return;
+//     }
+//     const win = window.open(url, "_blank");
+//     win.focus();
+// }
+
 export default function Footer() {
     return (
         <FooterContainer>
@@ -52,9 +61,7 @@ export default function Footer() {
                         size="large"
                         key={footerLink.icon}
                         aria-label={footerLink.icon}
-                        onClick={() => {
-                            console.log(`click for ${footerLink.url}`);
-                        }}
+                        href={footerLink.url}
                         iconName={footerLink.icon}
                     />
                 ))}
