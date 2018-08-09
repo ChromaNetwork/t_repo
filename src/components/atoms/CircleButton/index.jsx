@@ -28,7 +28,7 @@ const StyledCircleButton = styled.a`
 const sizes = {
     small: 22,
     normal: 32,
-    large: 40
+    large: 36
 };
 
 export default function CircleButton(props: Props) {
