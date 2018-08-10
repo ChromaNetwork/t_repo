@@ -22,18 +22,22 @@ const loadedImageCss = css`
 
 export default css`
     width: 100%;
-    ${ifProp(
-        "fullscreen",
-        css`
-            height: 100vh;
-        `
-    )};
     min-width: 100%;
     min-height: 500px;
     display: flex;
-    box-sizing: border-box;
+    justify-content: center;
     margin-bottom: ${Measurements.sectionMargin};
     overflow: hidden;
+
+    ${ifProp(
+        "fullscreen",
+        css`
+            top: -50px;
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+        `
+    )};
 
     &::before {
         background-size: cover;
@@ -45,9 +49,28 @@ export default css`
         left: 0;
         width: 100%;
         height: 100%;
+        min-height: 500px;
         z-index: ${Depths.default};
         filter: blur(3px);
         ${loadedImageCss};
+
+        ${ifProp(
+            "fullscreen",
+            css`
+                height: 100vh;
+                min-height: 700px;
+            `
+        )};
+
+        @media (${MediaBreakpoints.desktop}) {
+            ${ifProp(
+                "fullscreen",
+                css`
+                    height: 100vh;
+                    min-height: 800px;
+                `
+            )};
+        }
     }
 
     &::after {
@@ -60,10 +83,38 @@ export default css`
         left: 0;
         width: 100%;
         height: 100%;
+        min-height: 500px;
         z-index: ${Depths.default};
+        ${ifProp(
+            "fullscreen",
+            css`
+                height: 100vh;
+                min-height: 700px;
+            `
+        )};
+
+        @media (${MediaBreakpoints.desktop}) {
+            ${ifProp(
+                "fullscreen",
+                css`
+                    height: 100vh;
+                    min-height: 800px;
+                `
+            )};
+        }
     }
 
     @media (${MediaBreakpoints.tablet}) {
         margin-bottom: ${Measurements.sectionMargin_t};
+    }
+
+    @media (${MediaBreakpoints.desktop}) {
+        ${ifProp(
+            "fullscreen",
+            css`
+                height: 100vh;
+                min-height: 800px;
+            `
+        )};
     }
 `;

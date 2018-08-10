@@ -11,17 +11,19 @@ export default css`
     && {
         width: 175px;
         height: 175px;
-        margin-bottom: 56px;
+        margin-bottom: 12px;
         align-self: center;
 
         @media (${MediaBreakpoints.tablet}) {
             width: 250px;
             height: 250px;
+            margin-bottom: 24px;
         }
 
         @media (${MediaBreakpoints.desktop}) {
             width: 325px;
             height: 325px;
+            margin-bottom: 56px;
         }
     }
 `;

@@ -4,7 +4,7 @@
 import { css } from "styled-components";
 
 // Constants
-import { Depths, Measurements } from "Base/Constants";
+import { Depths, Measurements, MediaBreakpoints } from "Base/Constants";
 
 export default css`
     && {
@@ -15,5 +15,9 @@ export default css`
         padding-bottom: ${Measurements.basePadding};
         z-index: ${Depths.high};
         width: 100%;
+
+        @media (${MediaBreakpoints.tablet}) {
+            align-self: center;
+        }
     }
 `;

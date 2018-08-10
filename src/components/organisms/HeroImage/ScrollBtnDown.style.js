@@ -25,7 +25,7 @@ export default css`
     cursor: pointer;
     color: ${prop(ThemeProps.white)};
     z-index: ${Depths.high};
+    align-self: center;
     position: absolute;
     bottom: ${Measurements.basePadding};
-    width: 100%;
 `;

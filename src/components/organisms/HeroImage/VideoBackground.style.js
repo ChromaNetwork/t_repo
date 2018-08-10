@@ -5,7 +5,7 @@ import { css } from "styled-components";
 import { ifProp } from "styled-tools";
 
 // Constants
-import { Depths } from "Base/Constants";
+import { Depths, MediaBreakpoints } from "Base/Constants";
 
 export default css`
     background: black;
@@ -18,6 +18,22 @@ export default css`
     transition: opacity 0.5s ease-in;
     position: absolute;
     overflow: hidden;
+    ${ifProp(
+        "fullscreen",
+        css`
+            min-height: 700px;
+        `
+    )};
+
+    @media (${MediaBreakpoints.desktop}) {
+        ${ifProp(
+            "fullscreen",
+            css`
+                height: 100vh;
+                min-height: 800px;
+            `
+        )};
+    }
 
     &::after {
         display: block;
@@ -28,6 +44,23 @@ export default css`
         width: 100%;
         height: 100%;
         z-index: ${Depths.default};
+
+        ${ifProp(
+            "fullscreen",
+            css`
+                min-height: 700px;
+            `
+        )};
+
+        @media (${MediaBreakpoints.desktop}) {
+            ${ifProp(
+                "fullscreen",
+                css`
+                    height: 100vh;
+                    min-height: 800px;
+                `
+            )};
+        }
     }
 
     & iframe: {
@@ -37,5 +70,22 @@ export default css`
         width: 100%;
         height: 100%;
         pointer-events: none;
+
+        ${ifProp(
+            "fullscreen",
+            css`
+                min-height: 700px;
+            `
+        )};
+
+        @media (${MediaBreakpoints.desktop}) {
+            ${ifProp(
+                "fullscreen",
+                css`
+                    height: 100vh;
+                    min-height: 800px;
+                `
+            )};
+        }
     }
 `;

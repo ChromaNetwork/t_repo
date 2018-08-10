@@ -74,7 +74,7 @@ type State = {
 };
 
 function ScrollDown() {
-    Scroll.animateScroll.scrollMore(window.innerHeight - window.pageYOffset - 50); // Header height magic number :/
+    Scroll.animateScroll.scrollMore(Math.max(window.innerHeight, 700) - window.pageYOffset - 50); // Header height magic number :/
 }
 
 export default class HeroImage extends React.Component<Props, State> {
@@ -116,7 +116,7 @@ export default class HeroImage extends React.Component<Props, State> {
         return (
             <HeroContainer fullscreen={fullscreen} loaded={loaded} {...passthrough}>
                 {fullscreen && (
-                    <VideoBackground videoStarted={videoStarted}>
+                    <VideoBackground fullscreen={fullscreen} videoStarted={videoStarted}>
                         <VideoForeground>
                             <StyledPlayer
                                 style={{ objectFit: "cover" }}
@@ -133,8 +133,8 @@ export default class HeroImage extends React.Component<Props, State> {
                 <CenteredSection>
                     <Logo src={ImageAssets.TaoLogoBig.srcDefault} />
                     {children}
+                    {fullscreen && <ScrollDownBtn color="white" size="56" onClick={() => ScrollDown()} />}
                 </CenteredSection>
-                {fullscreen && <ScrollDownBtn color="white" size="56" onClick={() => ScrollDown()} />}
             </HeroContainer>
         );
     }
