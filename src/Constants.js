@@ -71,8 +71,8 @@ export const Colors: {
     white: string,
     accentBlue: string
 } = {
-    darkPurple: "#872964",
-    lightPurple: "#BD3A93",
+    darkPurple: "#853569",
+    lightPurple: "#B24793",
     darkBlue: "#203548",
     lightBlue: "#7992A3",
     black: "#192028",

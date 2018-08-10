@@ -15,6 +15,9 @@ import Section from "Molecules/Section";
 // types
 import type { Node } from "react";
 
+// Assets
+import { ImageAssets } from "Base/Constants";
+
 // Styles
 import HeroContainerStyle from "./HeroContainer.style";
 import CenteredSectionStyle from "./CenteredSection.style";
@@ -22,6 +25,7 @@ import ScrollBtnStyle from "./ScrollBtnDown.style";
 import VideoBackgroundStyle from "./VideoBackground.style";
 import VideoForegroundStyle from "./VideoForeground.style";
 import PlayerStyle from "./Player.style";
+import LogoStyle from "./Logo.style";
 
 const HeroContainer = styled.div`
     ${HeroContainerStyle};
@@ -45,6 +49,10 @@ const VideoForeground = styled.div`
 
 const StyledPlayer = styled(YouTubePlayer)`
     ${PlayerStyle};
+`;
+
+const Logo = styled.img.attrs({ alt: "logo" })`
+    ${LogoStyle};
 `;
 
 type Props = {
@@ -99,7 +107,6 @@ export default class HeroImage extends React.Component<Props, State> {
     }
 
     VideoStarted = (): void => {
-        console.log("Video started");
         this.setState({ videoStarted: true });
     };
 
@@ -123,7 +130,10 @@ export default class HeroImage extends React.Component<Props, State> {
                         </VideoForeground>
                     </VideoBackground>
                 )}
-                <CenteredSection>{children}</CenteredSection>
+                <CenteredSection>
+                    <Logo src={ImageAssets.TaoLogoBig.srcDefault} />
+                    {children}
+                </CenteredSection>
                 {fullscreen && <ScrollDownBtn color="white" size="56" onClick={() => ScrollDown()} />}
             </HeroContainer>
         );

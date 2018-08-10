@@ -8,6 +8,7 @@ import { Depths, Measurements } from "Base/Constants";
 
 export default css`
     && {
+        flex-direction: column;
         align-self: center;
         justify-content: center;
         padding-top: ${Measurements.basePadding};
