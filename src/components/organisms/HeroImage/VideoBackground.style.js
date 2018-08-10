@@ -16,6 +16,8 @@ export default css`
     z-index: 0;
     opacity: ${ifProp("videoStarted", 1, 0)};
     transition: opacity 0.5s ease-in;
+    position: absolute;
+    overflow: hidden;
 
     &::after {
         display: block;

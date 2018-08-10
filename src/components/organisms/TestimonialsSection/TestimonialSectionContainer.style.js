@@ -10,6 +10,7 @@ export default css`
     && {
         flex-direction: row;
         padding-bottom: 48px;
+        justify-content: center;
 
         @media (${MediaBreakpoints.tablet}) {
             padding-top: 0;

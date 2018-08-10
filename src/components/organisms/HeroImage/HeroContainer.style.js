@@ -25,12 +25,11 @@ export default css`
     ${ifProp(
         "fullscreen",
         css`
-            height: calc(100vh - ${Measurements.headerHeight});
+            height: 100vh;
         `
     )};
     min-width: 100%;
-    min-height: 600px;
-    position: relative;
+    min-height: 500px;
     display: flex;
     box-sizing: border-box;
     margin-bottom: ${Measurements.sectionMargin};
