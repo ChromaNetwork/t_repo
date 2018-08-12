@@ -28,6 +28,7 @@ export default css`
     justify-content: center;
     margin-bottom: ${Measurements.sectionMargin};
     overflow: hidden;
+    position: relative;
 
     ${ifProp(
         "fullscreen",

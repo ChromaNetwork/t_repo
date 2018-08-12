@@ -54,11 +54,11 @@ function Downloads() {
                 </SectionItem>
             </Section>
 
-            <Section style={{ flexDirection: "column" }}>
+            <Section background style={{ flexDirection: "column" }}>
                 <LargeHeading color={MainTheme.white} style={{ alignSelf: "center" }}>
                     Wallet Software
                 </LargeHeading>
-                <div style={{ display: "flex", flexDirection: "row" }}>
+                <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
                     <SectionItem>
                         <TextBlock
                             header="Color Background Section"
