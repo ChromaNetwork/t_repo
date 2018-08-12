@@ -9,6 +9,7 @@ import { Depths, MediaBreakpoints } from "Base/Constants";
 
 export default css`
     background: black;
+    user-select: none;
     top: 0;
     bottom: 0;
     right: 0;

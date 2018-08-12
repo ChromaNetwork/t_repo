@@ -47,7 +47,6 @@ function About() {
                     />
                     <TextBlock text={PlaceholderText} textSize="normal" textColor={MainTheme.white} />
                     <Button
-                        aria-label="Read more button"
                         onClick={() => {
                             console.log("clicked btn");
                         }}

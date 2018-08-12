@@ -4,7 +4,7 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { PlaceholderText } from "Base/Constants";
+import { PlaceholderText, Paths } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Components
@@ -36,9 +36,7 @@ function Home() {
                     />
                     <Button
                         name="Download Wallet Button"
-                        onClick={() => {
-                            console.log("clicked btn");
-                        }}
+                        href={Paths.downloads}
                         text="Get the Wallet"
                         style={{ marginTop: "56px", alignSelf: "center", fontWeight: 300 }}
                     />

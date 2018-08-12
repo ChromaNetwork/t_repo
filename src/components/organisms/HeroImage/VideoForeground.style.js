@@ -8,6 +8,7 @@ import { MediaBreakpoints } from "Base/Constants";
 
 export default css`
     background: black;
+    user-select: none;
     position: absolute;
     top: 0;
     left: 0;

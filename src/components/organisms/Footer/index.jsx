@@ -60,7 +60,6 @@ export default function Footer() {
                     <StyledCircleButton
                         size="large"
                         key={footerLink.icon}
-                        aria-label={footerLink.icon}
                         href={footerLink.url}
                         iconName={footerLink.icon}
                     />

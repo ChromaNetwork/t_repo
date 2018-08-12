@@ -10,10 +10,10 @@ import { MediaBreakpoints } from "Base/Constants";
 
 export default css`
     text-align: center;
+    text-decoration: none;
     background-color: ${prop(ThemeProps.tertiaryColor)};
     border: none;
     cursor: pointer;
-    outline: none;
     padding: 5px;
     display: flex;
     flex-direction: row;
