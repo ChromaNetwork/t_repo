@@ -9,7 +9,8 @@ import { ThemeProps } from "Base/MainTheme";
 
 export default css`
     && {
-        /*background-color: ${prop(ThemeProps.tertiaryColor)}*/
-        flex-direction: column;
+        display: "flex";
+        flex-direction: "column";
+        background-color: ${prop(ThemeProps.white)};
     }
 `;

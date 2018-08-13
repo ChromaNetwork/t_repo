@@ -61,7 +61,7 @@ function Home() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 8000,
         // $FlowFixMe -- Props will be provided by Slider.
         prevArrow: <PrevArrow />,
         // $FlowFixMe -- Props will be provided by Slider.

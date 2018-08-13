@@ -174,7 +174,7 @@ export const ExternalLinks: {
     mail: string
 } = {
     exchange: "https://c-cex.com/?p=xto-btc",
-    explorer: "http://taoexplorer.com/",
+    explorer: "https://chainz.cryptoid.info/xto/",
     discordInvite: "https://discord.gg/WBxAnCx",
     slackInvite: "https://tao11.typeform.com/to/ws8MgM",
     store: "https://teespring.com/stores/tao-blockchain",
@@ -243,13 +243,9 @@ export const PartnerLinks: Array<PartnerLink> = [
     { label: "Partner1", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
     { label: "Partner2", logoUrl: PlaceholderImageUrls.irregular, url: "https://www.google.com" },
     { label: "Partner3", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
+    { label: "Partner4", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
     { label: "Partner6", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner5", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner7", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner8", logoUrl: ImageAssets.DemLogo.srcDefault, url: "http://www.dem.capital" },
-    { label: "Partner9", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner10", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner11", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" }
+    { label: "Partner8", logoUrl: ImageAssets.DemLogo.srcDefault, url: "http://www.dem.capital" }
 ];
 
 export type Testimonial = {
@@ -275,5 +271,11 @@ export const Testimonials: Array<Testimonial> = [
         sourceName: "Messiah Jacobs",
         sourceTitle: "Manager, Estate of Russell Jones/ODB",
         quote: `"I’ve been involved with crypto-currency for three years.  When Hakim and Tao approached the Estate of ODB about making a token that fans can enjoy, we saw nothing but a positive outcome.  Four Screens Production is always looking for more deals that align with the spirit of ODB."`
+    },
+
+    {
+        sourceName: "Carlos Roa",
+        sourceTitle: "Founder, Deus Ex Machina Capital",
+        quote: `"When it comes to the Tao Network, its not just about the celebrity starpower or the money; its about redefining how fans and artists interact with each other. At DEM Capital, we are excited about the opportunities that Tao enables for creative and enterprising individuals who are passionate about music."`
     }
 ];

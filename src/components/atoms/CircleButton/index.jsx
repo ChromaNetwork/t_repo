@@ -15,7 +15,7 @@ import CircleButtonStyle from "./style";
 type Props = {
     onClick?: () => mixed,
     className?: string,
-    size?: "large" | "normal" | "small",
+    size?: "jumbo" | "large" | "normal" | "small",
     iconName?: string,
     blue?: boolean,
     href?: ?string
@@ -28,7 +28,8 @@ const StyledCircleButton = styled.a`
 const sizes = {
     small: 22,
     normal: 32,
-    large: 36
+    large: 36,
+    jumbo: 125
 };
 
 export default function CircleButton(props: Props) {

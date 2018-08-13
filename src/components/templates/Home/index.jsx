@@ -4,7 +4,7 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { PlaceholderText, Paths } from "Base/Constants";
+import { Paths } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Components
@@ -46,7 +46,27 @@ function Home() {
             <Section title="What is Tao?">
                 <SectionItem>
                     <TextBlock
-                        text={PlaceholderText}
+                        text="The Tao Network (XTO) is an open-source cryptocurrency and blockchain platform tailored to the music industry. 
+                            The underlying platform allows artists to create, manage, and distribute their own unique tokens to a variety of audiences.
+                             XTO tokens can also be used and traded in a variety of situations, including offline transactions."
+                        textSize="large"
+                        headerColor={MainTheme.white}
+                        textColor={MainTheme.white}
+                    />
+                    <TextBlock
+                        style={{ marginTop: "24px" }}
+                        text="
+                             Tao is fundamentally a community-based effort, and is designed to allow music enthusiasts to interact, 
+                             transact, communicate, and grow together. And thanks to its unique relationship with AltMarket, 
+                             Tao is also home to the next generation of artist development via a new crowdfunding process known 
+                             as the Initial Artist Offering."
+                        textSize="large"
+                        headerColor={MainTheme.white}
+                        textColor={MainTheme.white}
+                    />
+                    <TextBlock
+                        style={{ marginTop: "24px" }}
+                        text="Join us today and be a part of the future of music and entertainment."
                         textSize="large"
                         headerColor={MainTheme.white}
                         textColor={MainTheme.white}

@@ -12,6 +12,6 @@ export default css`
     padding: 0;
     color: ${prop(ThemeProps.white)};
     text-rendering: optimizeLegibility;
-    line-height: 120%;
-    font-weight: 300;
+    line-height: 130%;
+    font-weight: 200;
 `;

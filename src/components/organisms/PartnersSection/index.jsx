@@ -18,6 +18,11 @@ import PartnerSectionContainerStyle from "./PartnerSectionContainer.style";
 import PartnerSectionItemStyle from "./PartnerSectionItem.style";
 import PartnerCardsContainerStyle from "./PartnerCardsContainer.style";
 import ArrowHeadingStyle from "./ArrowHeading.style";
+// import ContainerStyle from "./Container.style";
+
+// const Container = styled.div`
+//     ${ContainerStyle};
+// `;
 
 const StyledSection = styled(Section)`
     ${PartnerSectionContainerStyle};
@@ -38,7 +43,7 @@ function Home() {
     return (
         <Fragment>
             <StyledArrowHeading text="Our Partners" align="right" />
-            <StyledSection>
+            <StyledSection background>
                 <PartnerCardsContainer>
                     {PartnerLinks.map(partnerLink => (
                         <StyledSectionItem key={partnerLink.label}>

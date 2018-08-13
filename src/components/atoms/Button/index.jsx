@@ -35,12 +35,12 @@ export default function CircleButton(props: Props) {
     const { iconName, text, href, ...passThrough } = props;
     const Icon = iconName ? Feather[iconName] : "";
     return href ? (
-        <StyleButtonLink to={href} role="button" {...passThrough}>
+        <StyleButtonLink to={href} {...passThrough}>
             <NormalText color={MainTheme.white}>{text}</NormalText>
             {iconName && <Icon color={MainTheme.white} size={24} style={{ marginLeft: "10px" }} />}
         </StyleButtonLink>
     ) : (
-        <StyleButton role="button" {...passThrough}>
+        <StyleButton {...passThrough}>
             <NormalText color={MainTheme.white}>{text}</NormalText>
             {iconName && <Icon color={MainTheme.white} size={24} style={{ marginLeft: "10px" }} />}
         </StyleButton>

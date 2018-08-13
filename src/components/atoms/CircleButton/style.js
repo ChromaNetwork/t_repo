@@ -12,6 +12,8 @@ const sizes = {
     small: "24px",
     normal: "32px",
     large: "48px",
+    jumbo: "150px",
+    jumbo_t: "225px",
     large_t: "64px",
     normal_t: "48px",
     small_t: "32px"
@@ -46,6 +48,13 @@ export default css`
             width: ${sizes.large};
             min-height: ${sizes.large};
             min-width: ${sizes.large};
+        `,
+        jumbo: css`
+            height: ${sizes.jumbo};
+            width: ${sizes.jumbo};
+            min-height: ${sizes.jumbo};
+            min-width: ${sizes.jumbo};
+            border-radius: 5px;
         `
     })};
 
@@ -68,6 +77,13 @@ export default css`
                 width: ${sizes.large_t};
                 min-height: ${sizes.large_t};
                 min-width: ${sizes.large_t};
+            `,
+            jumbo: css`
+                height: ${sizes.jumbo_t};
+                width: ${sizes.jumbo_t};
+                min-height: ${sizes.jumbo_t};
+                min-width: ${sizes.jumbo_t};
+                border-radius: 5px;
             `
         })};
     }
