@@ -20,10 +20,15 @@ type Props = {
     href?: string,
     className?: string,
     text: string,
-    iconName?: string
+    iconName?: string,
+    externalLink?: boolean
 };
 
 const StyleButtonLink = styled(Link)`
+    ${ButtonStyle};
+`;
+
+const StyleButtonAnchor = styled.a`
     ${ButtonStyle};
 `;
 
@@ -31,14 +36,21 @@ const StyleButton = styled.button`
     ${ButtonStyle};
 `;
 
-export default function CircleButton(props: Props) {
-    const { iconName, text, href, ...passThrough } = props;
+export default function Button(props: Props) {
+    const { iconName, text, href, externalLink, ...passThrough } = props;
     const Icon = iconName ? Feather[iconName] : "";
     return href ? (
-        <StyleButtonLink to={href} {...passThrough}>
-            <NormalText color={MainTheme.white}>{text}</NormalText>
-            {iconName && <Icon color={MainTheme.white} size={24} style={{ marginLeft: "10px" }} />}
-        </StyleButtonLink>
+        externalLink ? (
+            <StyleButtonAnchor href={href} {...passThrough}>
+                <NormalText color={MainTheme.white}>{text}</NormalText>
+                {iconName && <Icon color={MainTheme.white} size={24} style={{ marginLeft: "10px" }} />}
+            </StyleButtonAnchor>
+        ) : (
+            <StyleButtonLink to={href} {...passThrough}>
+                <NormalText color={MainTheme.white}>{text}</NormalText>
+                {iconName && <Icon color={MainTheme.white} size={24} style={{ marginLeft: "10px" }} />}
+            </StyleButtonLink>
+        )
     ) : (
         <StyleButton {...passThrough}>
             <NormalText color={MainTheme.white}>{text}</NormalText>
@@ -47,9 +59,10 @@ export default function CircleButton(props: Props) {
     );
 }
 
-CircleButton.defaultProps = {
+Button.defaultProps = {
     className: "",
     iconName: "",
     href: "",
-    onClick: () => {}
+    onClick: () => {},
+    externalLink: false
 };

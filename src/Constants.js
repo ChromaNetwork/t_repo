@@ -183,28 +183,50 @@ export const ExternalLinks: {
     mail: "mailto:info@tao.network"
 };
 
-export type DownloadableFileLink = { name: string, url: string };
+export type DownloadableFileLink = { label: string, url: string };
 export type DownloadableFileLinks = { currentLink: DownloadableFileLink, olderLinks: Array<DownloadableFileLink> };
 export const DownloadableFiles: {
     whitepaper: DownloadableFileLinks,
     macOSWallet: DownloadableFileLinks,
     windowsWallet: DownloadableFileLinks,
-    linuxWallet: DownloadableFileLinks
+    linuxWallet: DownloadableFileLinks,
+    paperWallet: DownloadableFileLinks
 } = {
-    whitepaper: { currentLink: { name: "v0.3", url: "http://tao.network/XTORoadmapv0.3.pdf" }, olderLinks: [] },
+    whitepaper: {
+        currentLink: { label: "Whitepaper v0.3", url: "http://tao.network/XTORoadmapv0.3.pdf" },
+        olderLinks: []
+    },
     macOSWallet: {
-        currentLink: { name: "0.10.0.0", url: "https://tao.network/files/Tao-Qt-0.10.0.0.dmg" },
-        olderLinks: [{ name: "0.9.2.3", url: "https://tao.network/files/Tao-Qt-0.9.2.3.dmg" }]
+        currentLink: { label: "Download 0.10.0.0", url: "https://tao.network/files/Tao-Qt-0.10.0.0.dmg" },
+        olderLinks: [{ label: "0.9.2.3", url: "https://tao.network/files/Tao-Qt-0.9.2.3.dmg" }]
     },
     windowsWallet: {
-        currentLink: { name: "0.10.0.0", url: "https://tao.network/files/Tao-0.10.0.0-Setup.exe" },
-        olderLinks: [{ name: "0.9.2.3", url: "https://tao.network/files/tao-0.9.2.3-win64-setup.exe" }]
+        currentLink: { label: "Download 0.10.0.0", url: "https://tao.network/files/Tao-0.10.0.0-Setup.exe" },
+        olderLinks: [{ label: "0.9.2.3", url: "https://tao.network/files/tao-0.9.2.3-win64-setup.exe" }]
     },
     linuxWallet: {
-        currentLink: { name: "0.10.0.0", url: "https://tao.network/files/tao-qt-0.10.0.0.tgz" },
-        olderLinks: [{ name: "0.9.2.3", url: "https://tao.network/files/tao-linux-0.9.2.3.tgz" }]
+        currentLink: { label: "Download 0.10.0.0", url: "https://tao.network/files/tao-qt-0.10.0.0.tgz" },
+        olderLinks: [{ label: "0.9.2.3", url: "https://tao.network/files/tao-linux-0.9.2.3.tgz" }]
+    },
+    paperWallet: {
+        currentLink: { label: "Go To Paper Wallet", url: "https://taoblockchain.github.io/PaperWallet/" },
+        olderLinks: []
     }
 };
+
+export type Wallet = { name: string, file?: DownloadableFileLinks, iconName: string };
+export const Wallets: Array<Array<Wallet>> = [
+    [
+        { name: "Windows", iconName: "FaWindows", file: DownloadableFiles.windowsWallet },
+        { name: "MacOS", iconName: "FaApple", file: DownloadableFiles.macOSWallet },
+        { name: "Linux", iconName: "FaLinux", file: DownloadableFiles.linuxWallet }
+    ],
+    [
+        { name: "Paper (Physical)", iconName: "FaTicketAlt", file: DownloadableFiles.paperWallet },
+        { name: "iOS", iconName: "FaAppStoreIos" },
+        { name: "Android", iconName: "FaAndroid" }
+    ]
+];
 
 export type HeaderLink = {
     label: string,
@@ -276,6 +298,6 @@ export const Testimonials: Array<Testimonial> = [
     {
         sourceName: "Carlos Roa",
         sourceTitle: "Founder, Deus Ex Machina Capital",
-        quote: `"When it comes to the Tao Network, its not just about the celebrity starpower or the money; its about redefining how fans and artists interact with each other. At DEM Capital, we are excited about the opportunities that Tao enables for creative and enterprising individuals who are passionate about music."`
+        quote: `"When it comes to the Tao Network, it's not just about the celebrity starpower or the money; it's about redefining how fans and artists interact with each other. At DEM Capital, we are excited about the opportunities that Tao enables for creative and enterprising individuals who are passionate about music."`
     }
 ];
