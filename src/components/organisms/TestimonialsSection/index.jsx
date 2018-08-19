@@ -69,7 +69,7 @@ function Home() {
     };
     return (
         <Fragment>
-            <StyledSection title="Testimonials">
+            <StyledSection titleAlign="right" title="Testimonials">
                 <StyledSlider {...settings}>
                     {Testimonials.map(testimonial => (
                         <TestimonialContainer key={testimonial.sourceName}>

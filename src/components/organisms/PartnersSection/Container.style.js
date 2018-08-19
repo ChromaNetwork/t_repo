@@ -11,6 +11,8 @@ export default css`
     && {
         display: "flex";
         flex-direction: "column";
-        background-color: ${prop(ThemeProps.white)};
+        background-color: ${prop(ThemeProps.black)};
+        margin-top: 72px;
+        margin-bottom: 72px;
     }
 `;

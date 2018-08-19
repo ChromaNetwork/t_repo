@@ -1,7 +1,7 @@
 // @flow
 
 // node_modules
-import { css } from "styled-components";
+import { css, keyframes } from "styled-components";
 import { prop, ifProp } from "styled-tools";
 
 // Constants
@@ -18,6 +18,29 @@ const loadedImageCss = css`
             transition: filter 0.6s linear;
         `
     )};
+`;
+
+const zoom = keyframes`
+    0% {
+        transform: scale(1);
+        opacity: 1;
+	}
+    25% {
+        transform: scale(1.1);
+        opacity: .5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: .25;
+    }
+    75%{
+        transform: scale(1.1);
+        opacity: .5;
+    }
+	100% {
+        transform: scale(1);
+        opacity: 1;
+	}
 `;
 
 export default css`
@@ -60,6 +83,7 @@ export default css`
             css`
                 height: 100vh;
                 min-height: 700px;
+                animation: ${zoom} 12s linear infinite;
             `
         )};
 

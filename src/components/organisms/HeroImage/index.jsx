@@ -6,7 +6,7 @@ import React from "react";
 import styled from "styled-components";
 import * as Scroll from "react-scroll";
 import { ChevronsDown } from "react-feather";
-import YouTubePlayer from "react-player/lib/players/YouTube";
+// import YouTubePlayer from "react-player/lib/players/YouTube";
 
 // Components
 import Section from "Molecules/Section";
@@ -22,9 +22,9 @@ import { ImageAssets } from "Base/Constants";
 import HeroContainerStyle from "./HeroContainer.style";
 import CenteredSectionStyle from "./CenteredSection.style";
 import ScrollBtnStyle from "./ScrollBtnDown.style";
-import VideoBackgroundStyle from "./VideoBackground.style";
-import VideoForegroundStyle from "./VideoForeground.style";
-import PlayerStyle from "./Player.style";
+// import VideoBackgroundStyle from "./VideoBackground.style";
+// import VideoForegroundStyle from "./VideoForeground.style";
+// import PlayerStyle from "./Player.style";
 import LogoStyle from "./Logo.style";
 
 const HeroContainer = styled.div`
@@ -39,17 +39,17 @@ const ScrollDownBtn = styled(ChevronsDown)`
     ${ScrollBtnStyle};
 `;
 
-const VideoBackground = styled.div`
-    ${VideoBackgroundStyle};
-`;
+// const VideoBackground = styled.div`
+//     ${VideoBackgroundStyle};
+// `;
 
-const VideoForeground = styled.div`
-    ${VideoForegroundStyle};
-`;
+// const VideoForeground = styled.div`
+//     ${VideoForegroundStyle};
+// `;
 
-const StyledPlayer = styled(YouTubePlayer)`
-    ${PlayerStyle};
-`;
+// const StyledPlayer = styled(YouTubePlayer)`
+//     ${PlayerStyle};
+// `;
 
 const Logo = styled.img.attrs({ alt: "logo" })`
     ${LogoStyle};
@@ -69,8 +69,8 @@ type Props = {
 };
 
 type State = {
-    loaded: boolean,
-    videoStarted: boolean
+    loaded: boolean
+    // videoStarted: boolean
 };
 
 function ScrollDown() {
@@ -92,8 +92,8 @@ export default class HeroImage extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            loaded: false,
-            videoStarted: false
+            loaded: false
+            // videoStarted: false
         };
     }
 
@@ -107,31 +107,16 @@ export default class HeroImage extends React.Component<Props, State> {
     }
 
     VideoStarted = (): void => {
-        this.setState({ videoStarted: true });
+        // this.setState({ videoStarted: true });
     };
 
     render() {
         const { children, divideType, scrollDown, fullscreen, ...passthrough } = this.props;
-        const { loaded, videoStarted } = this.state;
+        const { loaded } = this.state;
         return (
             <HeroContainer fullscreen={fullscreen} loaded={loaded} {...passthrough}>
-                {fullscreen && (
-                    <VideoBackground fullscreen={fullscreen} videoStarted={videoStarted}>
-                        <VideoForeground>
-                            <StyledPlayer
-                                style={{ objectFit: "cover" }}
-                                muted
-                                loop
-                                preload="true"
-                                url="https://youtu.be/ZDurU6vpW_w?t=38"
-                                playing
-                                onPlay={this.VideoStarted}
-                            />
-                        </VideoForeground>
-                    </VideoBackground>
-                )}
                 <CenteredSection>
-                    <Logo src={ImageAssets.TaoLogoBig.srcDefault} />
+                    {fullscreen && <Logo src={ImageAssets.TaoLogoBig.srcDefault} />}
                     {children}
                     {fullscreen && <ScrollDownBtn color="white" size="56" onClick={() => ScrollDown()} />}
                 </CenteredSection>

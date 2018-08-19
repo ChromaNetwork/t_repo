@@ -1,7 +1,7 @@
 // @flow
 
 // node_modules
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
 
 // Constants and Utils
@@ -18,11 +18,11 @@ import PartnerSectionContainerStyle from "./PartnerSectionContainer.style";
 import PartnerSectionItemStyle from "./PartnerSectionItem.style";
 import PartnerCardsContainerStyle from "./PartnerCardsContainer.style";
 import ArrowHeadingStyle from "./ArrowHeading.style";
-// import ContainerStyle from "./Container.style";
+import ContainerStyle from "./Container.style";
 
-// const Container = styled.div`
-//     ${ContainerStyle};
-// `;
+const Container = styled.div`
+    ${ContainerStyle};
+`;
 
 const StyledSection = styled(Section)`
     ${PartnerSectionContainerStyle};
@@ -41,9 +41,9 @@ const StyledArrowHeading = styled(ArrowHeading)`
 
 function Home() {
     return (
-        <Fragment>
-            <StyledArrowHeading text="Our Partners" align="right" />
-            <StyledSection background>
+        <Container>
+            <StyledArrowHeading text="Our Partners" align="center" />
+            <StyledSection>
                 <PartnerCardsContainer>
                     {PartnerLinks.map(partnerLink => (
                         <StyledSectionItem key={partnerLink.label}>
@@ -52,7 +52,7 @@ function Home() {
                     ))}
                 </PartnerCardsContainer>
             </StyledSection>
-        </Fragment>
+        </Container>
     );
 }
 

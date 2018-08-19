@@ -23,7 +23,7 @@ const StyledHeading = styled(LargeHeading)`
 
 type Props = {
     text: string,
-    align: "left" | "right"
+    align: "left" | "right" | "center"
 };
 
 export default function Section(props: Props) {

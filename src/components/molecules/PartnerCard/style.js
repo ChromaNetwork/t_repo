@@ -3,28 +3,29 @@
 
 // node_modules
 import { css } from "styled-components";
+import { prop } from "styled-tools";
 
 // Constants
 import { MediaBreakpoints } from "Base/Constants";
 
 export default css`
     && {
-        width: 100px;
-        height: 100px;
+        width: ${prop("width")};
+        height: 200px;
         align-items: center;
         justify-content: center;
         display: flex;
         padding: 4px;
 
         @media (${MediaBreakpoints.tablet}) {
-            width: 125px;
-            height: 125px;
+            width: ${prop("widtht")};
+            height: 250px;
             padding: 8px;
         }
 
         @media (${MediaBreakpoints.desktop}) {
-            width: 145px;
-            height: 145px;
+            width: ${prop("widthd")};
+            height: 300px;
             padding: 12px;
         }
     }

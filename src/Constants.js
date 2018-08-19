@@ -12,25 +12,10 @@ import TaoLogoFull from "Assets/logo_full.png";
 import TaoLogo250 from "Assets/logo_250x250.png";
 import TaoLogo75 from "Assets/logo_75x75.png";
 import DemLogo from "Assets/dem_logo.png";
+import AMLogo from "Assets/am_logo.png";
 
 export const PlaceholderText: string =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
-export const PlaceholderImageUrls: {
-    square: string,
-    wide: string,
-    large: string,
-    medium: string,
-    small: string,
-    irregular: string
-} = {
-    square: "http://via.placeholder.com/150x150",
-    wide: "http://via.placeholder.com/3840x2160",
-    large: "http://via.placeholder.com/2000x1200",
-    medium: "http://via.placeholder.com/1024x768",
-    irregular: "http://via.placeholder.com/300x125",
-    small: "http://via.placeholder.com/32x32"
-};
 
 export type ImageSource = {
     srcDefault: string,
@@ -50,7 +35,8 @@ export const ImageAssets: {
     TaoLogoFull: ImageSource,
     TaoLogo250: ImageSource,
     TaoLogo75: ImageSource,
-    DemLogo: ImageSource
+    DemLogo: ImageSource,
+    AmLogo: ImageSource
 } = {
     heroBg: { srcDefault: HeroBg, srcPlaceholder: HeroBgPre },
     heroBg2: { srcDefault: HeroBg2, srcPlaceholder: HeroBg2Pre },
@@ -59,7 +45,8 @@ export const ImageAssets: {
     TaoLogoFull: { srcDefault: TaoLogoFull, srcPlaceholder: "" },
     TaoLogo250: { srcDefault: TaoLogo250, srcPlaceholder: "" },
     TaoLogo75: { srcDefault: TaoLogo75, srcPlaceholder: "" },
-    DemLogo: { srcDefault: DemLogo, srcPlaceholder: "" }
+    DemLogo: { srcDefault: DemLogo, srcPlaceholder: "" },
+    AmLogo: { srcDefault: AMLogo, srcPlaceholder: "" }
 };
 
 export const Colors: {
@@ -258,16 +245,29 @@ export const FooterLinks: Array<FooterLink> = [
 export type PartnerLink = {
     label: string,
     logoUrl: string,
-    url?: string
+    url?: string,
+    width: string,
+    width_t: string,
+    width_d: string
 };
 
 export const PartnerLinks: Array<PartnerLink> = [
-    { label: "Partner1", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner2", logoUrl: PlaceholderImageUrls.irregular, url: "https://www.google.com" },
-    { label: "Partner3", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner4", logoUrl: PlaceholderImageUrls.large, url: "https://www.google.com" },
-    { label: "Partner6", logoUrl: ImageAssets.TaoLogo250.srcDefault, url: "https://www.google.com" },
-    { label: "Partner8", logoUrl: ImageAssets.DemLogo.srcDefault, url: "http://www.dem.capital" }
+    {
+        label: "Partner1",
+        logoUrl: ImageAssets.AmLogo.srcDefault,
+        url: "http://alt.market",
+        width: "300px",
+        width_t: "400px",
+        width_d: "475px"
+    },
+    {
+        label: "Partner2",
+        logoUrl: ImageAssets.DemLogo.srcDefault,
+        url: "http://www.dem.capital",
+        width: "200px",
+        width_t: "250px",
+        width_d: "300px"
+    }
 ];
 
 export type Testimonial = {

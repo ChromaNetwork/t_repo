@@ -4,7 +4,7 @@
 import React, { Fragment } from "react";
 
 // Constants and Utils
-import { Paths } from "Base/Constants";
+import { Paths, ImageAssets } from "Base/Constants";
 import MainTheme from "Base/MainTheme";
 
 // Components
@@ -21,8 +21,8 @@ import TestimonialsSection from "Organisms/TestimonialsSection";
 function Home() {
     return (
         <Fragment>
-            <Header heroFloat />
-            <HeroImage scrollDown divideType="blue" fullscreen srcPlaceholder="" srcDefault="">
+            <Header />
+            <HeroImage {...ImageAssets.heroBg2} scrollDown divideType="blue" fullscreen>
                 <SectionItem>
                     <TextBlock
                         header="Here's to the Artists."

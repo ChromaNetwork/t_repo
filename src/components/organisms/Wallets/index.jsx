@@ -59,7 +59,7 @@ function WalletsSection(props: {}) {
         <div {...props}>
             <ArrowHeading text="Wallet Software" align="left" />
             {Wallets.map((WalletGroup, i) => (
-                <Container key={i} background>
+                <Container key={i}>
                     {WalletGroup.map((WalletItem: Wallet) => {
                         const Icon = FontAwesome[WalletItem.iconName];
                         return (

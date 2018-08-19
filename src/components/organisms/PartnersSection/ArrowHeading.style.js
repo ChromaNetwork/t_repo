@@ -8,8 +8,9 @@ import { MediaBreakpoints } from "Base/Constants";
 
 export default css`
     && {
-        padding-bottom: 48px;
         padding-top: 24px;
+        align-items: center;
+        justify-content: center;
 
         /* @media (${MediaBreakpoints.tablet}) {
             padding-bottom: 48px;
