@@ -50,8 +50,6 @@ function Home() {
                             The underlying platform allows artists to create, manage, and distribute their own unique tokens to a variety of audiences.
                              XTO tokens can also be used and traded in a variety of situations, including offline transactions."
                         textSize="large"
-                        headerColor={MainTheme.white}
-                        textColor={MainTheme.white}
                     />
                     <TextBlock
                         style={{ marginTop: "24px" }}
@@ -61,21 +59,15 @@ function Home() {
                              Tao is also home to the next generation of artist development via a new crowdfunding process known 
                              as the Initial Artist Offering."
                         textSize="large"
-                        headerColor={MainTheme.white}
-                        textColor={MainTheme.white}
                     />
                     <TextBlock
                         style={{ marginTop: "24px" }}
                         text="Join us today and be a part of the future of music and entertainment."
                         textSize="large"
-                        headerColor={MainTheme.white}
-                        textColor={MainTheme.white}
                     />
                     <Button
                         name="Read More Button"
-                        onClick={() => {
-                            console.log("clicked btn");
-                        }}
+                        href="/about"
                         text="Read More"
                         style={{ marginTop: "24px", alignSelf: "flex-end" }}
                     />

@@ -24,14 +24,14 @@ const StyledBytton = styled(Button)`
 function WhitepaperDownload(props: {}) {
     return (
         <Fragment>
-            <ArrowHeading text="Tao Whitepaper" align="right" />
+            <ArrowHeading text="Tao Guide" align="right" />
             <Section {...props}>
                 <SectionItem>
                     <TextBlock text={PlaceholderText} />
                     <StyledBytton
                         href={DownloadableFiles.whitepaper.currentLink.url}
                         externalLink
-                        text="Download Whitepaper"
+                        text="Download Guide"
                     />
                 </SectionItem>
             </Section>
