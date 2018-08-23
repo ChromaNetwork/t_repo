@@ -21,7 +21,7 @@ const webpackConfig = {
         rules: [
             { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: "babel-loader" },
             // https://github.com/webpack-contrib/file-loader --See for config
-            { test: /\.(png|jpg|jpeg|gif|ttf|otf|svg)$/, loader: "file-loader" },
+            { test: /\.(png|jpg|jpeg|gif|ttf|otf|svg|pdf)$/, loader: "file-loader" },
             // https://www.npmjs.com/package/eslint-loader --See "Usage"
             { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: "eslint-loader" },
             { test: /\.css$/, use: [{ loader: "style-loader" }, { loader: "css-loader" }] }

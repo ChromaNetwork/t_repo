@@ -11,9 +11,14 @@ export default css`
     display: flex;
     padding-top: 48px;
     margin-left: ${ifProp({ align: "left" }, Measurements.basePadding, 0)};
-
     margin-right: ${ifProp({ align: "right" }, Measurements.basePadding, 0)};
-    overflow: hidden;
+    ${ifProp(
+        { align: "center" },
+        css`
+            align-items: center;
+            justify-content: center;
+        `
+    )} overflow: hidden;
 
     @media (${MediaBreakpoints.tablet}) {
         flex-direction: row;

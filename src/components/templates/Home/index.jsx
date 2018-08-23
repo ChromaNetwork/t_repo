@@ -22,7 +22,7 @@ function Home() {
     return (
         <Fragment>
             <Header />
-            <HeroImage {...ImageAssets.heroBg2} scrollDown divideType="blue" fullscreen>
+            <HeroImage {...ImageAssets.PinkConcert} scrollDown divideType="blue" fullscreen>
                 <SectionItem>
                     <TextBlock
                         header="Here's to the Artists."

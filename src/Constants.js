@@ -1,10 +1,6 @@
 // @flow
 
 // Assets
-import HeroBg from "Assets/herobg.jpg";
-import HeroBgPre from "Assets/herobg_pre.jpg";
-import HeroBg2 from "Assets/herobg2.jpg";
-import HeroBg2Pre from "Assets/herobg2_pre.jpg";
 import TaoLogoBig from "Assets/iconwhite.png";
 import Panorama from "Assets/panorama.jpg";
 import PanoramaPre from "Assets/panorama_pre.jpg";
@@ -13,6 +9,18 @@ import TaoLogo250 from "Assets/logo_250x250.png";
 import TaoLogo75 from "Assets/logo_75x75.png";
 import DemLogo from "Assets/dem_logo.png";
 import AMLogo from "Assets/am_logo.png";
+import CubeBG from "Assets/cube_concert_bg.jpg";
+import CubeBGPre from "Assets/cube_concert_bg_small.jpg";
+import PinkBG from "Assets/pink_concert_bg.jpg";
+import PinkBGPre from "Assets/pink_concert_bg_small.jpg";
+import AbstractBG from "Assets/abstract.jpg";
+import AbstractBGPre from "Assets/abstract_small.jpg";
+import Concert3BG from "Assets/concert_3.jpg";
+import Concert3BGPre from "Assets/concert_3_small.jpg";
+
+// Docs
+// $FlowFixMe
+import Roadmap from "Assets/docs/XTORoadmap.pdf";
 
 export const PlaceholderText: string =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -28,25 +36,29 @@ export type ImageSource = {
 
 // Importing all of the images here may cause all images to be loaded unnecessarily -- possibly move them to local imports.
 export const ImageAssets: {
-    heroBg: ImageSource,
-    heroBg2: ImageSource,
     TaoLogoBig: ImageSource,
     panorama: ImageSource,
     TaoLogoFull: ImageSource,
     TaoLogo250: ImageSource,
     TaoLogo75: ImageSource,
     DemLogo: ImageSource,
-    AmLogo: ImageSource
+    AmLogo: ImageSource,
+    CubeConcert: ImageSource,
+    PinkConcert: ImageSource,
+    Abstract: ImageSource,
+    Concert3: ImageSource
 } = {
-    heroBg: { srcDefault: HeroBg, srcPlaceholder: HeroBgPre },
-    heroBg2: { srcDefault: HeroBg2, srcPlaceholder: HeroBg2Pre },
     TaoLogoBig: { srcDefault: TaoLogoBig, srcPlaceholder: "" },
     panorama: { srcDefault: Panorama, srcPlaceholder: PanoramaPre },
     TaoLogoFull: { srcDefault: TaoLogoFull, srcPlaceholder: "" },
     TaoLogo250: { srcDefault: TaoLogo250, srcPlaceholder: "" },
     TaoLogo75: { srcDefault: TaoLogo75, srcPlaceholder: "" },
     DemLogo: { srcDefault: DemLogo, srcPlaceholder: "" },
-    AmLogo: { srcDefault: AMLogo, srcPlaceholder: "" }
+    AmLogo: { srcDefault: AMLogo, srcPlaceholder: "" },
+    CubeConcert: { srcDefault: CubeBG, srcPlaceholder: CubeBGPre },
+    PinkConcert: { srcDefault: PinkBG, srcPlaceholder: PinkBGPre },
+    Abstract: { srcDefault: AbstractBG, srcPlaceholder: AbstractBGPre },
+    Concert3: { srcDefault: Concert3BG, srcPlaceholder: Concert3BGPre }
 };
 
 export const Colors: {
@@ -180,7 +192,7 @@ export const DownloadableFiles: {
     paperWallet: DownloadableFileLinks
 } = {
     whitepaper: {
-        currentLink: { label: "Whitepaper v0.3", url: "http://tao.network/XTORoadmapv0.3.pdf" },
+        currentLink: { label: "Whitepaper v0.3", url: Roadmap },
         olderLinks: []
     },
     macOSWallet: {

@@ -12,20 +12,14 @@ import TextBlock from "Molecules/TextBlock";
 import HeroImage from "Organisms/HeroImage";
 
 // Constants
-import { ImageAssets, PlaceholderText } from "Base/Constants";
+import { ImageAssets } from "Base/Constants";
 
 function Downloads() {
     return (
         <Fragment>
             <Header />
-            <HeroImage {...ImageAssets.panorama}>
-                <TextBlock
-                    header="Downloads"
-                    headerSize="large"
-                    text={PlaceholderText}
-                    textSize="large"
-                    align="center"
-                />
+            <HeroImage {...ImageAssets.CubeConcert}>
+                <TextBlock header="Downloads" headerSize="large" text="" textSize="large" align="center" />
             </HeroImage>
             <WhitepaperDownload />
             <Wallets />

@@ -83,7 +83,7 @@ export default css`
             css`
                 height: 100vh;
                 min-height: 700px;
-                animation: ${zoom} 14s linear infinite;
+                /*animation: ${zoom} 14s linear infinite;*/
             `
         )};
 
